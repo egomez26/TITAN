@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE workspaceElements PUBLIC "-//CPN//DTD CPNXML 1.0//EN" "http://cpntools.org/DTD/6/cpn.dtd">
+<workspaceElements>
+	<generator tool="CPN Tools" version="4.0.1" format="6"/>
+	<cpnet>
+		<globbox>
+			<block id="ID1412310166">
+				<id>Standard priorities</id>
+				<ml id="ID1412310255">val P_HIGH = 100;
+					<layout>val P_HIGH = 100;</layout>
+				</ml>
+				<ml id="ID1412310292">val P_NORMAL = 1000;
+					<layout>val P_NORMAL = 1000;</layout>
+				</ml>
+				<ml id="ID1412310322">val P_LOW = 10000;
+					<layout>val P_LOW = 10000;</layout>
+				</ml>
+			</block>
+			<block id="ID1">
+				<id>Standard declarations</id>
+				<color id="ID85042">
+					<id>UNIT</id>
+					<unit/>
+					<layout>colset UNIT = unit;</layout>
+				</color>
+				<color id="ID4">
+					<id>BOOL</id>
+					<bool/>
+				</color>
+				<color id="ID3">
+					<id>INT</id>
+					<int/>
+				</color>
+				<color id="ID1412312409">
+					<id>INTINF</id>
+					<intinf/>
+					<layout>colset INTINF = intinf;</layout>
+				</color>
+				<color id="ID1412312425">
+					<id>TIME</id>
+				<time/>
+					<layout>colset TIME = time;</layout>
+				</color>
+				<color id="ID1412322990">
+					<id>REAL</id>
+					<real/>
+					<layout>colset REAL = real;</layout>
+				</color>
+				<color id="ID5">
+					<id>STRING</id>
+					<string/>
+				</color>
+			</block>
+		<block id="ID1413114063">
+			<id>PNPL</id>
+				<block id="ID1413113251">
+				<id>COLORS</id>
+					<color id="ID1413129378">
+					<id>TOKEN</id>
+						<timed/>
+						<int/>
+					<layout>colset TOKEN = int timed;</layout>
+				</color>
+				<color id="ID1413113141">
+					<id>FEATURE</id>
+					<alias>
+						<id>BOOL</id>
+					</alias>
+					<layout>colset FEATURE = BOOL;</layout>
+				</color>
+				<color id="ID1413113171">
+					<id>CONFIGURATION</id>
+					<record>
+						<recordfield>
+							<id>FEAT_Worker1</id>
+							<id>FEATURE</id>
+						</recordfield>
+						<recordfield>
+							<id>FEAT_Worker2</id>
+							<id>FEATURE</id>
+						</recordfield>
+						<recordfield>
+							<id>FEAT_Worker3</id>
+							<id>FEATURE</id>
+						</recordfield>
+					</record>
+					<layout>colset CONFIGURATION = record FEAT_Worker1 : FEATURE * 
+		FEAT_Worker2 : FEATURE * 
+		FEAT_Worker3 : FEATURE;</layout>
+				</color>
+				</block>
+				<block id="ID1413113462">
+					<id>CONSTANTS</id>
+					<ml id="ID1413113727">val initial = 1;
+						<layout>val initial = 1;</layout>
+					</ml>
+				</block>
+				<block id="ID1413114454">
+					<id>VARIABLES</id>
+					<var id="ID1412569443">
+						<type>
+							<id>CONFIGURATION</id>
+						</type>
+					<id>d</id>
+					<layout>var d : CONFIGURATION;</layout>
+				</var>
+					<var id="ID1413114508">
+						<type>
+							<id>CONFIGURATION</id>
+						</type>
+					<id>c</id>
+					<layout>var c : CONFIGURATION;</layout>
+				</var>
+					<var id="VAR_Worker1">
+						<type>
+							<id>FEATURE</id>
+						</type>
+						<id>VAR_Worker1</id>
+						<layout>var VAR_Worker1 : FEATURE;</layout>
+					</var>
+					<var id="VAR_Worker2">
+						<type>
+							<id>FEATURE</id>
+						</type>
+						<id>VAR_Worker2</id>
+						<layout>var VAR_Worker2 : FEATURE;</layout>
+					</var>
+					<var id="VAR_Worker3">
+						<type>
+							<id>FEATURE</id>
+						</type>
+						<id>VAR_Worker3</id>
+						<layout>var VAR_Worker3 : FEATURE;</layout>
+					</var>
+				</block>
+			<block id="ID1413115140">
+				<id>FUNCTIONS</id>
+				<ml id="FUN_IMPLIES">fun implies(p,q) = not p orelse q;
+					<layout>fun implies (p,q) = not p orelse q;</layout>
+				</ml>
+				<ml id="FUN_IFF">fun iff(p, q) = implies(p, q) andalso implies(q, p);
+					<layout>fun iff (p, q) = ((not p orelse q) andalso (p orelse not q));</layout>
+				</ml>
+				<ml id="FUN_ISVALID">fun isValid (PARAM_Feature_Model,PARAM_Worker1,PARAM_Worker2,PARAM_Worker3) =  (iff(PARAM_Worker1,PARAM_Feature_Model) andalso implies(PARAM_Worker2,PARAM_Feature_Model) andalso implies(PARAM_Worker3,PARAM_Feature_Model)) andalso (implies(PARAM_Worker2, PARAM_Worker1) andalso implies(PARAM_Worker3, PARAM_Worker2));
+					<layout>fun isValid (PARAM_Feature_Model,PARAM_Worker1,PARAM_Worker2,PARAM_Worker3) = (iff(PARAM_Worker1,PARAM_Feature_Model) andalso implies(PARAM_Worker2,PARAM_Feature_Model) andalso implies(PARAM_Worker3,PARAM_Feature_Model)) andalso (implies(PARAM_Worker2, PARAM_Worker1) andalso implies(PARAM_Worker3, PARAM_Worker2));</layout>
+				</ml>
+			</block>
+		</block>
+		</globbox>
+		<page id="ID6">
+			<pageattr name="New Page"/>
+			<!-- List of places -->
+			<place id="PL_Worker1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>Worker1</text>
+				<ellipse w="60.000000" h="60.000000"/>
+				<token x="-10.000000" y="0.000000"/>
+				<marking x="0.000000" y="0.000000" hidden="false">
+					<snap snap_id="0" anchor.horizontal="0" anchor.vertical="0"/>
+				</marking>
+				<type id="PL_T_Worker1">
+					<posattr x="-34.500000" y="-31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">TOKEN</text>
+				</type>
+				<initmark id="PL_M_Worker1">
+					<posattr x="-40.000000" y="31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">1`1</text>
+				</initmark>
+			</place>
+			<place id="PL_Worker2">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>Worker2</text>
+				<ellipse w="60.000000" h="60.000000"/>
+				<token x="-10.000000" y="0.000000"/>
+				<marking x="0.000000" y="0.000000" hidden="false">
+					<snap snap_id="0" anchor.horizontal="0" anchor.vertical="0"/>
+				</marking>
+				<type id="PL_T_Worker2">
+					<posattr x="-34.500000" y="-31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">TOKEN</text>
+				</type>
+				<initmark id="PL_M_Worker2">
+					<posattr x="-40.000000" y="31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">1`1</text>
+				</initmark>
+			</place>
+			<place id="PL_Worker3">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>Worker3</text>
+				<ellipse w="60.000000" h="60.000000"/>
+				<token x="-10.000000" y="0.000000"/>
+				<marking x="0.000000" y="0.000000" hidden="false">
+					<snap snap_id="0" anchor.horizontal="0" anchor.vertical="0"/>
+				</marking>
+				<type id="PL_T_Worker3">
+					<posattr x="-34.500000" y="-31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">TOKEN</text>
+				</type>
+				<initmark id="PL_M_Worker3">
+					<posattr x="-40.000000" y="31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">1`1</text>
+				</initmark>
+			</place>
+			<place id="PL_Todo">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>Todo</text>
+				<ellipse w="60.000000" h="60.000000"/>
+				<token x="-10.000000" y="0.000000"/>
+				<marking x="0.000000" y="0.000000" hidden="false">
+					<snap snap_id="0" anchor.horizontal="0" anchor.vertical="0"/>
+				</marking>
+				<type id="PL_T_Todo">
+					<posattr x="-34.500000" y="-31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">TOKEN</text>
+				</type>
+				<initmark id="PL_M_Todo">
+					<posattr x="-40.000000" y="31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</initmark>
+			</place>
+			<place id="PL_Finished">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>Finished</text>
+				<ellipse w="60.000000" h="60.000000"/>
+				<token x="-10.000000" y="0.000000"/>
+				<marking x="0.000000" y="0.000000" hidden="false">
+					<snap snap_id="0" anchor.horizontal="0" anchor.vertical="0"/>
+				</marking>
+				<type id="PL_T_Finished">
+					<posattr x="-34.500000" y="-31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">TOKEN</text>
+				</type>
+				<initmark id="PL_M_Finished">
+					<posattr x="-40.000000" y="31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">10`1</text>
+				</initmark>
+			</place>
+			<!-- Places for the configuration -->
+			<place id="PL_CONFIG">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>CONFIG</text>
+				<ellipse w="60.000000" h="60.000000"/>
+				<token x="-10.000000" y="0.000000"/>
+				<marking x="0.000000" y="0.000000" hidden="false">
+					<snap snap_id="0" anchor.horizontal="0" anchor.vertical="0"/>
+				</marking>
+				<type id="PL_T_CONFIG">
+					<posattr x="-34.500000" y="-31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">CONFIGURATION</text>
+				</type>
+				<initmark id="PL_M_CONFIG">
+					<posattr x="-40.000000" y="31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">1`{FEAT_Worker1 = true, FEAT_Worker2 = true, FEAT_Worker3 = true}</text>
+				</initmark>
+			</place>
+			<place id="PL_CURRENT">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>CURRENT</text>
+				<ellipse w="60.000000" h="60.000000"/>
+				<token x="-10.000000" y="0.000000"/>
+				<marking x="0.000000" y="0.000000" hidden="false">
+					<snap snap_id="0" anchor.horizontal="0" anchor.vertical="0"/>
+				</marking>
+				<type id="PL_T_CURRENT">
+					<posattr x="-34.500000" y="-31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">CONFIGURATION</text>
+				</type>
+				<initmark id="PL_M_CURRENT">
+					<posattr x="-40.000000" y="31.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">1`{FEAT_Worker1 = true, FEAT_Worker2 = true, FEAT_Worker3 = true}</text>
+				</initmark>
+			</place>
+			<!-- List of transitions -->
+			<trans id="TR_t0" explicit="false">
+				<posattr x="195.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>t0</text>
+				<box w="96.000000" h="28.000000"/>
+				<binding x="7.200000" y="-3.000000"/>
+				<cond id="TR_C_t0">
+					<posattr x="138.000000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">[((#FEAT_Worker1 c orelse #FEAT_Worker2 c) orelse #FEAT_Worker3 c)]</text>
+				</cond>
+				<time id="TR_T_t0">
+					<posattr x="257.500000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">@+1</text>
+				</time>
+				<code id="TR_S_t0">
+					<posattr x="277.500000" y="-46.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</code>
+				<priority id="TR_P_t0">
+					<posattr x="109.000000" y="-25.000000"/>
+					<fillattr colour="White" pattern="Solid" illed="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</priority>
+			</trans>
+			<trans id="TR_t1" explicit="false">
+				<posattr x="195.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>t1</text>
+				<box w="96.000000" h="28.000000"/>
+				<binding x="7.200000" y="-3.000000"/>
+				<cond id="TR_C_t1">
+					<posattr x="138.000000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">[#FEAT_Worker1 c]</text>
+				</cond>
+				<time id="TR_T_t1">
+					<posattr x="257.500000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">@+7</text>
+				</time>
+				<code id="TR_S_t1">
+					<posattr x="277.500000" y="-46.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</code>
+				<priority id="TR_P_t1">
+					<posattr x="109.000000" y="-25.000000"/>
+					<fillattr colour="White" pattern="Solid" illed="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</priority>
+			</trans>
+			<trans id="TR_t2" explicit="false">
+				<posattr x="195.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>t2</text>
+				<box w="96.000000" h="28.000000"/>
+				<binding x="7.200000" y="-3.000000"/>
+				<cond id="TR_C_t2">
+					<posattr x="138.000000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">[#FEAT_Worker2 c]</text>
+				</cond>
+				<time id="TR_T_t2">
+					<posattr x="257.500000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">@+5</text>
+				</time>
+				<code id="TR_S_t2">
+					<posattr x="277.500000" y="-46.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</code>
+				<priority id="TR_P_t2">
+					<posattr x="109.000000" y="-25.000000"/>
+					<fillattr colour="White" pattern="Solid" illed="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</priority>
+			</trans>
+			<trans id="TR_t3" explicit="false">
+				<posattr x="195.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>t3</text>
+				<box w="96.000000" h="28.000000"/>
+				<binding x="7.200000" y="-3.000000"/>
+				<cond id="TR_C_t3">
+					<posattr x="138.000000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">[#FEAT_Worker3 c]</text>
+				</cond>
+				<time id="TR_T_t3">
+					<posattr x="257.500000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">@+3</text>
+				</time>
+				<code id="TR_S_t3">
+					<posattr x="277.500000" y="-46.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</code>
+				<priority id="TR_P_t3">
+					<posattr x="109.000000" y="-25.000000"/>
+					<fillattr colour="White" pattern="Solid" illed="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</priority>
+			</trans>
+			<!-- Transitions for switching the configuration -->
+			<trans id="TR_switch_Worker1" explicit="false">
+				<posattr x="195.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>switch_Worker1</text>
+				<box w="96.000000" h="28.000000"/>
+				<binding x="7.200000" y="-3.000000"/>
+				<cond id="TR_C_switch_Worker1">
+					<posattr x="138.000000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">[false]</text>
+				</cond>
+				<time id="TR_T_switch_Worker1">
+					<posattr x="257.500000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</time>
+				<code id="TR_S_switch_Worker1">
+					<posattr x="277.500000" y="-46.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</code>
+				<priority id="TR_P_switch_Worker1">
+					<posattr x="109.000000" y="-25.000000"/>
+					<fillattr colour="White" pattern="Solid" illed="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</priority>
+			</trans>
+			<trans id="TR_switch_Worker2" explicit="false">
+				<posattr x="195.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>switch_Worker2</text>
+				<box w="96.000000" h="28.000000"/>
+				<binding x="7.200000" y="-3.000000"/>
+				<cond id="TR_C_switch_Worker2">
+					<posattr x="138.000000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">[false]</text>
+				</cond>
+				<time id="TR_T_switch_Worker2">
+					<posattr x="257.500000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</time>
+				<code id="TR_S_switch_Worker2">
+					<posattr x="277.500000" y="-46.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</code>
+				<priority id="TR_P_switch_Worker2">
+					<posattr x="109.000000" y="-25.000000"/>
+					<fillattr colour="White" pattern="Solid" illed="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</priority>
+			</trans>
+			<trans id="TR_switch_Worker3" explicit="false">
+				<posattr x="195.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>switch_Worker3</text>
+				<box w="96.000000" h="28.000000"/>
+				<binding x="7.200000" y="-3.000000"/>
+				<cond id="TR_C_switch_Worker3">
+					<posattr x="138.000000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">[false]</text>
+				</cond>
+				<time id="TR_T_switch_Worker3">
+					<posattr x="257.500000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</time>
+				<code id="TR_S_switch_Worker3">
+					<posattr x="277.500000" y="-46.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</code>
+				<priority id="TR_P_switch_Worker3">
+					<posattr x="109.000000" y="-25.000000"/>
+					<fillattr colour="White" pattern="Solid" illed="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</priority>
+			</trans>
+			<!-- Transition for validing the configuration -->
+			<trans id="TR_isValid" explicit="false">
+				<posattr x="195.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<text>isValid</text>
+				<box w="96.000000" h="28.000000"/>
+				<binding x="7.200000" y="-3.000000"/>
+				<cond id="TR_C_isValid">
+					<posattr x="138.000000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">[isValid(true,#FEAT_Worker1 c,#FEAT_Worker2 c,#FEAT_Worker3 c) andalso false]</text>
+				</cond>
+				<time id="TR_T_isValid">
+					<posattr x="257.500000" y="25.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</time>
+				<code id="TR_S_isValid">
+					<posattr x="277.500000" y="-46.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</code>
+				<priority id="TR_P_isValid">
+					<posattr x="109.000000" y="-25.000000"/>
+					<fillattr colour="White" pattern="Solid" illed="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1"/>
+				</priority>
+			</trans>
+			<!-- List of arcs -->
+			<arc id="ARC_a4" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t1"/>
+				<placeend idref="PL_Todo"/>
+				<annot id="ANN_a4">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker1 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a3" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t0"/>
+				<placeend idref="PL_Todo"/>
+				<annot id="ANN_a3">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (((#FEAT_Worker1 c orelse #FEAT_Worker2 c) orelse #FEAT_Worker3 c)) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a5" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t1"/>
+				<placeend idref="PL_Finished"/>
+				<annot id="ANN_a5">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker1 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a0" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t1"/>
+				<placeend idref="PL_Worker1"/>
+				<annot id="ANN_a0">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker1 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a14" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t1"/>
+				<placeend idref="PL_Worker1"/>
+				<annot id="ANN_a14">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker1 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a12" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t3"/>
+				<placeend idref="PL_Worker3"/>
+				<annot id="ANN_a12">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker3 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a9" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t2"/>
+				<placeend idref="PL_Worker2"/>
+				<annot id="ANN_a9">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker2 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a8" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t2"/>
+				<placeend idref="PL_Worker2"/>
+				<annot id="ANN_a8">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker2 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a13" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t3"/>
+				<placeend idref="PL_Worker3"/>
+				<annot id="ANN_a13">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker3 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a30" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t0"/>
+				<placeend idref="PL_Finished"/>
+				<annot id="ANN_a30">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (((#FEAT_Worker1 c orelse #FEAT_Worker2 c) orelse #FEAT_Worker3 c)) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a21" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t2"/>
+				<placeend idref="PL_Todo"/>
+				<annot id="ANN_a21">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker2 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a22" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t2"/>
+				<placeend idref="PL_Finished"/>
+				<annot id="ANN_a22">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker2 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a23" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t3"/>
+				<placeend idref="PL_Todo"/>
+				<annot id="ANN_a23">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker3 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<arc id="ARC_a24" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t3"/>
+				<placeend idref="PL_Finished"/>
+				<annot id="ANN_a24">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker3 c) then 1`1 else 0`1</text>
+				</annot>
+			</arc>
+			<!-- Arcs for connecting switches -->
+			<arc id="ARC_PTARC_SWITCH_Worker1" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_switch_Worker1"/>
+				<placeend idref="PL_CONFIG"/>
+				<annot id="ANN_PTARC_SWITCH_Worker1">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+				</annot>
+			</arc>
+			<arc id="ARC_TPARC_SWITCH_Worker1" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_switch_Worker1"/>
+				<placeend idref="PL_CONFIG"/>
+				<annot id="ANN_TPARC_SWITCH_Worker1">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = not VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+				</annot>
+			</arc>
+			<arc id="ARC_PTARC_SWITCH_Worker2" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_switch_Worker2"/>
+				<placeend idref="PL_CONFIG"/>
+				<annot id="ANN_PTARC_SWITCH_Worker2">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+				</annot>
+			</arc>
+			<arc id="ARC_TPARC_SWITCH_Worker2" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_switch_Worker2"/>
+				<placeend idref="PL_CONFIG"/>
+				<annot id="ANN_TPARC_SWITCH_Worker2">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = not VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+				</annot>
+			</arc>
+			<arc id="ARC_PTARC_SWITCH_Worker3" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_switch_Worker3"/>
+				<placeend idref="PL_CONFIG"/>
+				<annot id="ANN_PTARC_SWITCH_Worker3">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+				</annot>
+			</arc>
+			<arc id="ARC_TPARC_SWITCH_Worker3" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_switch_Worker3"/>
+				<placeend idref="PL_CONFIG"/>
+				<annot id="ANN_TPARC_SWITCH_Worker3">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = not VAR_Worker3}</text>
+				</annot>
+			</arc>
+			<!-- Arc for validing configuration -->
+			<arc id="ARC_ARC_VALID" orientation="BOTHDIR" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_isValid"/>
+				<placeend idref="PL_CONFIG"/>
+				<annot id="ANN_ARC_VALID">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">c</text>
+				</annot>
+			</arc>
+			<arc id="ARC_ARC_CURRENT" orientation="TtoP" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_isValid"/>
+				<placeend idref="PL_CURRENT"/>
+				<annot id="ANN_ARC_CURRENT">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">c</text>
+				</annot>
+			</arc>
+			<arc id="ARC_ARC_CURRENT_D" orientation="PtoT" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_isValid"/>
+				<placeend idref="PL_CURRENT"/>
+				<annot id="ANN_ARC_CURRENT_D">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">d</text>
+				</annot>
+			</arc>
+			<!-- Arc for passing to current configuration -->
+			<arc id="ARC_ARC_t0" orientation="BOTHDIR" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t0"/>
+				<placeend idref="PL_CURRENT"/>
+				<annot id="ANN_ARC_t0">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">c</text>
+				</annot>
+			</arc>
+			<arc id="ARC_ARC_t1" orientation="BOTHDIR" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t1"/>
+				<placeend idref="PL_CURRENT"/>
+				<annot id="ANN_ARC_t1">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">c</text>
+				</annot>
+			</arc>
+			<arc id="ARC_ARC_t2" orientation="BOTHDIR" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t2"/>
+				<placeend idref="PL_CURRENT"/>
+				<annot id="ANN_ARC_t2">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">c</text>
+				</annot>
+			</arc>
+			<arc id="ARC_ARC_t3" orientation="BOTHDIR" order="1">
+				<posattr x="0.000000" y="0.000000"/>
+				<fillattr colour="White" pattern="" filled="false"/>
+				<lineattr colour="Black" thick="1" type="Solid"/>
+				<textattr colour="Black" bold="false"/>
+				<arrowattr headsize="1.200000" currentcyckle="2"/>
+				<transend idref="TR_t3"/>
+				<placeend idref="PL_CURRENT"/>
+				<annot id="ANN_ARC_t3">
+					<posattr x="89.000000" y="11.000000"/>
+					<fillattr colour="White" pattern="Solid" filled="false"/>
+					<lineattr colour="Black" thick="0" type="Solid"/>
+					<textattr colour="Black" bold="false"/>
+					<text tool="CPN Tools" version="4.0.1">c</text>
+				</annot>
+			</arc>
+			<constraints/>
+		</page>
+		<instances>
+			<instance id="ID2149" page="ID6"/>
+		</instances>
+		<options>
+			<option name="realtimestamp">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="fair_be">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="global_fairness">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="extensions.10005.enable">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="extensions.10001.enable">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="extensions.10003.enable">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="extensions.10005.enable">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="extensions.10002.enable">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="extensions.10006.enable">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="repavg">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="repciavg">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="repcount">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="repfirstval">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="replastval">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="repmax">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="repmin">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="repssquare">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="repssqdev">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="repstddev">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="repsum">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="repvariance">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="avg">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="ciavg">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="count">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="firstval">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="lastval">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="max">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="min">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="ssquare">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="ssqdev">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="stddev">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="sum">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="variance">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="firstupdate">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="interval">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="lastupdate">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="untimedavg">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="untimedciavg">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="untimedcount">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="untimedfirstval">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="untimedlastval">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="untimedmax">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="untimedmin">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="untimedssquare">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="untimedssqdev">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="untimedstddev">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="untimedsum">
+				<value>
+					<boolean>true</boolean>
+				</value>
+			</option>
+			<option name="untimedvariance">
+				<value>
+					<boolean>false</boolean>
+				</value>
+			</option>
+			<option name="outputdirectory">
+				<value>
+					<text>"&lt;same as model&gt;"</text>
+				</value>
+			</option>
+		</options>
+		<binders>
+			<cpnbinder id="ID2222" x="428"
+               y="274"
+               width="600"
+               height="400">
+				<sheets>
+					<cpnsheet id="ID2215" panx="-6.000000" pany="-5.000000" zoom="1.000000" instance="ID2149">
+						<zorder>
+							<position value="0"/>
+						</zorder>
+					</cpnsheet>
+				</sheets>
+				<zorder>
+					<position value="0"/>
+				</zorder>
+			</cpnbinder>
+		</binders>
+		<monitorblock name="Monitors"/>
+		<IndexNode expanded="false">
+		</IndexNode>
+	</cpnet>
+</workspaceElements>

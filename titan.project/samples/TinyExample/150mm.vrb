@@ -1,0 +1,7 @@
+pn "150mm.petrinets" 
+fm "model.xml"
+
+PC for Worker2, a8, a9, t2 , a21 , a22 = Worker2;
+PC for Worker3, a12, a13 , t3, a23 , a24 = Worker3;
+PC for Worker1 , a14 , a0 , t1 , a4 , a5 = Worker1 ;
+PC for t0 , a3 , a30 , Todo , Finished = ( (Worker1 or Worker2) or Worker3) ;

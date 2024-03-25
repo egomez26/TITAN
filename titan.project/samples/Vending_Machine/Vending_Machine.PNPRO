@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Vending_Machine" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false">
+    <nodes>
+      <place marking="1" name="p_start" x="3.0" y="8.0"/>
+      <transition name="t_solid" type="IMM" x="11.85" y="8.0"/>
+      <place name="p_solid" x="14.0" y="8.0"/>
+      <transition name="t_solid_end" type="IMM" x="31.85" y="8.0"/>
+      <place name="p_end" x="45.0" y="8.0"/>
+      <transition name="t_end" type="IMM" x="23.85" y="4.0"/>
+      <transition name="t_beverage" type="IMM" x="3.85" y="17.0"/>
+      <place name="p_beverage" x="7.0" y="17.0"/>
+      <transition name="t_coffee" type="IMM" x="11.85" y="17.0"/>
+      <transition name="t_tea" type="IMM" x="11.85" y="23.0"/>
+      <transition name="t_coffee_end" type="IMM" x="17.85" y="17.0"/>
+      <transition name="t_tea_end" type="IMM" x="17.85" y="23.0"/>
+      <place name="p_coffee" x="14.0" y="17.0"/>
+      <place name="p_tea" x="14.0" y="23.0"/>
+      <place name="p_beverage_end" x="41.0" y="17.0"/>
+      <transition name="t_beverage_end" type="IMM" x="45.849999999999994" y="17.0"/>
+      <place name="p_cup" x="31.0" y="17.0"/>
+      <transition name="t_sugar_no" type="IMM" x="36.849999999999994" y="17.0"/>
+      <transition name="t_sugar" type="IMM" x="31.85" y="23.0"/>
+      <place name="p_sugar" x="36.0" y="23.0"/>
+      <transition name="t_sugar_end" type="IMM" x="41.85" y="23.0"/>
+      <transition name="t_milk_no" type="IMM" x="26.85" y="17.0"/>
+      <place name="p_coffee_end" x="22.0" y="17.0"/>
+      <place name="p_milk" x="27.0" y="12.0"/>
+      <transition name="t_milk" type="IMM" x="22.85" y="12.0"/>
+      <transition name="t_milk_end" type="IMM" x="31.85" y="12.0"/>
+    </nodes>
+    <edges>
+      <arc head="t_solid" kind="INPUT" tail="p_start"/>
+      <arc head="p_solid" kind="OUTPUT" tail="t_solid"/>
+      <arc head="p_end" kind="OUTPUT" tail="t_solid_end"/>
+      <arc head="t_solid_end" kind="INPUT" tail="p_solid">
+        <point x="28.5" y="9.0"/>
+      </arc>
+      <arc head="t_beverage" kind="INPUT" tail="p_start"/>
+      <arc head="p_beverage" kind="OUTPUT" tail="t_beverage"/>
+      <arc head="t_coffee" kind="INPUT" tail="p_beverage"/>
+      <arc head="p_coffee" kind="OUTPUT" tail="t_coffee"/>
+      <arc head="p_tea" kind="OUTPUT" tail="t_tea"/>
+      <arc head="t_coffee_end" kind="INPUT" tail="p_coffee"/>
+      <arc head="t_tea_end" kind="INPUT" tail="p_tea"/>
+      <arc head="t_beverage_end" kind="INPUT" tail="p_beverage_end"/>
+      <arc head="p_end" kind="OUTPUT" tail="t_beverage_end"/>
+      <arc head="t_end" kind="INPUT" tail="p_end">
+        <point x="46.0" y="5.0"/>
+      </arc>
+      <arc head="p_start" kind="OUTPUT" tail="t_end">
+        <point x="4.0" y="5.0"/>
+      </arc>
+      <arc head="t_sugar_no" kind="INPUT" tail="p_cup"/>
+      <arc head="p_beverage_end" kind="OUTPUT" tail="t_sugar_no"/>
+      <arc head="t_sugar" kind="INPUT" tail="p_cup"/>
+      <arc head="p_sugar" kind="OUTPUT" tail="t_sugar"/>
+      <arc head="t_sugar_end" kind="INPUT" tail="p_sugar"/>
+      <arc head="p_beverage_end" kind="OUTPUT" tail="t_sugar_end"/>
+      <arc head="p_coffee_end" kind="OUTPUT" tail="t_coffee_end"/>
+      <arc head="t_milk_no" kind="INPUT" tail="p_coffee_end"/>
+      <arc head="p_cup" kind="OUTPUT" tail="t_milk_no"/>
+      <arc head="t_milk" kind="INPUT" tail="p_coffee_end"/>
+      <arc head="p_milk" kind="OUTPUT" tail="t_milk"/>
+      <arc head="t_milk_end" kind="INPUT" tail="p_milk"/>
+      <arc head="p_cup" kind="OUTPUT" tail="t_milk_end"/>
+      <arc head="t_tea" kind="INPUT" tail="p_beverage">
+        <point x="8.0" y="24.0"/>
+      </arc>
+      <arc head="p_cup" kind="OUTPUT" tail="t_tea_end">
+        <point x="28.5" y="24.0"/>
+      </arc>
+    </edges>
+  </gspn>
+</project>

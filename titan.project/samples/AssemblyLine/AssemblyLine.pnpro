@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="output" version="121">
+  <gspn name="output" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place name="ctrl" x="36.0" y="11.0"/>
+      <place name="cnvB" x="7.0" y="7.0"/>
+      <place name="prod1" x="47.0" y="7.0"/>
+      <place name="cnv1" x="26.0" y="7.0"/>
+      <place name="prod2" x="47.0" y="15.0"/>
+      <place name="cnvA" x="7.0" y="15.0"/>
+      <place name="cnv2" x="26.0" y="15.0"/>
+      <place name="assmbly" x="58.0" y="11.0"/>
+      <place name="in" x="16.0" y="11.0"/>
+      <transition name="inc2" type="IMM" weight="1" x="30.85" y="15.0"/>
+      <transition name="prod" type="IMM" weight="1" x="42.85" y="11.0"/>
+      <transition name="genB" type="IMM" weight="1" x="2.85" y="7.0"/>
+      <transition name="out2" type="IMM" weight="1" x="20.85" y="15.0"/>
+      <transition name="pack" type="IMM" weight="1" x="52.85" y="11.0"/>
+      <transition name="fix" type="IMM" weight="1" x="36.85" y="20.0"/>
+      <transition name="genA" type="IMM" weight="1" x="2.85" y="15.0"/>
+      <transition name="out1" type="IMM" weight="1" x="20.85" y="7.0"/>
+      <transition name="inc1" type="IMM" weight="1" x="30.85" y="7.0"/>
+      <transition name="proc" type="IMM" weight="1" x="12.85" y="11.0"/>
+    </nodes>
+    <edges>
+      <arc head="cnvB" kind="OUTPUT" tail="genB"/>
+      <arc head="prod" kind="INPUT" tail="ctrl"/>
+      <arc head="pack" kind="INPUT" tail="prod1"/>
+      <arc head="cnv2" kind="OUTPUT" tail="out2"/>
+      <arc head="fix" kind="INPUT" tail="ctrl"/>
+      <arc head="prod1" kind="OUTPUT" tail="prod"/>
+      <arc head="proc" kind="INPUT" tail="cnvA"/>
+      <arc head="inc1" kind="INPUT" tail="cnv1"/>
+      <arc head="ctrl" kind="OUTPUT" tail="inc2"/>
+      <arc head="ctrl" kind="OUTPUT" tail="inc1"/>
+      <arc head="cnvA" kind="OUTPUT" tail="genA"/>
+      <arc head="inc2" kind="INPUT" tail="cnv2"/>
+      <arc head="out1" kind="INPUT" tail="in"/>
+      <arc head="out2" kind="INPUT" tail="in"/>
+      <arc head="assmbly" kind="OUTPUT" tail="pack"/>
+      <arc head="proc" kind="INPUT" tail="cnvB"/>
+      <arc head="prod2" kind="OUTPUT" tail="prod"/>
+      <arc head="pack" kind="INPUT" tail="prod2"/>
+      <arc head="in" kind="OUTPUT" tail="proc"/>
+      <arc head="cnv1" kind="OUTPUT" tail="out1"/>
+      <arc head="in" kind="OUTPUT" tail="fix">
+        <point x="17.0" y="21.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="GSPN" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

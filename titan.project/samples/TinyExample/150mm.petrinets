@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="http://www.petrinets.org/">
+  <places xsi:type="ex:TimedPlace" name="Worker1" marking="3" outputs="//@arcs.3" inputs="//@arcs.4"/>
+  <places xsi:type="ex:TimedPlace" name="Worker2" marking="4" outputs="//@arcs.7" inputs="//@arcs.6"/>
+  <places xsi:type="ex:TimedPlace" name="Worker3" marking="5" outputs="//@arcs.8" inputs="//@arcs.5"/>
+  <places xsi:type="ex:TimedPlace" name="Todo" outputs="//@arcs.0 //@arcs.10 //@arcs.12" inputs="//@arcs.1"/>
+  <places xsi:type="ex:TimedPlace" name="Finished" marking="10" outputs="//@arcs.9" inputs="//@arcs.2 //@arcs.11 //@arcs.13"/>
+  <trans name="t0" inputs="//@arcs.9" outputs="//@arcs.1" delay="50"/>
+  <trans name="t1" inputs="//@arcs.0 //@arcs.3" outputs="//@arcs.2 //@arcs.4" delay="7"/>
+  <trans name="t2" inputs="//@arcs.7 //@arcs.10" outputs="//@arcs.6 //@arcs.11" delay="5"/>
+  <trans name="t3" inputs="//@arcs.8 //@arcs.12" outputs="//@arcs.5 //@arcs.13" delay="3"/>
+  <arcs xsi:type="ex:PTArc" name="a4" input="//@places.3" output="//@trans.1"/>
+  <arcs xsi:type="ex:TPArc" name="a3" input="//@trans.0" output="//@places.3"/>
+  <arcs xsi:type="ex:TPArc" name="a5" input="//@trans.1" output="//@places.4"/>
+  <arcs xsi:type="ex:PTArc" name="a0" input="//@places.0" output="//@trans.1"/>
+  <arcs xsi:type="ex:TPArc" name="a14" input="//@trans.1" output="//@places.0"/>
+  <arcs xsi:type="ex:TPArc" name="a12" input="//@trans.3" output="//@places.2"/>
+  <arcs xsi:type="ex:TPArc" name="a9" input="//@trans.2" output="//@places.1"/>
+  <arcs xsi:type="ex:PTArc" name="a8" input="//@places.1" output="//@trans.2"/>
+  <arcs xsi:type="ex:PTArc" name="a13" input="//@places.2" output="//@trans.3"/>
+  <arcs xsi:type="ex:PTArc" name="a30" input="//@places.4" output="//@trans.0"/>
+  <arcs xsi:type="ex:PTArc" name="a21" input="//@places.3" output="//@trans.2"/>
+  <arcs xsi:type="ex:TPArc" name="a22" input="//@trans.2" output="//@places.4"/>
+  <arcs xsi:type="ex:PTArc" name="a23" input="//@places.3" output="//@trans.3"/>
+  <arcs xsi:type="ex:TPArc" name="a24" input="//@trans.3" output="//@places.4"/>
+</ex:PetriNet>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and mandatory="true" name="Phils">
+			<graphics key="collapsed" value="false"/>
+			<feature name="TwoP">
+				<graphics key="collapsed" value="false"/>
+			</feature>
+			<feature name="ThreeP">
+				<graphics key="collapsed" value="false"/>
+			</feature>
+			<feature name="FourP"/>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<conj>
+				<imp>
+					<var>ThreeP</var>
+					<var>TwoP</var>
+				</imp>
+				<imp>
+					<var>FourP</var>
+					<var>ThreeP</var>
+				</imp>
+			</conj>
+		</rule>
+	</constraints>
+</featureModel>
+

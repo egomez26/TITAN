@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and mandatory="true" name="VendingMachine">
+			<graphics key="collapsed" value="false"/>
+			<or mandatory="true" name="Container">
+				<graphics key="collapsed" value="false"/>
+				<or name="Beverage">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Tea"/>
+					<feature name="Coffee"/>
+				</or>
+				<feature name="Solid"/>
+			</or>
+			<or name="Supplement">
+				<feature name="Sugar"/>
+				<feature name="Milk"/>
+			</or>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Sugar</var>
+				<var>Beverage</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Milk</var>
+				<var>Coffee</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

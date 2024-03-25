@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="output" version="121">
+  <gspn name="output" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place name="t3" x="17.0" y="24.0"/>
+      <place name="t4" x="17.0" y="34.0"/>
+      <place name="f1" x="35.0" y="5.0"/>
+      <place name="f3" x="35.0" y="24.0"/>
+      <place name="e4" x="17.0" y="39.0"/>
+      <place name="e1" x="17.0" y="12.0"/>
+      <place name="t2" x="17.0" y="16.0"/>
+      <place name="e3" x="17.0" y="29.0"/>
+      <place name="e2" x="17.0" y="20.0"/>
+      <place name="f4" x="35.0" y="33.0"/>
+      <place name="t1" x="17.0" y="5.0"/>
+      <place name="f2" x="35.0" y="14.0"/>
+      <transition name="release1" type="IMM" weight="1" x="26.85" y="9.0"/>
+      <transition name="get4" type="IMM" weight="1" x="10.85" y="37.0"/>
+      <transition name="release2" type="IMM" weight="1" x="26.85" y="17.0"/>
+      <transition name="get3" type="IMM" weight="1" x="10.85" y="27.0"/>
+      <transition name="get2" type="IMM" weight="1" x="10.85" y="17.0"/>
+      <transition name="release3" type="IMM" weight="1" x="26.85" y="27.0"/>
+      <transition name="release4" type="IMM" weight="1" x="25.85" y="37.0"/>
+      <transition name="get1" type="IMM" weight="1" x="10.85" y="9.0"/>
+    </nodes>
+    <edges>
+      <arc head="e4" kind="OUTPUT" tail="get4"/>
+      <arc head="f1" kind="OUTPUT" tail="release1"/>
+      <arc head="f3" kind="OUTPUT" tail="release3"/>
+      <arc head="get3" kind="INPUT" tail="t3"/>
+      <arc head="release4" kind="INPUT" tail="e4"/>
+      <arc head="get3" kind="INPUT" tail="f4"/>
+      <arc head="t2" kind="OUTPUT" tail="release2"/>
+      <arc head="f2" kind="OUTPUT" tail="release1"/>
+      <arc head="release3" kind="INPUT" tail="e3"/>
+      <arc head="f4" kind="OUTPUT" tail="release3"/>
+      <arc head="get2" kind="INPUT" tail="f3"/>
+      <arc head="t3" kind="OUTPUT" tail="release3"/>
+      <arc head="get1" kind="INPUT" tail="f2"/>
+      <arc head="get2" kind="INPUT" tail="f1"/>
+      <arc head="f4" kind="OUTPUT" tail="release4"/>
+      <arc head="get2" kind="INPUT" tail="f2"/>
+      <arc head="f2" kind="OUTPUT" tail="release2"/>
+      <arc head="get2" kind="INPUT" tail="t2"/>
+      <arc head="e2" kind="OUTPUT" tail="get2"/>
+      <arc head="e3" kind="OUTPUT" tail="get3"/>
+      <arc head="get1" kind="INPUT" tail="f1"/>
+      <arc head="get1" kind="INPUT" tail="t1"/>
+      <arc head="get3" kind="INPUT" tail="f3"/>
+      <arc head="t1" kind="OUTPUT" tail="release1"/>
+      <arc head="release1" kind="INPUT" tail="e1"/>
+      <arc head="t4" kind="OUTPUT" tail="release4"/>
+      <arc head="f1" kind="OUTPUT" tail="release4"/>
+      <arc head="f3" kind="OUTPUT" tail="release2"/>
+      <arc head="get4" kind="INPUT" tail="t4"/>
+      <arc head="e1" kind="OUTPUT" tail="get1"/>
+      <arc head="get3" kind="INPUT" tail="f1"/>
+      <arc head="get4" kind="INPUT" tail="f1"/>
+      <arc head="f1" kind="OUTPUT" tail="release2"/>
+      <arc head="release2" kind="INPUT" tail="e2"/>
+      <arc head="get4" kind="INPUT" tail="f4"/>
+      <arc head="f1" kind="OUTPUT" tail="release3"/>
+    </edges>
+  </gspn>
+  <measures gspn-name="GSPN" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

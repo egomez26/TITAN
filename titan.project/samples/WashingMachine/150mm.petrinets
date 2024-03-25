@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="http://www.petrinets.org/">
+  <places name="p_idle" outputs="//@arcs.0" inputs="//@arcs.17"/>
+  <places name="p_locking" outputs="//@arcs.2 //@arcs.18" inputs="//@arcs.1"/>
+  <places name="p_heaterOn" inputs="//@arcs.3"/>
+  <places name="p_waiting" outputs="//@arcs.5" inputs="//@arcs.4"/>
+  <places name="p_heaterOff" inputs="//@arcs.6"/>
+  <places name="p_washing" outputs="//@arcs.8 //@arcs.11" inputs="//@arcs.7 //@arcs.19"/>
+  <places name="p_quickCool" inputs="//@arcs.9"/>
+  <places name="p_unlocking" outputs="//@arcs.16" inputs="//@arcs.10 //@arcs.15"/>
+  <places name="p_drying" outputs="//@arcs.13" inputs="//@arcs.12"/>
+  <places name="p_quickCoolDry" inputs="//@arcs.14"/>
+  <places name="p_heatEnabled" outputs="//@arcs.20"/>
+  <places name="p_delayEnabled" outputs="//@arcs.21"/>
+  <places name="p_setDelay" inputs="//@arcs.22"/>
+  <trans name="t_start" inputs="//@arcs.0" outputs="//@arcs.1"/>
+  <trans name="t_cycle" inputs="//@arcs.2 //@arcs.20 //@arcs.21" outputs="//@arcs.3 //@arcs.4"/>
+  <trans name="t_waiting" inputs="//@arcs.5" outputs="//@arcs.6 //@arcs.7"/>
+  <trans name="t_quickCool" inputs="//@arcs.8" outputs="//@arcs.9 //@arcs.10"/>
+  <trans name="t_dry" inputs="//@arcs.11" outputs="//@arcs.12"/>
+  <trans name="t_finishDrying" inputs="//@arcs.13" outputs="//@arcs.14 //@arcs.15"/>
+  <trans name="t_finishing" inputs="//@arcs.16" outputs="//@arcs.17"/>
+  <trans name="t_delay" inputs="//@arcs.18" outputs="//@arcs.19 //@arcs.22"/>
+  <arcs xsi:type="ex:PTArc" name="a1" input="//@places.0" output="//@trans.0"/>
+  <arcs xsi:type="ex:TPArc" name="a2" input="//@trans.0" output="//@places.1"/>
+  <arcs xsi:type="ex:PTArc" name="a3" input="//@places.1" output="//@trans.1"/>
+  <arcs xsi:type="ex:TPArc" name="a4" input="//@trans.1" output="//@places.2"/>
+  <arcs xsi:type="ex:TPArc" name="a5" input="//@trans.1" output="//@places.3"/>
+  <arcs xsi:type="ex:PTArc" name="a6" input="//@places.3" output="//@trans.2"/>
+  <arcs xsi:type="ex:TPArc" name="a7" input="//@trans.2" output="//@places.4"/>
+  <arcs xsi:type="ex:TPArc" name="a8" input="//@trans.2" output="//@places.5"/>
+  <arcs xsi:type="ex:PTArc" name="a9" input="//@places.5" output="//@trans.3"/>
+  <arcs xsi:type="ex:TPArc" name="a10" input="//@trans.3" output="//@places.6"/>
+  <arcs xsi:type="ex:TPArc" name="a11" input="//@trans.3" output="//@places.7"/>
+  <arcs xsi:type="ex:PTArc" name="a12" input="//@places.5" output="//@trans.4"/>
+  <arcs xsi:type="ex:TPArc" name="a13" input="//@trans.4" output="//@places.8"/>
+  <arcs xsi:type="ex:PTArc" name="a14" input="//@places.8" output="//@trans.5"/>
+  <arcs xsi:type="ex:TPArc" name="a15" input="//@trans.5" output="//@places.9"/>
+  <arcs xsi:type="ex:TPArc" name="a16" input="//@trans.5" output="//@places.7"/>
+  <arcs xsi:type="ex:PTArc" name="a17" input="//@places.7" output="//@trans.6"/>
+  <arcs xsi:type="ex:TPArc" name="a18" input="//@trans.6" output="//@places.0"/>
+  <arcs xsi:type="ex:PTArc" name="a19" input="//@places.1" output="//@trans.7"/>
+  <arcs xsi:type="ex:TPArc" name="a20" input="//@trans.7" output="//@places.5"/>
+  <arcs xsi:type="ex:PTArc" name="a21" input="//@places.10" output="//@trans.1"/>
+  <arcs xsi:type="ex:PTArc" name="a22" input="//@places.11" output="//@trans.1"/>
+  <arcs xsi:type="ex:TPArc" name="a23" input="//@trans.7" output="//@places.12"/>
+</ex:PetriNet>

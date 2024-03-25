@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="output" version="121">
+  <gspn name="output" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place name="p_coffee" x="37.0" y="12.0"/>
+      <place name="p_soup" x="26.0" y="30.0"/>
+      <place name="p_beverage" x="26.0" y="16.0"/>
+      <place name="p_water" x="26.0" y="2.0"/>
+      <place name="p_hotChocolate" x="37.0" y="16.0"/>
+      <place name="p_vegetable" x="37.0" y="28.0"/>
+      <place name="p_soup_end" x="49.0" y="30.0"/>
+      <place name="p_beverage_end" x="49.0" y="14.0"/>
+      <place name="p_milk" x="37.0" y="20.0"/>
+      <place name="p_chicken" x="37.0" y="32.0"/>
+      <place name="p_tomato" x="37.0" y="36.0"/>
+      <place name="p_mushroom" x="37.0" y="24.0"/>
+      <place name="p_end" x="60.0" y="22.0"/>
+      <place name="p_tea" x="37.0" y="8.0"/>
+      <place marking="1" name="p_start" x="12.0" y="22.0"/>
+      <transition name="t_chicken_end" type="IMM" weight="1" x="43.85" y="32.0"/>
+      <transition name="t_soup_end" type="IMM" weight="1" x="53.85" y="30.0"/>
+      <transition name="t_tea" type="IMM" weight="1" x="26.85" y="8.0"/>
+      <transition name="t_mushroom_end" type="IMM" weight="1" x="43.85" y="24.0"/>
+      <transition name="t_tomato" type="IMM" weight="1" x="32.85" y="36.0"/>
+      <transition name="t_chicken" type="IMM" weight="1" x="32.85" y="32.0"/>
+      <transition name="t_vegetable_end" type="IMM" weight="1" x="43.85" y="28.0"/>
+      <transition name="t_end" rotation="4.71238898038469" type="IMM" weight="1" x="60.85" y="39.0"/>
+      <transition name="t_tomato_end" type="IMM" weight="1" x="43.85" y="36.0"/>
+      <transition name="t_coffee" type="IMM" weight="1" x="32.85" y="12.0"/>
+      <transition name="t_chocolate_end" type="IMM" weight="1" x="43.85" y="16.0"/>
+      <transition name="t_beverage_end" type="IMM" weight="1" x="53.85" y="14.0"/>
+      <transition name="t_vegetable" type="IMM" weight="1" x="32.85" y="28.0"/>
+      <transition name="t_milk_end" type="IMM" weight="1" x="43.85" y="20.0"/>
+      <transition name="t_milk" type="IMM" weight="1" x="32.85" y="20.0"/>
+      <transition name="t_mushroom" type="IMM" weight="1" x="32.85" y="24.0"/>
+      <transition name="t_beverage" type="IMM" weight="1" x="16.85" y="16.0"/>
+      <transition name="t_soup" type="IMM" weight="1" x="16.85" y="30.0"/>
+      <transition name="t_chocolate" type="IMM" weight="1" x="32.85" y="16.0"/>
+      <transition name="t_water_end" type="IMM" weight="1" x="32.85" y="2.0"/>
+      <transition name="t_coffee_end" type="IMM" weight="1" x="43.85" y="12.0"/>
+      <transition name="t_tea_end" type="IMM" weight="1" x="43.85" y="8.0"/>
+      <transition name="t_water" type="IMM" weight="1" x="21.85" y="2.0"/>
+      <place name="p_water_end" x="42.0" y="2.0"/>
+      <transition name="t_water_last_end" type="IMM" x="49.85" y="2.0"/>
+      <place label-x="-1.0" name="p_tea_waiting" x="29.0" y="8.0"/>
+      <transition name="t_tea_waiting_end" priority="2" type="IMM" x="32.85" y="8.0"/>
+      <place label-x="-0.5" label-y="2.0" name="p_soup_waiting" x="19.0" y="30.0"/>
+      <transition name="t_soup_waiting_end" priority="2" type="IMM" x="22.85" y="30.0"/>
+    </nodes>
+    <edges>
+      <arc head="t_coffee_end" kind="INPUT" tail="p_coffee"/>
+      <arc head="t_mushroom" kind="INPUT" tail="p_soup"/>
+      <arc head="t_tea_end" kind="INPUT" tail="p_tea"/>
+      <arc head="t_milk" kind="INPUT" tail="p_beverage"/>
+      <arc head="t_tomato_end" kind="INPUT" tail="p_tomato"/>
+      <arc head="t_chicken" kind="INPUT" tail="p_soup"/>
+      <arc head="t_tea" kind="INPUT" tail="p_beverage"/>
+      <arc head="t_beverage_end" kind="INPUT" tail="p_beverage_end"/>
+      <arc head="t_vegetable" kind="INPUT" tail="p_soup"/>
+      <arc head="p_chicken" kind="OUTPUT" tail="t_chicken"/>
+      <arc head="t_tomato" kind="INPUT" tail="p_soup"/>
+      <arc head="p_tomato" kind="OUTPUT" tail="t_tomato"/>
+      <arc head="t_chocolate_end" kind="INPUT" tail="p_hotChocolate"/>
+      <arc head="t_mushroom_end" kind="INPUT" tail="p_mushroom"/>
+      <arc head="t_water_end" kind="INPUT" tail="p_water"/>
+      <arc head="t_chicken_end" kind="INPUT" tail="p_chicken"/>
+      <arc head="p_hotChocolate" kind="OUTPUT" tail="t_chocolate"/>
+      <arc head="p_end" kind="OUTPUT" tail="t_soup_end"/>
+      <arc head="t_vegetable_end" kind="INPUT" tail="p_vegetable"/>
+      <arc head="p_water" kind="OUTPUT" tail="t_water"/>
+      <arc head="p_vegetable" kind="OUTPUT" tail="t_vegetable"/>
+      <arc head="p_beverage_end" kind="OUTPUT" tail="t_coffee_end"/>
+      <arc head="p_soup_waiting" kind="OUTPUT" tail="t_soup"/>
+      <arc head="t_chocolate" kind="INPUT" tail="p_beverage"/>
+      <arc head="t_coffee" kind="INPUT" tail="p_beverage"/>
+      <arc head="p_mushroom" kind="OUTPUT" tail="t_mushroom"/>
+      <arc head="p_water" kind="OUTPUT" tail="t_tea"/>
+      <arc head="p_soup_end" kind="OUTPUT" tail="t_chicken_end"/>
+      <arc head="t_milk_end" kind="INPUT" tail="p_milk"/>
+      <arc head="t_end" kind="INPUT" tail="p_end"/>
+      <arc head="p_milk" kind="OUTPUT" tail="t_milk"/>
+      <arc head="p_end" kind="OUTPUT" tail="t_beverage_end"/>
+      <arc head="t_soup_end" kind="INPUT" tail="p_soup_end"/>
+      <arc head="p_soup_end" kind="OUTPUT" tail="t_vegetable_end"/>
+      <arc head="p_beverage" kind="OUTPUT" tail="t_beverage"/>
+      <arc head="p_soup_end" kind="OUTPUT" tail="t_mushroom_end"/>
+      <arc head="p_coffee" kind="OUTPUT" tail="t_coffee"/>
+      <arc head="p_beverage_end" kind="OUTPUT" tail="t_chocolate_end"/>
+      <arc head="p_beverage_end" kind="OUTPUT" tail="t_milk_end"/>
+      <arc head="p_soup_end" kind="OUTPUT" tail="t_tomato_end"/>
+      <arc head="p_start" kind="OUTPUT" tail="t_end">
+        <point x="13.0" y="40.0"/>
+      </arc>
+      <arc head="t_beverage" kind="INPUT" tail="p_start"/>
+      <arc head="t_soup" kind="INPUT" tail="p_start"/>
+      <arc head="p_end" kind="OUTPUT" tail="t_water_last_end">
+        <point x="61.0" y="3.0"/>
+      </arc>
+      <arc head="p_water_end" kind="OUTPUT" tail="t_water_end"/>
+      <arc head="t_water_last_end" kind="INPUT" tail="p_water_end"/>
+      <arc head="p_tea_waiting" kind="OUTPUT" tail="t_tea"/>
+      <arc head="t_tea_waiting_end" kind="INPUT" tail="p_water_end"/>
+      <arc head="t_tea_waiting_end" kind="INPUT" tail="p_tea_waiting"/>
+      <arc head="p_tea" kind="OUTPUT" tail="t_tea_waiting_end"/>
+      <arc head="p_beverage_end" kind="OUTPUT" tail="t_tea_end"/>
+      <arc head="t_soup_waiting_end" kind="INPUT" tail="p_soup_waiting"/>
+      <arc head="p_soup" kind="OUTPUT" tail="t_soup_waiting_end"/>
+      <arc head="t_water" kind="INPUT" tail="p_start">
+        <point x="13.0" y="3.0"/>
+      </arc>
+      <arc head="t_soup_waiting_end" kind="INPUT" tail="p_water_end">
+        <point x="46.0" y="1.5"/>
+        <point x="63.5" y="1.5"/>
+        <point x="63.5" y="42.5"/>
+        <point x="23.0" y="42.5"/>
+      </arc>
+      <arc head="p_water" kind="OUTPUT" tail="t_soup">
+        <point x="10.5" y="31.0"/>
+        <point x="10.5" y="1.0"/>
+        <point x="26.0" y="1.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="GSPN" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

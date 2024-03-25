@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="http://www.petrinets.org/">
+  <places name="p_start" outputs="//@arcs.0 //@arcs.6" inputs="//@arcs.4"/>
+  <places name="p_solid" outputs="//@arcs.3" inputs="//@arcs.1"/>
+  <places name="p_end" outputs="//@arcs.2" inputs="//@arcs.5 //@arcs.18"/>
+  <places name="p_beverage" outputs="//@arcs.8 //@arcs.9" inputs="//@arcs.7"/>
+  <places name="p_coffee" outputs="//@arcs.11" inputs="//@arcs.10"/>
+  <places name="p_coffee_end" outputs="//@arcs.13 //@arcs.19" inputs="//@arcs.12"/>
+  <places name="p_cup" outputs="//@arcs.15 //@arcs.26" inputs="//@arcs.14 //@arcs.22 //@arcs.25"/>
+  <places name="p_beverage_end" outputs="//@arcs.17" inputs="//@arcs.16 //@arcs.29"/>
+  <places name="p_milk" outputs="//@arcs.21" inputs="//@arcs.20"/>
+  <places name="p_tea" outputs="//@arcs.24" inputs="//@arcs.23"/>
+  <places name="p_sugar" outputs="//@arcs.28" inputs="//@arcs.27"/>
+  <trans name="t_solid" inputs="//@arcs.0" outputs="//@arcs.1"/>
+  <trans name="t_solid_end" inputs="//@arcs.3" outputs="//@arcs.5"/>
+  <trans name="t_end" inputs="//@arcs.2" outputs="//@arcs.4"/>
+  <trans name="t_beverage" inputs="//@arcs.6" outputs="//@arcs.7"/>
+  <trans name="t_coffee" inputs="//@arcs.8" outputs="//@arcs.10"/>
+  <trans name="t_tea" inputs="//@arcs.9" outputs="//@arcs.23"/>
+  <trans name="t_coffee_end" inputs="//@arcs.11" outputs="//@arcs.12"/>
+  <trans name="t_milk_no" inputs="//@arcs.13" outputs="//@arcs.14"/>
+  <trans name="t_sugar_no" inputs="//@arcs.15" outputs="//@arcs.16"/>
+  <trans name="t_beverage_end" inputs="//@arcs.17" outputs="//@arcs.18"/>
+  <trans name="t_milk" inputs="//@arcs.19" outputs="//@arcs.20"/>
+  <trans name="t_milk_end" inputs="//@arcs.21" outputs="//@arcs.22"/>
+  <trans name="t_tea_end" inputs="//@arcs.24" outputs="//@arcs.25"/>
+  <trans name="t_sugar" inputs="//@arcs.26" outputs="//@arcs.27"/>
+  <trans name="t_sugar_end" inputs="//@arcs.28" outputs="//@arcs.29"/>
+  <arcs xsi:type="ex:PTArc" name="a_solid_in" input="//@places.0" output="//@trans.0"/>
+  <arcs xsi:type="ex:TPArc" name="a_solid_out" input="//@trans.0" output="//@places.1"/>
+  <arcs xsi:type="ex:PTArc" name="a_end_in" input="//@places.2" output="//@trans.2"/>
+  <arcs xsi:type="ex:PTArc" name="a_solid_end_in" input="//@places.1" output="//@trans.1"/>
+  <arcs xsi:type="ex:TPArc" name="a_end_out" input="//@trans.2" output="//@places.0"/>
+  <arcs xsi:type="ex:TPArc" name="a_solid_end_out" input="//@trans.1" output="//@places.2"/>
+  <arcs xsi:type="ex:PTArc" name="a_beverage_in" input="//@places.0" output="//@trans.3"/>
+  <arcs xsi:type="ex:TPArc" name="a_beverage_out" input="//@trans.3" output="//@places.3"/>
+  <arcs xsi:type="ex:PTArc" name="a_coffee_in" input="//@places.3" output="//@trans.4"/>
+  <arcs xsi:type="ex:PTArc" name="a_tea_in" input="//@places.3" output="//@trans.5"/>
+  <arcs xsi:type="ex:TPArc" name="a_coffee_out" input="//@trans.4" output="//@places.4"/>
+  <arcs xsi:type="ex:PTArc" name="a_coffee_end_in" input="//@places.4" output="//@trans.6"/>
+  <arcs xsi:type="ex:TPArc" name="a_coffee_end_out" input="//@trans.6" output="//@places.5"/>
+  <arcs xsi:type="ex:PTArc" name="a_milk_no_in" input="//@places.5" output="//@trans.7"/>
+  <arcs xsi:type="ex:TPArc" name="a_milk_no_out" input="//@trans.7" output="//@places.6"/>
+  <arcs xsi:type="ex:PTArc" name="a_sugar_no_in" input="//@places.6" output="//@trans.8"/>
+  <arcs xsi:type="ex:TPArc" name="a_sugar_no_out" input="//@trans.8" output="//@places.7"/>
+  <arcs xsi:type="ex:PTArc" name="a_beverage_end_in" input="//@places.7" output="//@trans.9"/>
+  <arcs xsi:type="ex:TPArc" name="a_beverage_end_out" input="//@trans.9" output="//@places.2"/>
+  <arcs xsi:type="ex:PTArc" name="a_milk_in" input="//@places.5" output="//@trans.10"/>
+  <arcs xsi:type="ex:TPArc" name="a_milk_out" input="//@trans.10" output="//@places.8"/>
+  <arcs xsi:type="ex:PTArc" name="a_milk_end_in" input="//@places.8" output="//@trans.11"/>
+  <arcs xsi:type="ex:TPArc" name="a_milk_end_out" input="//@trans.11" output="//@places.6"/>
+  <arcs xsi:type="ex:TPArc" name="a_tea_out" input="//@trans.5" output="//@places.9"/>
+  <arcs xsi:type="ex:PTArc" name="t_tea_end_in" input="//@places.9" output="//@trans.12"/>
+  <arcs xsi:type="ex:TPArc" name="a_tea_end_out" input="//@trans.12" output="//@places.6"/>
+  <arcs xsi:type="ex:PTArc" name="a_sugar_in" input="//@places.6" output="//@trans.13"/>
+  <arcs xsi:type="ex:TPArc" name="a_sugar_out" input="//@trans.13" output="//@places.10"/>
+  <arcs xsi:type="ex:PTArc" name="a_sugar_end_in" input="//@places.10" output="//@trans.14"/>
+  <arcs xsi:type="ex:TPArc" name="a_sugar_end_out" input="//@trans.14" output="//@places.7"/>
+</ex:PetriNet>

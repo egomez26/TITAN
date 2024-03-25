@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and abstract="true" mandatory="true" name="FlexibleAssemblyLine">
+            <or mandatory="true" name="InParts">
+                <feature name="PartA"/>
+                <feature name="PartB"/>
+            </or>
+            <and mandatory="true" name="Process">
+                <feature name="QualityControl"/>
+                <feature name="Parallel"/>
+            </and>
+            <or mandatory="true" name="OutProducts">
+                <feature name="Prod1"/>
+                <feature name="Prod2"/>
+            </or>
+        </and>
+    </struct>
+    <constraints/>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="false"/>
+</featureModel>

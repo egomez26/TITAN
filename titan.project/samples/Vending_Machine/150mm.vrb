@@ -1,0 +1,9 @@
+pn "150mm.petrinets" 
+fm "model.xml"
+
+PC for t_solid , a_solid_in , a_solid_out , p_solid , a_solid_end_in , t_solid_end , a_solid_end_out = Solid ;
+PC for t_coffee , p_coffee , a_coffee_end_in , t_coffee_end , a_coffee_end_out , p_coffee_end , a_coffee_in , a_coffee_out , a_milk_no_in , t_milk_no , a_milk_no_out = Coffee ;
+PC for a_beverage_in , t_beverage , a_beverage_out , p_beverage , p_cup , a_beverage_end_in , t_beverage_end , a_beverage_end_out , p_beverage_end , a_sugar_no_in , a_sugar_no_out , t_sugar_no = Beverage ;
+PC for t_milk , p_milk , t_milk_end , a_milk_in , a_milk_end_out , a_milk_out , a_milk_end_in = Milk ;
+PC for p_sugar , a_sugar_end_in , t_sugar_end , a_sugar_end_out , t_sugar , a_sugar_in , a_sugar_out = Sugar ;
+PC for p_tea , a_tea_out , t_tea_end_in , t_tea , t_tea_end , a_tea_end_out , a_tea_in = Tea ;

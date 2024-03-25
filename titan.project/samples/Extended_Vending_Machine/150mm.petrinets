@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="http://www.petrinets.org/">
+  <places name="p_start" outputs="//@arcs.0 //@arcs.6 //@arcs.26" inputs="//@arcs.4"/>
+  <places name="p_water" outputs="//@arcs.3" inputs="//@arcs.1 //@arcs.51 //@arcs.55"/>
+  <places name="p_end" outputs="//@arcs.2" inputs="//@arcs.12 //@arcs.44 //@arcs.48"/>
+  <places name="p_beverage" outputs="//@arcs.8 //@arcs.9 //@arcs.18 //@arcs.22" inputs="//@arcs.7"/>
+  <places name="p_coffee" outputs="//@arcs.11" inputs="//@arcs.10"/>
+  <places name="p_tea" outputs="//@arcs.14" inputs="//@arcs.50"/>
+  <places name="p_beverage_end" outputs="//@arcs.17" inputs="//@arcs.15 //@arcs.16 //@arcs.21 //@arcs.25"/>
+  <places name="p_hotChocolate" outputs="//@arcs.19" inputs="//@arcs.20"/>
+  <places name="p_milk" outputs="//@arcs.23" inputs="//@arcs.24"/>
+  <places name="p_soup" outputs="//@arcs.28 //@arcs.31 //@arcs.33 //@arcs.35" inputs="//@arcs.53"/>
+  <places name="p_vegetable" outputs="//@arcs.30" inputs="//@arcs.29"/>
+  <places name="p_chicken" outputs="//@arcs.32" inputs="//@arcs.37"/>
+  <places name="p_mushroom" outputs="//@arcs.34" inputs="//@arcs.38"/>
+  <places name="p_tomato" outputs="//@arcs.36" inputs="//@arcs.39"/>
+  <places name="p_soup_end" outputs="//@arcs.45" inputs="//@arcs.40 //@arcs.41 //@arcs.42 //@arcs.43"/>
+  <places name="p_water_end" outputs="//@arcs.47 //@arcs.49 //@arcs.54" inputs="//@arcs.5"/>
+  <places name="p_tea_waiting" outputs="//@arcs.46" inputs="//@arcs.13"/>
+  <places name="p_soup_waiting" outputs="//@arcs.52" inputs="//@arcs.27"/>
+  <trans name="t_water" inputs="//@arcs.0" outputs="//@arcs.1"/>
+  <trans name="t_water_end" inputs="//@arcs.3" outputs="//@arcs.5"/>
+  <trans name="t_end" inputs="//@arcs.2" outputs="//@arcs.4"/>
+  <trans name="t_beverage" inputs="//@arcs.6" outputs="//@arcs.7"/>
+  <trans name="t_coffee" inputs="//@arcs.8" outputs="//@arcs.10"/>
+  <trans name="t_tea" inputs="//@arcs.9" outputs="//@arcs.13 //@arcs.51"/>
+  <trans name="t_coffee_end" inputs="//@arcs.11" outputs="//@arcs.15"/>
+  <trans name="t_beverage_end" inputs="//@arcs.17" outputs="//@arcs.12"/>
+  <trans name="t_tea_end" inputs="//@arcs.14" outputs="//@arcs.16"/>
+  <trans name="t_chocolate" inputs="//@arcs.18" outputs="//@arcs.20"/>
+  <trans name="t_chocolate_end" inputs="//@arcs.19" outputs="//@arcs.21"/>
+  <trans name="t_milk" inputs="//@arcs.22" outputs="//@arcs.24"/>
+  <trans name="t_milk_end" inputs="//@arcs.23" outputs="//@arcs.25"/>
+  <trans name="t_soup" inputs="//@arcs.26" outputs="//@arcs.27 //@arcs.55"/>
+  <trans name="t_vegetable" inputs="//@arcs.28" outputs="//@arcs.29"/>
+  <trans name="t_chicken" inputs="//@arcs.31" outputs="//@arcs.37"/>
+  <trans name="t_mushroom" inputs="//@arcs.33" outputs="//@arcs.38"/>
+  <trans name="t_tomato" inputs="//@arcs.35" outputs="//@arcs.39"/>
+  <trans name="t_vegetable_end" inputs="//@arcs.30" outputs="//@arcs.40"/>
+  <trans name="t_chicken_end" inputs="//@arcs.32" outputs="//@arcs.41"/>
+  <trans name="t_mushroom_end" inputs="//@arcs.34" outputs="//@arcs.42"/>
+  <trans name="t_tomato_end" inputs="//@arcs.36" outputs="//@arcs.43"/>
+  <trans name="t_soup_end" inputs="//@arcs.45" outputs="//@arcs.44"/>
+  <trans name="t_water_last_end" inputs="//@arcs.47" outputs="//@arcs.48"/>
+  <trans name="t_tea_waiting" inputs="//@arcs.46 //@arcs.49" outputs="//@arcs.50"/>
+  <trans name="t_soup_waiting" inputs="//@arcs.52 //@arcs.54" outputs="//@arcs.53"/>
+  <arcs xsi:type="ex:PTArc" name="a1" input="//@places.0" output="//@trans.0"/>
+  <arcs xsi:type="ex:TPArc" name="a2" input="//@trans.0" output="//@places.1"/>
+  <arcs xsi:type="ex:PTArc" name="a3" input="//@places.2" output="//@trans.2"/>
+  <arcs xsi:type="ex:PTArc" name="a4" input="//@places.1" output="//@trans.1"/>
+  <arcs xsi:type="ex:TPArc" name="a5" input="//@trans.2" output="//@places.0"/>
+  <arcs xsi:type="ex:TPArc" name="a6" input="//@trans.1" output="//@places.15"/>
+  <arcs xsi:type="ex:PTArc" name="a7" input="//@places.0" output="//@trans.3"/>
+  <arcs xsi:type="ex:TPArc" name="a8" input="//@trans.3" output="//@places.3"/>
+  <arcs xsi:type="ex:PTArc" name="a9" input="//@places.3" output="//@trans.4"/>
+  <arcs xsi:type="ex:PTArc" name="a10" input="//@places.3" output="//@trans.5"/>
+  <arcs xsi:type="ex:TPArc" name="a11" input="//@trans.4" output="//@places.4"/>
+  <arcs xsi:type="ex:PTArc" name="a12" input="//@places.4" output="//@trans.6"/>
+  <arcs xsi:type="ex:TPArc" name="a13" input="//@trans.7" output="//@places.2"/>
+  <arcs xsi:type="ex:TPArc" name="a14" input="//@trans.5" output="//@places.16"/>
+  <arcs xsi:type="ex:PTArc" name="a15" input="//@places.5" output="//@trans.8"/>
+  <arcs xsi:type="ex:TPArc" name="a16" input="//@trans.6" output="//@places.6"/>
+  <arcs xsi:type="ex:TPArc" name="a17" input="//@trans.8" output="//@places.6"/>
+  <arcs xsi:type="ex:PTArc" name="a18" input="//@places.6" output="//@trans.7"/>
+  <arcs xsi:type="ex:PTArc" name="a19" input="//@places.3" output="//@trans.9"/>
+  <arcs xsi:type="ex:PTArc" name="a20" input="//@places.7" output="//@trans.10"/>
+  <arcs xsi:type="ex:TPArc" name="a21" input="//@trans.9" output="//@places.7"/>
+  <arcs xsi:type="ex:TPArc" name="a22" input="//@trans.10" output="//@places.6"/>
+  <arcs xsi:type="ex:PTArc" name="a23" input="//@places.3" output="//@trans.11"/>
+  <arcs xsi:type="ex:PTArc" name="a24" input="//@places.8" output="//@trans.12"/>
+  <arcs xsi:type="ex:TPArc" name="a25" input="//@trans.11" output="//@places.8"/>
+  <arcs xsi:type="ex:TPArc" name="a26" input="//@trans.12" output="//@places.6"/>
+  <arcs xsi:type="ex:PTArc" name="a27" input="//@places.0" output="//@trans.13"/>
+  <arcs xsi:type="ex:TPArc" name="a28" input="//@trans.13" output="//@places.17"/>
+  <arcs xsi:type="ex:PTArc" name="a29" input="//@places.9" output="//@trans.14"/>
+  <arcs xsi:type="ex:TPArc" name="a30" input="//@trans.14" output="//@places.10"/>
+  <arcs xsi:type="ex:PTArc" name="a31" input="//@places.10" output="//@trans.18"/>
+  <arcs xsi:type="ex:PTArc" name="a32" input="//@places.9" output="//@trans.15"/>
+  <arcs xsi:type="ex:PTArc" name="a33" input="//@places.11" output="//@trans.19"/>
+  <arcs xsi:type="ex:PTArc" name="a34" input="//@places.9" output="//@trans.16"/>
+  <arcs xsi:type="ex:PTArc" name="a35" input="//@places.12" output="//@trans.20"/>
+  <arcs xsi:type="ex:PTArc" name="a36" input="//@places.9" output="//@trans.17"/>
+  <arcs xsi:type="ex:PTArc" name="a37" input="//@places.13" output="//@trans.21"/>
+  <arcs xsi:type="ex:TPArc" name="a38" input="//@trans.15" output="//@places.11"/>
+  <arcs xsi:type="ex:TPArc" name="a39" input="//@trans.16" output="//@places.12"/>
+  <arcs xsi:type="ex:TPArc" name="a40" input="//@trans.17" output="//@places.13"/>
+  <arcs xsi:type="ex:TPArc" name="a41" input="//@trans.18" output="//@places.14"/>
+  <arcs xsi:type="ex:TPArc" name="a42" input="//@trans.19" output="//@places.14"/>
+  <arcs xsi:type="ex:TPArc" name="a43" input="//@trans.20" output="//@places.14"/>
+  <arcs xsi:type="ex:TPArc" name="a44" input="//@trans.21" output="//@places.14"/>
+  <arcs xsi:type="ex:TPArc" name="a45" input="//@trans.22" output="//@places.2"/>
+  <arcs xsi:type="ex:PTArc" name="a46" input="//@places.14" output="//@trans.22"/>
+  <arcs xsi:type="ex:PTArc" name="a48" input="//@places.16" output="//@trans.24"/>
+  <arcs xsi:type="ex:PTArc" name="a49" input="//@places.15" output="//@trans.23"/>
+  <arcs xsi:type="ex:TPArc" name="a50" input="//@trans.23" output="//@places.2"/>
+  <arcs xsi:type="ex:PTArc" name="a51" input="//@places.15" output="//@trans.24"/>
+  <arcs xsi:type="ex:TPArc" name="a52" input="//@trans.24" output="//@places.5"/>
+  <arcs xsi:type="ex:TPArc" name="a53" input="//@trans.5" output="//@places.1"/>
+  <arcs xsi:type="ex:PTArc" name="a54" input="//@places.17" output="//@trans.25"/>
+  <arcs xsi:type="ex:TPArc" name="a55" input="//@trans.25" output="//@places.9"/>
+  <arcs xsi:type="ex:PTArc" name="a56" input="//@places.15" output="//@trans.25"/>
+  <arcs xsi:type="ex:TPArc" name="a57" input="//@trans.13" output="//@places.1"/>
+</ex:PetriNet>

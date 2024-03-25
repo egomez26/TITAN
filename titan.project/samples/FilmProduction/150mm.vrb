@@ -1,0 +1,12 @@
+pn "150mm.petrinets" 
+fm "model.xml"
+
+PC for film_shooting , a5 , a7 , a11 , film_editing_done , a14 = ( Film or Choice) ;
+PC for tape_shooting , a3 , a6 , a10 , tape_editing_done , a16 = ( Tape or Choice) ;
+PC for both_shooting , a9 , a8 , a12 , a13 , both_editing_done , a15 , a4 = Both ;
+PC for p_negmatching , a20 , a22 , a25 , neg_finishing = negmatching ;
+PC for p_online , a21 , a23 , online_finishing , a24 = Online ;
+PC for p_film_finishing , a27 , a30 , film_finishing , p_finish_on_film , a31 , a36 = FilmF ;
+PC for p_tape_finishing , a28 , a29 , tape_finishing , a32 , p_transfer_in_telecine , a33 , transfer_completed , a34 , p_finish_on_tape , a35 = TapeF ;
+PC for p_release_on_new_medium , a37 , a38 , release_completed , a40 = ReleaseOnNewMedium ;
+PC for a39 = not ReleaseOnNewMedium ;

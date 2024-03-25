@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and mandatory="true" name="VendingMachine">
+			<graphics key="collapsed" value="false"/>
+			<and mandatory="true" name="Dispenser">
+				<graphics key="collapsed" value="false"/>
+				<and name="Beverage">
+					<graphics key="collapsed" value="false"/>
+					<feature mandatory="true" name="Tea"/>
+					<feature mandatory="true" name="Coffee"/>
+					<feature name="HotChocolate"/>
+					<feature name="Milk"/>
+				</and>
+				<feature name="HotWater"/>
+				<or name="Soup">
+					<feature name="Vegetable"/>
+					<feature name="Chicken"/>
+					<feature name="Mushroom"/>
+					<feature name="Tomato"/>
+				</or>
+			</and>
+			<or name="CoinCollector">
+				<feature name="CoinIn"/>
+				<feature name="BalanceOut"/>
+			</or>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<disj>
+					<var>Tea</var>
+					<var>Soup</var>
+				</disj>
+				<var>HotWater</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

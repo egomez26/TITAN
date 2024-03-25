@@ -1,0 +1,12 @@
+pn "150mm.petrinets" 
+fm "model.xml"
+
+PC for p_heaterOn , a4 = Heat ;
+PC for p_heaterOff , a5 , p_waiting , a6 , a7 , a8 = ( Heat or Delay) ;
+PC for p_heatEnabled , a21 = Heat ;
+PC for p_delayEnabled , a22 = Delay ;
+PC for p_quickCool , a10 = Heat ;
+PC for p_setDelay , a23 = Delay ;
+PC for t_quickCool , a9 , a11 = not Dry ;
+PC for p_drying , t_dry , a12 , a14 , t_finishDrying , a15 , p_quickCoolDry , a16 , a13 = Dry ;
+PC for t_cycle , a3 = ( Heat or Delay) ;

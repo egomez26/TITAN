@@ -1,0 +1,10 @@
+pn "150mm.petrinets" 
+fm "model.xml"
+
+PC for genA, cnvA, genA_cnvA, cnvA_proc = PartA;
+PC for genB, cnvB, genB_cnvB, cnvB_proc = PartB;
+PC for out2, cnv2, inc2, in_out2, out2_cnv2, cnv2_inc2, inc2_ctrl = Parallel;
+PC for fix,  ctrl_fix,  fix_in = QualityControl;
+PC for prod1, prod_prod1 = Prod1;
+PC for prod2, prod_prod2 = Prod2;
+PC for pack, assmbly, prod1_pack, prod2_pack, pack_assmbly = (Prod1 and Prod2);

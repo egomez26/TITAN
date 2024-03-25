@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and mandatory="true" name="FilmProduction">
+			<graphics key="collapsed" value="false"/>
+			<alt mandatory="true" name="PostProduction">
+				<feature name="Tape"/>
+				<feature name="Film"/>
+				<feature name="Both"/>
+				<feature name="Choice"/>
+			</alt>
+			<alt mandatory="true" name="Editing">
+				<feature name="Online"/>
+				<feature name="negmatching"/>
+			</alt>
+			<or mandatory="true" name="Finishing">
+				<feature name="TapeF"/>
+				<feature name="FilmF"/>
+			</or>
+			<feature name="ReleaseOnNewMedium"/>
+		</and>
+	</struct>
+</featureModel>

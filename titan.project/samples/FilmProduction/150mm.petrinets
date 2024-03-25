@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="http://www.petrinets.org/">
+  <places name="p_init" outputs="//@arcs.0" inputs="//@arcs.38 //@arcs.39"/>
+  <places name="p_receive_footage" outputs="//@arcs.2 //@arcs.3 //@arcs.4" inputs="//@arcs.1"/>
+  <places name="p_prepare_tape_for_editing" outputs="//@arcs.9 //@arcs.11" inputs="//@arcs.5 //@arcs.8"/>
+  <places name="p_prepare_film_for_editing" outputs="//@arcs.10 //@arcs.12" inputs="//@arcs.6 //@arcs.7"/>
+  <places name="p_prepare_for_editing" outputs="//@arcs.16" inputs="//@arcs.13 //@arcs.14 //@arcs.15"/>
+  <places name="p_edit_offline" outputs="//@arcs.18" inputs="//@arcs.17"/>
+  <places name="p_negmatching" outputs="//@arcs.21" inputs="//@arcs.19"/>
+  <places name="p_online" outputs="//@arcs.22" inputs="//@arcs.20"/>
+  <places name="p_editing_done" outputs="//@arcs.25" inputs="//@arcs.23 //@arcs.24"/>
+  <places name="p_film_finishing" outputs="//@arcs.29" inputs="//@arcs.26"/>
+  <places name="p_tape_finishing" outputs="//@arcs.28" inputs="//@arcs.27"/>
+  <places name="p_finish_on_film" outputs="//@arcs.35" inputs="//@arcs.30"/>
+  <places name="p_transfer_in_telecine" outputs="//@arcs.32" inputs="//@arcs.31"/>
+  <places name="p_finish_on_tape" outputs="//@arcs.34" inputs="//@arcs.33"/>
+  <places name="p_release_on_new_medium" outputs="//@arcs.37" inputs="//@arcs.36"/>
+  <trans name="shooting_completed" inputs="//@arcs.0" outputs="//@arcs.1"/>
+  <trans name="tape_shooting" inputs="//@arcs.2" outputs="//@arcs.5"/>
+  <trans name="both_shooting" inputs="//@arcs.3" outputs="//@arcs.7 //@arcs.8"/>
+  <trans name="film_shooting" inputs="//@arcs.4" outputs="//@arcs.6"/>
+  <trans name="tape_editing_done" inputs="//@arcs.9" outputs="//@arcs.15"/>
+  <trans name="film_editing_done" inputs="//@arcs.10" outputs="//@arcs.13"/>
+  <trans name="both_editing_done" inputs="//@arcs.11 //@arcs.12" outputs="//@arcs.14"/>
+  <trans name="prepare_for_editing" inputs="//@arcs.16" outputs="//@arcs.17"/>
+  <trans name="film_editing" inputs="//@arcs.18" outputs="//@arcs.19 //@arcs.20"/>
+  <trans name="neg_finishing" inputs="//@arcs.21" outputs="//@arcs.24"/>
+  <trans name="online_finishing" inputs="//@arcs.22" outputs="//@arcs.23"/>
+  <trans name="finishing" inputs="//@arcs.25" outputs="//@arcs.26 //@arcs.27"/>
+  <trans name="film_finishing" inputs="//@arcs.29" outputs="//@arcs.30"/>
+  <trans name="tape_finishing" inputs="//@arcs.28" outputs="//@arcs.31"/>
+  <trans name="transfer_completed" inputs="//@arcs.32" outputs="//@arcs.33"/>
+  <trans name="finish_completed" inputs="//@arcs.34 //@arcs.35" outputs="//@arcs.36 //@arcs.38"/>
+  <trans name="release_completed" inputs="//@arcs.37" outputs="//@arcs.39"/>
+  <arcs xsi:type="ex:PTArc" name="a1" input="//@places.0" output="//@trans.0"/>
+  <arcs xsi:type="ex:TPArc" name="a2" input="//@trans.0" output="//@places.1"/>
+  <arcs xsi:type="ex:PTArc" name="a3" input="//@places.1" output="//@trans.1"/>
+  <arcs xsi:type="ex:PTArc" name="a4" input="//@places.1" output="//@trans.2"/>
+  <arcs xsi:type="ex:PTArc" name="a5" input="//@places.1" output="//@trans.3"/>
+  <arcs xsi:type="ex:TPArc" name="a6" input="//@trans.1" output="//@places.2"/>
+  <arcs xsi:type="ex:TPArc" name="a7" input="//@trans.3" output="//@places.3"/>
+  <arcs xsi:type="ex:TPArc" name="a8" input="//@trans.2" output="//@places.3"/>
+  <arcs xsi:type="ex:TPArc" name="a9" input="//@trans.2" output="//@places.2"/>
+  <arcs xsi:type="ex:PTArc" name="a10" input="//@places.2" output="//@trans.4"/>
+  <arcs xsi:type="ex:PTArc" name="a11" input="//@places.3" output="//@trans.5"/>
+  <arcs xsi:type="ex:PTArc" name="a12" input="//@places.2" output="//@trans.6"/>
+  <arcs xsi:type="ex:PTArc" name="a13" input="//@places.3" output="//@trans.6"/>
+  <arcs xsi:type="ex:TPArc" name="a14" input="//@trans.5" output="//@places.4"/>
+  <arcs xsi:type="ex:TPArc" name="a15" input="//@trans.6" output="//@places.4"/>
+  <arcs xsi:type="ex:TPArc" name="a16" input="//@trans.4" output="//@places.4"/>
+  <arcs xsi:type="ex:PTArc" name="a17" input="//@places.4" output="//@trans.7"/>
+  <arcs xsi:type="ex:TPArc" name="a18" input="//@trans.7" output="//@places.5"/>
+  <arcs xsi:type="ex:PTArc" name="a19" input="//@places.5" output="//@trans.8"/>
+  <arcs xsi:type="ex:TPArc" name="a20" input="//@trans.8" output="//@places.6"/>
+  <arcs xsi:type="ex:TPArc" name="a21" input="//@trans.8" output="//@places.7"/>
+  <arcs xsi:type="ex:PTArc" name="a22" input="//@places.6" output="//@trans.9"/>
+  <arcs xsi:type="ex:PTArc" name="a23" input="//@places.7" output="//@trans.10"/>
+  <arcs xsi:type="ex:TPArc" name="a24" input="//@trans.10" output="//@places.8"/>
+  <arcs xsi:type="ex:TPArc" name="a25" input="//@trans.9" output="//@places.8"/>
+  <arcs xsi:type="ex:PTArc" name="a26" input="//@places.8" output="//@trans.11"/>
+  <arcs xsi:type="ex:TPArc" name="a27" input="//@trans.11" output="//@places.9"/>
+  <arcs xsi:type="ex:TPArc" name="a28" input="//@trans.11" output="//@places.10"/>
+  <arcs xsi:type="ex:PTArc" name="a29" input="//@places.10" output="//@trans.13"/>
+  <arcs xsi:type="ex:PTArc" name="a30" input="//@places.9" output="//@trans.12"/>
+  <arcs xsi:type="ex:TPArc" name="a31" input="//@trans.12" output="//@places.11"/>
+  <arcs xsi:type="ex:TPArc" name="a32" input="//@trans.13" output="//@places.12"/>
+  <arcs xsi:type="ex:PTArc" name="a33" input="//@places.12" output="//@trans.14"/>
+  <arcs xsi:type="ex:TPArc" name="a34" input="//@trans.14" output="//@places.13"/>
+  <arcs xsi:type="ex:PTArc" name="a35" input="//@places.13" output="//@trans.15"/>
+  <arcs xsi:type="ex:PTArc" name="a36" input="//@places.11" output="//@trans.15"/>
+  <arcs xsi:type="ex:TPArc" name="a37" input="//@trans.15" output="//@places.14"/>
+  <arcs xsi:type="ex:PTArc" name="a38" input="//@places.14" output="//@trans.16"/>
+  <arcs xsi:type="ex:TPArc" name="a39" input="//@trans.15" output="//@places.0"/>
+  <arcs xsi:type="ex:TPArc" name="a40" input="//@trans.16" output="//@places.0"/>
+</ex:PetriNet>

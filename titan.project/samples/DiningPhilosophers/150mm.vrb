@@ -1,0 +1,8 @@
+pn "150mm.petrinets" 
+fm "model.xml"
+
+PC for t2 ,e2 , release2 , get2 , a3 , a12 , a4 , a11 = TwoP ;
+PC for t3 ,e3 , release3 , get3 , a14 , a6 , a13 , a5 , f3 = ThreeP ;
+PC for t4 ,e4 , release4 , get4 , a16 , a8 , a15 , a7 , f4 , a33 , a34 , a36 , a35 = FourP ;
+PC for a21 , a23 , a25 , a26 = ( TwoP and ThreeP ) ;
+PC for a29 , a32 , a31 , a28 , a27 , a30 = ( ThreeP and FourP ) ;

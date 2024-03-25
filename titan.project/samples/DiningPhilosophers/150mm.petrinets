@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:PetriNet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ex="http://www.petrinets.org/">
+  <places name="t1" outputs="//@arcs.0" inputs="//@arcs.9"/>
+  <places name="e1" outputs="//@arcs.1" inputs="//@arcs.8"/>
+  <places name="t2" outputs="//@arcs.2" inputs="//@arcs.11"/>
+  <places name="e2" outputs="//@arcs.3" inputs="//@arcs.10"/>
+  <places name="t3" outputs="//@arcs.4" inputs="//@arcs.13"/>
+  <places name="e3" outputs="//@arcs.5" inputs="//@arcs.12"/>
+  <places name="e4" outputs="//@arcs.7" inputs="//@arcs.14"/>
+  <places name="t4" outputs="//@arcs.6" inputs="//@arcs.15"/>
+  <places name="f1" outputs="//@arcs.16 //@arcs.21 //@arcs.26 //@arcs.32" inputs="//@arcs.18 //@arcs.23 //@arcs.29 //@arcs.35"/>
+  <places name="f2" outputs="//@arcs.17 //@arcs.20" inputs="//@arcs.19 //@arcs.24"/>
+  <places name="f3" outputs="//@arcs.22 //@arcs.27" inputs="//@arcs.25 //@arcs.30"/>
+  <places name="f4" outputs="//@arcs.28 //@arcs.33" inputs="//@arcs.31 //@arcs.34"/>
+  <trans name="get1" inputs="//@arcs.0 //@arcs.16 //@arcs.17" outputs="//@arcs.8"/>
+  <trans name="release1" inputs="//@arcs.1" outputs="//@arcs.9 //@arcs.18 //@arcs.19"/>
+  <trans name="get2" inputs="//@arcs.2 //@arcs.20 //@arcs.21 //@arcs.22" outputs="//@arcs.10"/>
+  <trans name="release2" inputs="//@arcs.3" outputs="//@arcs.11 //@arcs.23 //@arcs.24 //@arcs.25"/>
+  <trans name="get3" inputs="//@arcs.4 //@arcs.26 //@arcs.27 //@arcs.28" outputs="//@arcs.12"/>
+  <trans name="release3" inputs="//@arcs.5" outputs="//@arcs.13 //@arcs.29 //@arcs.30 //@arcs.31"/>
+  <trans name="get4" inputs="//@arcs.6 //@arcs.32 //@arcs.33" outputs="//@arcs.14"/>
+  <trans name="release4" inputs="//@arcs.7" outputs="//@arcs.15 //@arcs.34 //@arcs.35"/>
+  <arcs xsi:type="ex:PTArc" name="a1" input="//@places.0" output="//@trans.0"/>
+  <arcs xsi:type="ex:PTArc" name="a2" input="//@places.1" output="//@trans.1"/>
+  <arcs xsi:type="ex:PTArc" name="a3" input="//@places.2" output="//@trans.2"/>
+  <arcs xsi:type="ex:PTArc" name="a4" input="//@places.3" output="//@trans.3"/>
+  <arcs xsi:type="ex:PTArc" name="a5" input="//@places.4" output="//@trans.4"/>
+  <arcs xsi:type="ex:PTArc" name="a6" input="//@places.5" output="//@trans.5"/>
+  <arcs xsi:type="ex:PTArc" name="a7" input="//@places.7" output="//@trans.6"/>
+  <arcs xsi:type="ex:PTArc" name="a8" input="//@places.6" output="//@trans.7"/>
+  <arcs xsi:type="ex:TPArc" name="a9" input="//@trans.0" output="//@places.1"/>
+  <arcs xsi:type="ex:TPArc" name="a10" input="//@trans.1" output="//@places.0"/>
+  <arcs xsi:type="ex:TPArc" name="a11" input="//@trans.2" output="//@places.3"/>
+  <arcs xsi:type="ex:TPArc" name="a12" input="//@trans.3" output="//@places.2"/>
+  <arcs xsi:type="ex:TPArc" name="a13" input="//@trans.4" output="//@places.5"/>
+  <arcs xsi:type="ex:TPArc" name="a14" input="//@trans.5" output="//@places.4"/>
+  <arcs xsi:type="ex:TPArc" name="a15" input="//@trans.6" output="//@places.6"/>
+  <arcs xsi:type="ex:TPArc" name="a16" input="//@trans.7" output="//@places.7"/>
+  <arcs xsi:type="ex:PTArc" name="a17" input="//@places.8" output="//@trans.0"/>
+  <arcs xsi:type="ex:PTArc" name="a18" input="//@places.9" output="//@trans.0"/>
+  <arcs xsi:type="ex:TPArc" name="a19" input="//@trans.1" output="//@places.8"/>
+  <arcs xsi:type="ex:TPArc" name="a20" input="//@trans.1" output="//@places.9"/>
+  <arcs xsi:type="ex:PTArc" name="a21" input="//@places.9" output="//@trans.2"/>
+  <arcs xsi:type="ex:PTArc" name="a22" input="//@places.8" output="//@trans.2"/>
+  <arcs xsi:type="ex:PTArc" name="a23" input="//@places.10" output="//@trans.2"/>
+  <arcs xsi:type="ex:TPArc" name="a24" input="//@trans.3" output="//@places.8"/>
+  <arcs xsi:type="ex:TPArc" name="a25" input="//@trans.3" output="//@places.9"/>
+  <arcs xsi:type="ex:TPArc" name="a26" input="//@trans.3" output="//@places.10"/>
+  <arcs xsi:type="ex:PTArc" name="a27" input="//@places.8" output="//@trans.4"/>
+  <arcs xsi:type="ex:PTArc" name="a28" input="//@places.10" output="//@trans.4"/>
+  <arcs xsi:type="ex:PTArc" name="a29" input="//@places.11" output="//@trans.4"/>
+  <arcs xsi:type="ex:TPArc" name="a30" input="//@trans.5" output="//@places.8"/>
+  <arcs xsi:type="ex:TPArc" name="a31" input="//@trans.5" output="//@places.10"/>
+  <arcs xsi:type="ex:TPArc" name="a32" input="//@trans.5" output="//@places.11"/>
+  <arcs xsi:type="ex:PTArc" name="a33" input="//@places.8" output="//@trans.6"/>
+  <arcs xsi:type="ex:PTArc" name="a34" input="//@places.11" output="//@trans.6"/>
+  <arcs xsi:type="ex:TPArc" name="a35" input="//@trans.7" output="//@places.11"/>
+  <arcs xsi:type="ex:TPArc" name="a36" input="//@trans.7" output="//@places.8"/>
+</ex:PetriNet>

@@ -1,0 +1,14 @@
+pn "150mm.petrinets" 
+fm "model.xml"
+
+PC for p_tea , a14 , a15 , t_tea_end , a17 , t_tea , a10 , p_tea_waiting, a48, a52 , a51 , t_tea_waiting = Tea ;
+PC for p_tomato , a40 , a37 , t_tomato_end , a44 , t_tomato , a36 = Tomato;
+PC for p_chicken , a38 , a33 , t_chicken_end , t_chicken , a42 , a32 = Chicken ;
+PC for p_vegetable , a31 , t_vegetable_end , a41 , a30 , t_vegetable , a29 = Vegetable ;
+PC for p_mushroom , a35 , t_mushroom_end , a43 , a39 , t_mushroom , a34 = Mushroom ;
+PC for p_milk , a25 , a24 , t_milk , t_milk_end , a26 , a23 = Milk ;
+PC for p_hotChocolate , a20 , t_chocolate_end , a22 , a21 , t_chocolate , a19 = HotChocolate ;
+PC for p_coffee , a12 , t_coffee_end , a11 , a16 , t_coffee , a9 = Coffee ;
+PC for p_soup_waiting , a27 , t_soup , a28 , a54 , t_soup_waiting , a55 , a56 , p_soup , p_soup_end , a46 , t_soup_end , a45, a57 = ((Tomato or Vegetable) or (Chicken or Mushroom)) ;
+PC for p_beverage , a8 , t_beverage , a7 , p_beverage_end , a18 , t_beverage_end , a13 = ((Coffee or Milk) or (Tea or HotChocolate)) ;
+PC for p_water , a2 , a4 , t_water , a1 , t_water_end , a6 , p_water_end , a49 , t_water_last_end , a50 = HotWater ;

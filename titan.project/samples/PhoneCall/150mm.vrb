@@ -1,0 +1,5 @@
+pn "150mm.petrinets" 
+fm "model.xml"
+
+PC for t_auxiliary_2 , a08 , a09 = Simple ;
+PC for a05 , a04 = Extended ;

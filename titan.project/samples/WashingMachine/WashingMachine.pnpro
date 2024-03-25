@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="output" version="121">
+  <gspn name="output" show-color-cmd="false" show-fluid-cmd="false" zoom="75">
+    <nodes>
+      <place name="p_unlocking" x="16.0" y="40.0"/>
+      <place name="p_drying" x="21.0" y="31.0"/>
+      <place name="p_setDelay" x="7.0" y="7.0"/>
+      <place name="p_heatEnabled" x="22.0" y="17.0"/>
+      <place name="p_heaterOff" x="7.0" y="23.0"/>
+      <place name="p_washing" x="16.0" y="27.0"/>
+      <place name="p_delayEnabled" x="22.0" y="10.0"/>
+      <place name="p_quickCoolDry" x="27.0" y="36.0"/>
+      <place name="p_heaterOn" x="7.0" y="15.0"/>
+      <place name="p_waiting" x="16.0" y="18.0"/>
+      <place name="p_locking" x="16.0" y="11.0"/>
+      <place name="p_quickCool" x="7.0" y="34.0"/>
+      <place name="p_idle" x="16.0" y="3.0"/>
+      <transition name="t_quickCool" rotation="4.71238898038469" type="IMM" weight="1" x="12.85" y="34.0"/>
+      <transition name="t_finishing" type="IMM" weight="1" x="30.85" y="40.0"/>
+      <transition name="t_dry" rotation="3.141592653589793" type="IMM" weight="1" x="21.85" y="27.0"/>
+      <transition name="t_finishDrying" rotation="4.71238898038469" type="IMM" weight="1" x="21.85" y="36.0"/>
+      <transition name="t_start" rotation="4.71238898038469" type="IMM" weight="1" x="16.85" y="7.0"/>
+      <transition name="t_delay" rotation="3.141592653589793" type="IMM" weight="1" x="7.85" y="11.0"/>
+      <transition name="t_cycle" rotation="4.71238898038469" type="IMM" weight="1" x="16.85" y="15.0"/>
+      <transition name="t_waiting" rotation="4.71238898038469" type="IMM" weight="1" x="16.85" y="23.0"/>
+    </nodes>
+    <edges>
+      <arc head="t_start" kind="INPUT" tail="p_idle"/>
+      <arc head="p_washing" kind="OUTPUT" tail="t_waiting"/>
+      <arc head="p_unlocking" kind="OUTPUT" tail="t_finishDrying"/>
+      <arc head="t_waiting" kind="INPUT" tail="p_waiting"/>
+      <arc head="p_locking" kind="OUTPUT" tail="t_start"/>
+      <arc head="p_quickCool" kind="OUTPUT" tail="t_quickCool"/>
+      <arc head="p_drying" kind="OUTPUT" tail="t_dry"/>
+      <arc head="t_delay" kind="INPUT" tail="p_locking"/>
+      <arc head="t_cycle" kind="INPUT" tail="p_locking"/>
+      <arc head="p_heaterOn" kind="OUTPUT" tail="t_cycle"/>
+      <arc head="t_dry" kind="INPUT" tail="p_washing"/>
+      <arc head="p_setDelay" kind="OUTPUT" tail="t_delay"/>
+      <arc head="t_cycle" kind="INPUT" tail="p_heatEnabled"/>
+      <arc head="p_unlocking" kind="OUTPUT" tail="t_quickCool"/>
+      <arc head="t_finishDrying" kind="INPUT" tail="p_drying"/>
+      <arc head="p_heaterOff" kind="OUTPUT" tail="t_waiting"/>
+      <arc head="t_quickCool" kind="INPUT" tail="p_washing"/>
+      <arc head="p_waiting" kind="OUTPUT" tail="t_cycle"/>
+      <arc head="t_finishing" kind="INPUT" tail="p_unlocking"/>
+      <arc head="p_quickCoolDry" kind="OUTPUT" tail="t_finishDrying"/>
+      <arc head="t_cycle" kind="INPUT" tail="p_delayEnabled"/>
+      <arc head="p_idle" kind="OUTPUT" tail="t_finishing">
+        <point x="34.0" y="41.0"/>
+        <point x="33.5" y="4.0"/>
+      </arc>
+      <arc head="p_washing" kind="OUTPUT" tail="t_delay">
+        <point x="3.0" y="12.0"/>
+        <point x="3.0" y="28.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="GSPN" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

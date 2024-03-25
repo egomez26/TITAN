@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="output" version="121">
+  <gspn name="output" show-color-cmd="false" show-fluid-cmd="false">
+    <nodes>
+      <place name="p7" x="19.0" y="36.0"/>
+      <place name="p8" x="19.0" y="45.0"/>
+      <place name="p2" x="22.0" y="2.0"/>
+      <place name="p5" x="19.0" y="23.0"/>
+      <place name="p9" x="10.0" y="45.0"/>
+      <place name="p6" x="10.0" y="23.0"/>
+      <place name="p13" x="29.0" y="23.0"/>
+      <place name="p12" x="29.0" y="15.0"/>
+      <place name="p11" x="29.0" y="7.0"/>
+      <place name="p4" x="15.0" y="14.0"/>
+      <place name="p1" x="39.0" y="7.0"/>
+      <place name="p10" x="24.0" y="52.0"/>
+      <place name="p14" x="39.0" y="18.0"/>
+      <place name="p3" x="15.0" y="7.0"/>
+      <transition name="t_auxiliary_2" type="IMM" weight="1" x="4.85" y="23.0"/>
+      <transition name="t_search_entries_with_digits" rotation="4.71238898038469" type="IMM" weight="1" x="19.85" y="29.0"/>
+      <transition name="t_end" rotation="4.71238898038469" type="IMM" weight="1" x="39.85" y="13.0"/>
+      <transition name="t_auxiliary_3" rotation="4.71238898038469" type="IMM" weight="1" x="5.85" y="52.0"/>
+      <transition name="t_enter_digit" rotation="4.71238898038469" type="IMM" weight="1" x="15.85" y="11.0"/>
+      <transition name="t_open_phonebook" rotation="4.71238898038469" type="IMM" weight="1" x="29.85" y="4.0"/>
+      <transition name="t_auxiliary_1" rotation="4.71238898038469" type="IMM" weight="1" x="15.85" y="4.0"/>
+      <transition name="t_show_entry" rotation="4.71238898038469" type="IMM" weight="1" x="19.85" y="41.0"/>
+      <transition name="t_enter_character" rotation="4.71238898038469" type="IMM" weight="1" x="29.85" y="11.0"/>
+      <transition name="t_fork" rotation="4.71238898038469" type="IMM" weight="1" x="15.85" y="19.0"/>
+      <transition name="t_auxiliary_4" rotation="4.71238898038469" type="IMM" weight="1" x="24.85" y="19.0"/>
+      <transition name="t_new_call" rotation="4.71238898038469" type="IMM" weight="1" x="39.85" y="2.0"/>
+      <transition name="t_join" rotation="4.71238898038469" type="IMM" weight="1" x="15.85" y="48.0"/>
+      <transition name="t_select_entry" rotation="4.71238898038469" type="IMM" weight="1" x="29.85" y="19.0"/>
+      <transition label-x="1.5" label-y="-0.5" name="t_auxiliary_5" rotation="4.71238898038469" type="IMM" weight="1" x="29.85" y="38.0"/>
+      <transition name="t_show_digit" rotation="4.71238898038469" type="IMM" weight="1" x="10.85" y="36.0"/>
+      <transition name="t_initialise_call" rotation="4.71238898038469" type="IMM" weight="1" x="39.85" y="23.0"/>
+      <transition name="t_auxiliary_6" type="IMM" weight="1" x="35.85" y="15.0"/>
+    </nodes>
+    <edges>
+      <arc head="p13" kind="OUTPUT" tail="t_select_entry"/>
+      <arc head="t_join" kind="INPUT" tail="p9"/>
+      <arc head="t_show_entry" kind="INPUT" tail="p7"/>
+      <arc head="t_open_phonebook" kind="INPUT" tail="p2"/>
+      <arc head="t_show_digit" kind="INPUT" tail="p6"/>
+      <arc head="p3" kind="OUTPUT" tail="t_auxiliary_4"/>
+      <arc head="t_initialise_call" kind="INPUT" tail="p13"/>
+      <arc head="p6" kind="OUTPUT" tail="t_fork"/>
+      <arc head="p8" kind="OUTPUT" tail="t_show_entry"/>
+      <arc head="t_end" kind="INPUT" tail="p14"/>
+      <arc head="t_select_entry" kind="INPUT" tail="p12"/>
+      <arc head="p14" kind="OUTPUT" tail="t_initialise_call"/>
+      <arc head="t_search_entries_with_digits" kind="INPUT" tail="p5"/>
+      <arc head="t_auxiliary_4" kind="INPUT" tail="p10"/>
+      <arc head="p4" kind="OUTPUT" tail="t_enter_digit"/>
+      <arc head="p9" kind="OUTPUT" tail="t_show_digit"/>
+      <arc head="t_new_call" kind="INPUT" tail="p1"/>
+      <arc head="t_join" kind="INPUT" tail="p8"/>
+      <arc head="p10" kind="OUTPUT" tail="t_join"/>
+      <arc head="p7" kind="OUTPUT" tail="t_search_entries_with_digits"/>
+      <arc head="p12" kind="OUTPUT" tail="t_enter_character"/>
+      <arc head="p11" kind="OUTPUT" tail="t_auxiliary_6"/>
+      <arc head="t_auxiliary_3" kind="INPUT" tail="p9"/>
+      <arc head="p11" kind="OUTPUT" tail="t_open_phonebook"/>
+      <arc head="p2" kind="OUTPUT" tail="t_new_call"/>
+      <arc head="t_fork" kind="INPUT" tail="p4"/>
+      <arc head="t_enter_character" kind="INPUT" tail="p11"/>
+      <arc head="t_auxiliary_6" kind="INPUT" tail="p12"/>
+      <arc head="t_auxiliary_5" kind="INPUT" tail="p10"/>
+      <arc head="p6" kind="OUTPUT" tail="t_auxiliary_2"/>
+      <arc head="p5" kind="OUTPUT" tail="t_fork"/>
+      <arc head="p1" kind="OUTPUT" tail="t_end"/>
+      <arc head="p3" kind="OUTPUT" tail="t_auxiliary_1"/>
+      <arc head="t_enter_digit" kind="INPUT" tail="p3"/>
+      <arc head="p10" kind="OUTPUT" tail="t_auxiliary_3"/>
+      <arc head="t_auxiliary_1" kind="INPUT" tail="p2"/>
+      <arc head="t_auxiliary_2" kind="INPUT" mult-k="0.37900390625" tail="p4"/>
+      <arc head="p13" kind="OUTPUT" tail="t_auxiliary_5"/>
+    </edges>
+  </gspn>
+  <measures gspn-name="GSPN" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

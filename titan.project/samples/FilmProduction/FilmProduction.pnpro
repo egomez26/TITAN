@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="output" version="121">
+  <gspn name="output" show-color-cmd="false" show-fluid-cmd="false" zoom="75">
+    <nodes>
+      <place name="p_prepare_tape_for_editing" x="12.0" y="17.0"/>
+      <place name="p_release_on_new_medium" x="20.0" y="81.0"/>
+      <place name="p_finish_on_tape" x="27.0" y="73.0"/>
+      <place name="p_tape_finishing" x="27.0" y="56.0"/>
+      <place name="p_transfer_in_telecine" x="27.0" y="65.0"/>
+      <place name="p_finish_on_film" x="12.0" y="65.0"/>
+      <place name="p_editing_done" x="20.0" y="50.0"/>
+      <place name="p_film_finishing" x="12.0" y="56.0"/>
+      <place name="p_edit_offline" x="20.0" y="36.0"/>
+      <place name="p_prepare_film_for_editing" x="27.0" y="17.0"/>
+      <place name="p_negmatching" x="27.0" y="43.0"/>
+      <place name="p_online" x="12.0" y="43.0"/>
+      <place name="p_receive_footage" x="20.0" y="7.0"/>
+      <place name="p_init" x="20.0" y="1.0"/>
+      <place name="p_prepare_for_editing" x="20.0" y="28.0"/>
+      <transition name="release_completed" rotation="4.71238898038469" type="IMM" weight="1" x="20.85" y="86.0"/>
+      <transition name="transfer_completed" rotation="4.71238898038469" type="IMM" weight="1" x="27.85" y="70.0"/>
+      <transition name="finishing" rotation="4.71238898038469" type="IMM" weight="1" x="20.85" y="54.0"/>
+      <transition name="tape_finishing" rotation="4.71238898038469" type="IMM" weight="1" x="27.85" y="61.0"/>
+      <transition name="both_shooting" rotation="4.71238898038469" type="IMM" weight="1" x="20.85" y="12.0"/>
+      <transition name="both_editing_done" rotation="4.71238898038469" type="IMM" weight="1" x="20.85" y="23.0"/>
+      <transition name="film_editing_done" rotation="4.71238898038469" type="IMM" weight="1" x="27.85" y="23.0"/>
+      <transition name="online_finishing" rotation="4.71238898038469" type="IMM" weight="1" x="12.85" y="48.0"/>
+      <transition name="film_editing" rotation="4.71238898038469" type="IMM" weight="1" x="20.85" y="40.0"/>
+      <transition name="film_finishing" rotation="4.71238898038469" type="IMM" weight="1" x="12.85" y="61.0"/>
+      <transition name="neg_finishing" rotation="4.71238898038469" type="IMM" weight="1" x="27.85" y="48.0"/>
+      <transition name="tape_shooting" rotation="4.71238898038469" type="IMM" weight="1" x="12.85" y="12.0"/>
+      <transition name="tape_editing_done" rotation="4.71238898038469" type="IMM" weight="1" x="12.85" y="23.0"/>
+      <transition name="shooting_completed" rotation="4.71238898038469" type="IMM" weight="1" x="20.85" y="4.0"/>
+      <transition name="film_shooting" rotation="4.71238898038469" type="IMM" weight="1" x="27.85" y="12.0"/>
+      <transition name="finish_completed" rotation="4.71238898038469" type="IMM" weight="1" x="20.85" y="77.0"/>
+      <transition name="prepare_for_editing" rotation="4.71238898038469" type="IMM" weight="1" x="20.85" y="33.0"/>
+    </nodes>
+    <edges>
+      <arc head="p_edit_offline" kind="OUTPUT" tail="prepare_for_editing"/>
+      <arc head="p_tape_finishing" kind="OUTPUT" tail="finishing"/>
+      <arc head="both_editing_done" kind="INPUT" tail="p_prepare_film_for_editing"/>
+      <arc head="p_prepare_for_editing" kind="OUTPUT" tail="both_editing_done"/>
+      <arc head="p_online" kind="OUTPUT" tail="film_editing"/>
+      <arc head="both_editing_done" kind="INPUT" tail="p_prepare_tape_for_editing"/>
+      <arc head="p_prepare_for_editing" kind="OUTPUT" tail="tape_editing_done"/>
+      <arc head="transfer_completed" kind="INPUT" tail="p_transfer_in_telecine"/>
+      <arc head="p_finish_on_tape" kind="OUTPUT" tail="transfer_completed"/>
+      <arc head="p_release_on_new_medium" kind="OUTPUT" tail="finish_completed"/>
+      <arc head="p_prepare_tape_for_editing" kind="OUTPUT" tail="both_shooting"/>
+      <arc head="film_finishing" kind="INPUT" tail="p_film_finishing"/>
+      <arc head="film_shooting" kind="INPUT" tail="p_receive_footage"/>
+      <arc head="online_finishing" kind="INPUT" tail="p_online"/>
+      <arc head="p_film_finishing" kind="OUTPUT" tail="finishing"/>
+      <arc head="tape_shooting" kind="INPUT" tail="p_receive_footage"/>
+      <arc head="p_negmatching" kind="OUTPUT" tail="film_editing"/>
+      <arc head="release_completed" kind="INPUT" tail="p_release_on_new_medium"/>
+      <arc head="p_finish_on_film" kind="OUTPUT" tail="film_finishing"/>
+      <arc head="shooting_completed" kind="INPUT" tail="p_init"/>
+      <arc head="finish_completed" kind="INPUT" tail="p_finish_on_tape"/>
+      <arc head="finish_completed" kind="INPUT" tail="p_finish_on_film"/>
+      <arc head="p_prepare_film_for_editing" kind="OUTPUT" tail="both_shooting"/>
+      <arc head="film_editing" kind="INPUT" tail="p_edit_offline"/>
+      <arc head="both_shooting" kind="INPUT" tail="p_receive_footage"/>
+      <arc head="p_prepare_film_for_editing" kind="OUTPUT" tail="film_shooting"/>
+      <arc head="p_transfer_in_telecine" kind="OUTPUT" tail="tape_finishing"/>
+      <arc head="prepare_for_editing" kind="INPUT" tail="p_prepare_for_editing"/>
+      <arc head="tape_finishing" kind="INPUT" tail="p_tape_finishing"/>
+      <arc head="p_prepare_tape_for_editing" kind="OUTPUT" tail="tape_shooting"/>
+      <arc head="tape_editing_done" kind="INPUT" tail="p_prepare_tape_for_editing"/>
+      <arc head="film_editing_done" kind="INPUT" tail="p_prepare_film_for_editing"/>
+      <arc head="p_prepare_for_editing" kind="OUTPUT" tail="film_editing_done"/>
+      <arc head="neg_finishing" kind="INPUT" tail="p_negmatching"/>
+      <arc head="p_receive_footage" kind="OUTPUT" tail="shooting_completed"/>
+      <arc head="p_init" kind="OUTPUT" tail="release_completed">
+        <point x="1.0" y="87.0"/>
+        <point x="1.0" y="2.0"/>
+      </arc>
+      <arc head="p_init" kind="OUTPUT" tail="finish_completed">
+        <point x="4.5" y="78.0"/>
+        <point x="4.5" y="4.5"/>
+      </arc>
+      <arc head="p_editing_done" kind="OUTPUT" tail="neg_finishing"/>
+      <arc head="p_editing_done" kind="OUTPUT" tail="online_finishing"/>
+      <arc head="finishing" kind="INPUT" tail="p_editing_done"/>
+    </edges>
+  </gspn>
+  <measures gspn-name="GSPN" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

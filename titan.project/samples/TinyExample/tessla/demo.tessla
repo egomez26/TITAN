@@ -1,0 +1,23 @@
+in Worker1: Events[Int]
+in Worker2: Events[Int]
+in Worker3: Events[Int]
+def Max_Worker1: Int := 3
+def Max_Worker2: Int := 4
+def Max_Worker3: Int := 5
+
+
+def Worker1Usage: Events[Int] := 100 - (Worker1 * 100)/ Max_Worker1
+def Worker2Usage: Events[Int] := 100 - (Worker2 * 100)/ Max_Worker2
+def Worker3Usage: Events[Int] := 100 - (Worker3 * 100)/ Max_Worker3
+
+def AverageWorker1Usage = average(Worker1Usage)
+def AverageWorker2Usage = average(Worker2Usage)
+def AverageWorker3Usage = average(Worker3Usage)
+
+out Worker1Usage
+out Worker2Usage
+out Worker3Usage
+
+out AverageWorker1Usage
+out AverageWorker2Usage
+out AverageWorker3Usage
