@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.pnpl.model.petrinet;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: UAM
+Bundle-Localization: plugin
+Automatic-Module-Name: org.pnpl.model.petrinet
+Export-Package: PetriNets,
+ PetriNets.impl,
+ PetriNets.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport
+Bundle-ActivationPolicy: lazy

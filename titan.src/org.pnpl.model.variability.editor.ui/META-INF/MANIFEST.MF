@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.pnpl.model.variability.editor.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: org.pnpl.model.variability.editor.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.pnpl.model.variability.editor.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.pnpl.model.variability.editor,
+ org.pnpl.model.variability.editor.ide,
+ org.pnpl.model.variability,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.14.300",
+ org.eclipse.ui.ide;bundle-version="3.18.500",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.35.0",
+ org.eclipse.xtend.lib;bundle-version="2.35.0";resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: org.pnpl.model.variability.editor.ui.contentassist,
+ org.pnpl.model.variability.editor.ui.internal,
+ org.pnpl.model.variability.editor.ui.quickfix
+Bundle-Activator: org.pnpl.model.variability.editor.ui.internal.EditorActivator

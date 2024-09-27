@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.pnpl.solvers.sat
+Bundle-Vendor: UAM
+Bundle-Version: 1.0.0.qualifier
+Export-Package: org.pnpl.solvers.sat.features,
+ org.pnpl.solvers.sat.features.impl,
+ org.pnpl.solvers.sat.formulas,
+ org.pnpl.solvers.sat.formulas.cnf,
+ org.pnpl.solvers.sat.issues,
+ org.pnpl.solvers.sat.presenceConditions
+Require-Bundle: org.sat4j.core;bundle-version="2.3.6"
+Automatic-Module-Name: org.pnpl.analysis.solver.sat

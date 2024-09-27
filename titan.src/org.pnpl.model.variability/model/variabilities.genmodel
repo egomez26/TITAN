@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.pnpl.model.variability/src" modelPluginID="org.pnpl.model.variability"
+    modelName="Variabilities" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>variabilities.ecore</foreignModel>
+  <genPackages prefix="Variability" disposableProviderFactory="true" ecorePackage="variabilities.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="variabilities.ecore#//UnaryOperator">
+      <genEnumLiterals ecoreEnumLiteral="variabilities.ecore#//UnaryOperator/NOT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="variabilities.ecore#//BinaryOperator">
+      <genEnumLiterals ecoreEnumLiteral="variabilities.ecore#//BinaryOperator/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="variabilities.ecore#//BinaryOperator/OR"/>
+      <genEnumLiterals ecoreEnumLiteral="variabilities.ecore#//BinaryOperator/IMPLIES"/>
+    </genEnums>
+    <genClasses ecoreClass="variabilities.ecore#//FileURI">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute variabilities.ecore#//FileURI/importURI"/>
+    </genClasses>
+    <genClasses ecoreClass="variabilities.ecore#//Variability">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference variabilities.ecore#//Variability/petrinet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference variabilities.ecore#//Variability/featuremodel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference variabilities.ecore#//Variability/presencecondition"/>
+    </genClasses>
+    <genClasses ecoreClass="variabilities.ecore#//PresenceCondition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference variabilities.ecore#//PresenceCondition/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference variabilities.ecore#//PresenceCondition/expression"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="variabilities.ecore#//Expression"/>
+    <genClasses ecoreClass="variabilities.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute variabilities.ecore#//Feature/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="variabilities.ecore#//UnaryExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute variabilities.ecore#//UnaryExpression/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference variabilities.ecore#//UnaryExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="variabilities.ecore#//BinaryExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute variabilities.ecore#//BinaryExpression/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference variabilities.ecore#//BinaryExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference variabilities.ecore#//BinaryExpression/right"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

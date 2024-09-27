@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="de.ovgu.featureide.core.composers">
+      <composer
+            class="org.pnpl.analysis.featureide.composer.PetriNetsComposer"
+            description="Petri Nets Composer"
+            id="org.pnpl.analysis.featureide.petrinets"
+            name="PetriNets"
+            nature="org.pnpl.analysis.featureide.petrinets">
+      </composer>
+   </extension>
+
+</plugin>
