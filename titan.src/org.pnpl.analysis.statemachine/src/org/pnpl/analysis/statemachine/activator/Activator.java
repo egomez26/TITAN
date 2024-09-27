@@ -1,4 +1,4 @@
-package org.pnpl.analysis.markedgraph.analysis.activator;
+package org.pnpl.analysis.statemachine.activator;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

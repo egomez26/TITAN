@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.pnpl.analysis.analyzer.lines">
+      <client
+            class="org.pnpl.analysis.statemachine.analysis.AnalysisPNPL"
+            name="State Machines">
+      </client>
+   </extension>
+   <extension
+         point="org.pnpl.analysis.analyzer.products">
+      <client
+            class="org.pnpl.analysis.statemachine.analysis.AnalysisProducts"
+            name="State Machines">
+      </client>
+   </extension>
+
+</plugin>
