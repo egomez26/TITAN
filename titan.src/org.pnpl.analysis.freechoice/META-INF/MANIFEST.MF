@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.pnpl.analysis.freechoice;singleton:=true
+Bundle-Vendor: UAM
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.pnpl.analysis.freechoice.activator.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.pnpl.analysis.analyzer;bundle-version="1.0.0",
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore;bundle-version="2.37.0"
+Automatic-Module-Name: org.pnpl.analysis.markedgraph
+Bundle-ActivationPolicy: lazy
+Import-Package: PetriNets,
+ com.google.common.collect;version="[33.2.0,34.0.0)"

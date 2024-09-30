@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.pnpl.analysis.analyzer.lines">
+      <client
+            class="org.pnpl.analysis.extendedfreechoice.analysis.AnalysisPNPL"
+            name="Extended Free Choice">
+      </client>
+   </extension>
+   <extension
+         point="org.pnpl.analysis.analyzer.products">
+      <client
+            class="org.pnpl.analysis.extendedfreechoice.analysis.AnalysisProducts"
+            name="Extended Free Choice">
+      </client>
+   </extension>
+
+</plugin>

@@ -69,4 +69,12 @@
          id="org.pnpl.analysis.statemachine"
          version="0.0.0"/>
 
+   <plugin
+         id="org.pnpl.analysis.extendedfreechoice"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.analysis.freechoice"
+         version="0.0.0"/>
+
 </feature>
