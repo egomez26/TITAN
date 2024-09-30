@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.pnpl.titan.feature"
+      label="TITAN Feature"
+      version="1.0.0.qualifier"
+      provider-name="UCM">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <url>
+      <update label="TITAN" url="https://github.com/egomez26/TITAN/blob/main/titan.project/plugins/TITAN.zip"/>
+   </url>
+
+   <plugin
+         id="org.pnpl.analysis.markedgraph"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.analysis.analyzer"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.model.variability.editor"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.model.variability"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.model.variability.editor.ui"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.analysis.featureide"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.model.petrinet"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.model.petrinet.editor"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.model.petrinet.edit"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.solvers.sat"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.model.variability.editor.ide"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.analysis.statemachine"
+         version="0.0.0"/>
+
+</feature>

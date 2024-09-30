@@ -36,11 +36,6 @@ Workflow {
 				generateXtendStub = true
 			}
 
-			formatter = {
-				generateStub = true
-				/*generateXtendStub = true*/
-			}
-
 			serializer = {
 				generateStub = false
 			}
@@ -54,6 +49,12 @@ Workflow {
 				/*generateDeprecationValidation = true*/
 				composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
 			}
+			
+			formatter = {
+				generateStub = true
+				/*generateXtendStub = true*/
+			}
+			
 			/*generator = {
 				generateXtendStub = true
 			}

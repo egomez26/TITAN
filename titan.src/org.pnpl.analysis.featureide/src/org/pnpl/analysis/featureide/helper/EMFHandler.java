@@ -121,7 +121,6 @@ public class EMFHandler {
 		}
 	}
 	
-	//@SuppressWarnings("restriction")
 	public String object2xtext (EObject eobj) {
 		if (eobj == null)
 			return "";
