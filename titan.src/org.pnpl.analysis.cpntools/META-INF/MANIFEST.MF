@@ -5,11 +5,7 @@ Bundle-SymbolicName: org.pnpl.analysis.cpntools
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.pnpl.analysis.cpntools
 Bundle-RequiredExecutionEnvironment: JavaSE-21
-Require-Bundle: org.cpntools.accesscpn.model,
- org.cpntools.accesscpn.engine.highlevel,
- org.cpntools.accesscpn.engine.proxy,
- org.cpntools.accesscpn.model.importer,
- org.eclipse.emf.common;bundle-version="2.31.0",
+Require-Bundle: org.eclipse.emf.common;bundle-version="2.31.0",
  org.eclipse.emf.ecore;bundle-version="2.37.0",
  org.eclipse.emf.ecore.change;bundle-version="2.17.0",
  org.eclipse.emf.ecore.xmi;bundle-version="2.38.0"
