@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cpntools
+Bundle-SymbolicName: org.pnpl.analysis.cpntools
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.pnpl.analysis.cpntools
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Require-Bundle: org.cpntools.accesscpn.model,
+ org.cpntools.accesscpn.engine.highlevel,
+ org.cpntools.accesscpn.engine.proxy,
+ org.cpntools.accesscpn.model.importer
