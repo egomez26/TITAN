@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.ovgu.featureide.fm.core,
  org.pnpl.model.petrinet;bundle-version="1.0.0",
  org.pnpl.model.variability,
- org.pnpl.analysis.analyzer;bundle-version="1.0.0",
+ org.pnpl.analysis;bundle-version="1.0.0",
  org.pnpl.analysis.invariant
 Automatic-Module-Name: org.pnpl.analysis.markedgraph
 Bundle-ActivationPolicy: lazy

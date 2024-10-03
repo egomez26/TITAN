@@ -46,7 +46,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.pnpl.analysis.analyzer.helpers.PetriNetsHelper;
+import org.pnpl.analysis.helpers.PetriNetsHelper;
 import org.pnpl.analysis.invariant.utils.InterrupterRegistry;
 import org.pnpl.analysis.invariant.utils.MathTools;
 import org.pnpl.analysis.invariant.utils.Matrix;

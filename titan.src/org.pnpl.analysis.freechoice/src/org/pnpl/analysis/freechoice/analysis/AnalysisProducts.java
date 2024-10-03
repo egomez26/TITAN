@@ -2,8 +2,8 @@ package org.pnpl.analysis.freechoice.analysis;
 
 import java.util.List;
 
-import org.pnpl.analysis.analyzer.analysis.AbstractAnalysisProducts;
-import org.pnpl.analysis.analyzer.helpers.PetriNetsHelper;
+import org.pnpl.analysis.analyzer.AbstractAnalysisProducts;
+import org.pnpl.analysis.helpers.PetriNetsHelper;
 
 import PetriNets.PTArc;
 import PetriNets.Place;

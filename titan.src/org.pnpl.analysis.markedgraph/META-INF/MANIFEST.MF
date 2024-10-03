@@ -6,7 +6,7 @@ Bundle-Vendor: UAM
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.pnpl.analysis.markedgraph.activator.Activator
 Require-Bundle: org.eclipse.core.runtime,
- org.pnpl.analysis.analyzer;bundle-version="1.0.0",
+ org.pnpl.analysis;bundle-version="1.0.0",
  org.eclipse.emf.common
 Automatic-Module-Name: org.pnpl.analysis.markedgraph
 Bundle-ActivationPolicy: lazy

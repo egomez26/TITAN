@@ -1,10 +1,11 @@
 package org.pnpl.analysis.statemachine.analysis;
 
 import java.util.List;
-import com.google.common.collect.Lists;
 
-import org.pnpl.analysis.analyzer.analysis.AbstractAnalysisPNPL;
-import org.pnpl.analysis.analyzer.helpers.ClauseHelper;
+import org.pnpl.analysis.analyzer.AbstractAnalysisPNPL;
+import org.pnpl.analysis.helpers.ClauseHelper;
+
+import com.google.common.collect.Lists;
 
 import PetriNets.PetriNet;
 import PetriNets.PTArc;

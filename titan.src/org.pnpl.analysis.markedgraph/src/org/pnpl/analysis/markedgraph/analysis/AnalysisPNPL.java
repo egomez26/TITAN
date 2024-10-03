@@ -1,9 +1,11 @@
 package org.pnpl.analysis.markedgraph.analysis;
 
 import java.util.List;
+
+import org.pnpl.analysis.analyzer.AbstractAnalysisPNPL;
+import org.pnpl.analysis.helpers.ClauseHelper;
+
 import com.google.common.collect.Lists;
-import org.pnpl.analysis.analyzer.analysis.AbstractAnalysisPNPL;
-import org.pnpl.analysis.analyzer.helpers.ClauseHelper;
 
 import PetriNets.PTArc;
 import PetriNets.PetriNet;

@@ -10,23 +10,28 @@
    </description>
 
    <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
+      MISO
+Universidad Autónoma de Madrid
+--
+Universidad Complutense de Madrid
    </copyright>
 
    <license url="http://www.example.com/license">
-      [Enter License Description here.]
+      https://creativecommons.org/licenses/by-nc-sa/4.0/
    </license>
 
    <url>
       <update label="TITAN" url="https://github.com/egomez26/TITAN/blob/main/titan.project/plugins/TITAN.zip"/>
    </url>
 
-   <plugin
-         id="org.pnpl.analysis.markedgraph"
-         version="0.0.0"/>
+   <requires>
+      <import plugin="de.ovgu.featureide.core"/>
+      <import plugin="de.ovgu.featureide.fm.core"/>
+      <import plugin="de.ovgu.featureide.fm.ui"/>
+   </requires>
 
    <plugin
-         id="org.pnpl.analysis.analyzer"
+         id="org.pnpl.analysis.markedgraph"
          version="0.0.0"/>
 
    <plugin
@@ -91,6 +96,10 @@
 
    <plugin
          id="org.pnpl.analysis.tinvariant"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.analysis"
          version="0.0.0"/>
 
 </feature>

@@ -2,7 +2,7 @@ package org.pnpl.analysis.statemachine.analysis;
 
 import java.util.List;
 
-import org.pnpl.analysis.analyzer.analysis.AbstractAnalysisProducts;
+import org.pnpl.analysis.analyzer.AbstractAnalysisProducts;
 
 import PetriNets.PTArc;
 import PetriNets.TPArc;

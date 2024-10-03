@@ -3,7 +3,7 @@ package org.pnpl.analysis.pinvariant.analysis;
 import java.util.List;
 import java.util.Set;
 
-import org.pnpl.analysis.analyzer.analysis.AbstractAnalysisProducts;
+import org.pnpl.analysis.analyzer.AbstractAnalysisProducts;
 import org.pnpl.analysis.invariant.analysis.InvariantCalculator;
 
 /**

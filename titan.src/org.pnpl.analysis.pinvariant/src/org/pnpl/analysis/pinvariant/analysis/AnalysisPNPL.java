@@ -10,10 +10,9 @@ import java.util.stream.Collectors;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Table;
 import org.eclipse.collections.api.tuple.Pair;
-
-import org.pnpl.analysis.analyzer.helpers.PetriNetsHelper;
+import org.pnpl.analysis.analyzer.AbstractAnalysisPNPL;
+import org.pnpl.analysis.helpers.PetriNetsHelper;
 import org.pnpl.analysis.invariant.analysis.ConstraintCalculator;
-import org.pnpl.analysis.analyzer.analysis.AbstractAnalysisPNPL;
 
 import variability.Expression;
 import PetriNets.PetriNet;

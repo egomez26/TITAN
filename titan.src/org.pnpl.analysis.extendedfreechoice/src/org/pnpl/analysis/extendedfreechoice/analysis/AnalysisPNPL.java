@@ -2,9 +2,9 @@ package org.pnpl.analysis.extendedfreechoice.analysis;
 
 import java.util.List;
 
-import org.pnpl.analysis.analyzer.analysis.AbstractAnalysisPNPL;
-import org.pnpl.analysis.analyzer.helpers.ClauseHelper;
-import org.pnpl.analysis.analyzer.helpers.PetriNetsHelper;
+import org.pnpl.analysis.analyzer.AbstractAnalysisPNPL;
+import org.pnpl.analysis.helpers.ClauseHelper;
+import org.pnpl.analysis.helpers.PetriNetsHelper;
 
 import com.google.common.collect.Lists;
 

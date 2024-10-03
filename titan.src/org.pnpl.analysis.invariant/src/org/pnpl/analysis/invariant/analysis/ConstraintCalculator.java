@@ -11,6 +11,7 @@ import com.google.common.collect.Lists;
 import org.jacop.constraints.*;
 import org.jacop.core.*;
 import org.jacop.search.*;
+import org.pnpl.analysis.helpers.ExpressionHelper;
 
 import de.ovgu.featureide.fm.core.base.IConstraint;
 import de.ovgu.featureide.fm.core.base.IFeature;
@@ -21,7 +22,6 @@ import variability.BinaryExpression;
 import variability.Expression;
 import variability.Feature;
 import variability.UnaryExpression;
-import org.pnpl.analysis.analyzer.helpers.ExpressionHelper;
 
 /**
  * Translate the Lifted Incidence Matrix into a CSP and solve to find the solutions
