@@ -6,7 +6,7 @@
       provider-name="UCM">
 
    <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+      TITAN -- Eclipse plug-in for analysing Petri net product lines
    </description>
 
    <copyright url="http://www.example.com/copyright">
@@ -75,6 +75,22 @@
 
    <plugin
          id="org.pnpl.analysis.freechoice"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.solvers.jacop"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.analysis.invariant"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.analysis.pinvariant"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.analysis.tinvariant"
          version="0.0.0"/>
 
 </feature>

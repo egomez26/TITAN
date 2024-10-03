@@ -77,6 +77,7 @@ public class Main {
 		search.getSolutionListener().printAllSolutions();
 	}
 	
+	@SuppressWarnings("unused")
 	private static void loadFlatZincFile(String fullname) {
 		String[] arg = new String[2];
 		arg[0] = "-s";
