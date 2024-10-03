@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.pnpl.analysis.invariant
+Bundle-Vendor: UAM
+Bundle-Version: 1.0.0.qualifier
+Export-Package: org.pnpl.analysis.invariant.analysis;uses:="org.pnpl.analysis.invariant.utils,de.ovgu.featureide.fm.core.base,PetriNets",
+ org.pnpl.analysis.invariant.test
+Automatic-Module-Name: org.pnpl.analysis.invariant
+Import-Package: com.google.common.collect;version="[33.3.0,34.0.0)"
+Require-Bundle: de.ovgu.featureide.fm.core,
+ org.pnpl.model.petrinet,
+ org.pnpl.model.variability,
+ org.pnpl.analysis.analyzer,
+ org.pnpl.solvers.jacop;bundle-version="1.0.0"

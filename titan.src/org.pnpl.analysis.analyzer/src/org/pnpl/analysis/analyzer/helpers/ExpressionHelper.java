@@ -87,7 +87,7 @@ public class ExpressionHelper {
 	
 	// Transform a constraint (as a Node) in the Feature Model into a String
 	public Expression buildExpression(String condition) {		
-		//System.out.println("[pnpl analysis] Loading pc " +condition);
+		//System.out.println("[pnpl] Loading pc " +condition);
 		return getExpression(condition);
 	}
 	

@@ -27,7 +27,7 @@ public abstract class AbstractAnalysisProducts extends AbstractAnalysis {
 		if (vh == null) return false;
 		if ((vh.getPetriNetFile() == null) || (vh.getFeatureModelFile() == null)) return false;
 		
-		System.out.println("[pnpl analysis] Starting analysis of each product");
+		System.out.println("[pnpl] Starting analysis of each product");
 
 		PetriNetsIterator iterator = new PetriNetsIterator(vh);
 		iterator.buildModels();
@@ -38,7 +38,7 @@ public abstract class AbstractAnalysisProducts extends AbstractAnalysis {
 		while(iterator.hasNext()) {
 			IFile ifile = iterator.next();
 			if (ifile != null) {
-				System.out.println("[pnpl analysis] Analysing product: " + ifile.getFullPath());
+				System.out.println("[pnpl] Analysing product: " + ifile.getFullPath());
 				
 				this.currentFile = ifile;
 				this.productID = count; 
@@ -52,7 +52,7 @@ public abstract class AbstractAnalysisProducts extends AbstractAnalysis {
 				if (!StrongSatisfaction && !result) break;
 			}
 		}
-		System.out.println("[pnpl analysis] Number of products analyzed: " + count);
+		System.out.println("[pnpl] Number of products analyzed: " + count);
 		return result;
 	}
 

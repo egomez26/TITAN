@@ -343,7 +343,7 @@ public class VariabilityHelper {
 				}
 			}
 		} else
-			System.err.println("[pnpl analysis] Feature " + key + " doesn't exist in the model");
+			System.err.println("[pnpl] Feature " + key + " doesn't exist in the model");
 		return value;
 	}
 }

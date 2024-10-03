@@ -77,9 +77,9 @@ public abstract class AbstractAnalysisHandler extends AbstractHandler implements
 					outprint = outprint + name;
 					time_end = System.currentTimeMillis();
 					
-					System.out.println("[pnpl analysis] " + outprint);
+					System.out.println("[pnpl] " + outprint);
 					String timeprint =  "The task has taken " + ( time_end - time_start ) + " milliseconds";
-					System.out.println("[pnpl analysis] " + timeprint);
+					System.out.println("[pnpl] " + timeprint);
 					
 					MessageDialog.openInformation(null, "Analysis results", outprint + ".\n" + timeprint);
 				}

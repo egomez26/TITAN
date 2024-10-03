@@ -32,7 +32,7 @@ public abstract class AbstractAnalysisPNPL extends AbstractAnalysis {
 		boolean result = false;
 		
 		if (vh != null) {
-			System.out.println("[pnpl analysis] Starting analysis of product lines");
+			System.out.println("[pnpl] Starting analysis of product lines");
 
 			extractPresenceConditions();
 			result = buildCondition();
@@ -41,16 +41,16 @@ public abstract class AbstractAnalysisPNPL extends AbstractAnalysis {
 				result = (condition == null || condition.trim().isEmpty());
 					
 				if (!result) {
-					System.out.println("[pnpl analysis] Condition: "+ condition);
+					System.out.println("[pnpl] Condition: "+ condition);
 					
 					FeatureProvider fp = new FeatureProvider(getFeatures()); 
 					ConditionParser parser = new ConditionParser(condition,fp);
 					Collection<ValidationIssue> errors = parser.parse();			
-					System.out.println("[pnpl analysis] Evaluation: "+ parser.getResult());
-					System.out.println("[pnpl analysis] Errors: "+ errors);
+					System.out.println("[pnpl] Evaluation: "+ parser.getResult());
+					System.out.println("[pnpl] Errors: "+ errors);
 					
 					CNFFormula formula = parser.getAST().toCNF(); 
-					//System.out.println("[pnpl analysis] CNF: " + formula+"\n");
+					//System.out.println("[pnpl] CNF: " + formula+"\n");
 					
 					result = !doSomeSAT(formula, fp);
 				}
@@ -79,7 +79,7 @@ public abstract class AbstractAnalysisPNPL extends AbstractAnalysis {
 			try {
 				solver.addClause(c.toVecInt(fp.getFeatures()));
 			} catch (ContradictionException e) {
-				System.err.println("[pnpl analysis] Contradiction");
+				System.err.println("[pnpl] Contradiction");
 				return false;
 			}
 		}
@@ -87,8 +87,8 @@ public abstract class AbstractAnalysisPNPL extends AbstractAnalysis {
 		IProblem problem = solver;
 		try {
 			if (problem.isSatisfiable()) {
-				System.out.println("[pnpl analysis] Problem is SAT");
-				System.out.println("[pnpl analysis] Model: ");
+				System.out.println("[pnpl] Problem is SAT");
+				System.out.println("[pnpl] Model: ");
 				int[] model = problem.findModel();
 				for (int i = 0; i < model.length; i++) {
 					System.out.println(" "+fp.getFeatures().get(Math.abs(model[i])-1)+" = "+
@@ -97,7 +97,7 @@ public abstract class AbstractAnalysisPNPL extends AbstractAnalysis {
 				return model.length > 0;
 			}
 		} catch (TimeoutException e) {
-			System.err.println("[pnpl analysis] Timeout!");
+			System.err.println("[pnpl] Timeout!");
 			e.printStackTrace();
 		}
 		return false;

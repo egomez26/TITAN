@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.pnpl.analysis.analyzer.lines">
+      <client
+            class="org.pnpl.analysis.pinvariant.analysis.AnalysisPNPL"
+            name="P-Invariant">
+      </client>
+   </extension>
+   <extension
+         point="org.pnpl.analysis.analyzer.products">
+      <client
+            class="org.pnpl.analysis.pinvariant.analysis.AnalysisProducts"
+            name="P-Invariant">
+      </client>
+   </extension>
+
+</plugin>
