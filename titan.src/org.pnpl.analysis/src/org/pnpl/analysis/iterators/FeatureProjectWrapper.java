@@ -1,4 +1,4 @@
-package org.pnpl.analysis.iterator;
+package org.pnpl.analysis.iterators;
 
 import java.nio.file.Path;
 import java.util.Collection;

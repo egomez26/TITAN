@@ -1,6 +1,6 @@
-package org.pnpl.analysis.handler;
+package org.pnpl.analysis.handlers;
 
-public class ProductsHandler extends AbstractAnalysisHandler {
+public class AnalysisHandlerProducts extends AnalysisHandler {
 
 	@Override
 	protected String getExtensionPointIdentifier() {

@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.pnpl.analysis.analyzer.lines">
+         point="org.pnpl.analysis.analyzer.pnpl">
       <client
             class="org.pnpl.analysis.tinvariant.analysis.AnalysisPNPL"
             name="T-Invariant">

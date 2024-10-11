@@ -1,4 +1,4 @@
-package org.pnpl.analysis.handler;
+package org.pnpl.analysis.handlers;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +24,7 @@ import org.pnpl.analysis.helpers.MenuHelper;
  * @author Esther Guerra
  */
 
-public abstract class AbstractAnalysisHandler extends AbstractHandler implements IHandler {
+public abstract class AnalysisHandler extends AbstractHandler implements IHandler {
 	private static String STRING_ALL = "All products are ";
 	private static String STRING_SOME = "Some products are not ";
 	

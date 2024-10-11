@@ -3,7 +3,7 @@ package org.pnpl.analysis.analyzer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.pnpl.analysis.featureide.helper.EMFHandler;
-import org.pnpl.analysis.iterator.PetriNetsIterator;
+import org.pnpl.analysis.iterators.PetriNetsIterator;
 
 import PetriNets.PetriNet;
 import PetriNets.PetriNetsFactory;

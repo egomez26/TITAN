@@ -1,4 +1,4 @@
-package org.pnpl.analysis.iterator;
+package org.pnpl.analysis.iterators;
 
 import java.util.ArrayList;
 import java.util.List;

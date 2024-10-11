@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension-point id="org.pnpl.analysis.analyzer.products" name="Products Analysis" schema="schema/org.pnpl.analysis.analyzer.products.exsd"/>
-   <extension-point id="org.pnpl.analysis.analyzer.lines" name="Petri Net Product Lines Analysis" schema="schema/org.pnpl.analysis.analyzer.lines.exsd"/>
+   <extension-point id="org.pnpl.analysis.analyzer.products" name="Products Analysis" schema="schema/org.pnpl.analysis.products.exsd"/>
+   <extension-point id="org.pnpl.analysis.analyzer.pnpl" name="Petri Net Product Lines Analysis" schema="schema/org.pnpl.analysis.pnpl.exsd"/>
    <extension
          point="org.eclipse.ui.commands">
       <command
-            defaultHandler="org.pnpl.analysis.handler.PNPLHandler"
+            defaultHandler="org.pnpl.analysis.handlers.AnalysisHandlerPNPL"
             description="Analysis of Petri Net Product Lines"
             id="pnpl.analysis.commandPNPL"
-            name="Command in PNPL">
+            name="Analysis for PNPL">
       </command>
       <command
-            defaultHandler="org.pnpl.analysis.handler.ProductsHandler"
+            defaultHandler="org.pnpl.analysis.handlers.AnalysisHandlerProducts"
             description="Analysis of Products"
             id="pnpl.analysis.commandProducts"
-            name="Command for Products">
+            name="Analysis for Products">
       </command>
    </extension>
    <extension
