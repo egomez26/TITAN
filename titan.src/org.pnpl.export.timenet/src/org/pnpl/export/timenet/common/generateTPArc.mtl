@@ -1,0 +1,13 @@
+[comment encoding = UTF-8 /]
+[module generateTPArc('http://www.petrinets.org/')]
+
+[template public generateElement(anArc : TPArc)]
+<arc id="[anArc.name/]" source="[anArc.input.name/]" target="[anArc.output.name/]">
+	<inscription>
+    	<graphics>
+			<offset page="1" x="0" y="0"/>
+		</graphics>
+		<value>[anArc.weight/]</value>
+	</inscription>
+</arc>
+[/template]

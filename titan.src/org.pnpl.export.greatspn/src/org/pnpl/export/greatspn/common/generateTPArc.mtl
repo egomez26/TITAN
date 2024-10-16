@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module generateTPArc('http://www.petrinets.org/')]
+
+[template public generateElement(anArc : TPArc, anId : Integer)
+	{ anId : Integer = (anId)*10;}]
+[if (anArc.name.oclIsUndefined())]
+<arc id="[anId/]" head="[anArc.output.name.replaceAll(' ', '_')/]" kind="OUTPUT" mult="[anArc.weight/]" tail="[anArc.input.name.replaceAll(' ', '_')/]"/>
+[else]
+<arc id="[anArc.name.toString()/]" head="[anArc.output.name.replaceAll(' ', '_')/]" kind="OUTPUT" mult="[anArc.weight/]" tail="[anArc.input.name.replaceAll(' ', '_')/]"/>
+[/if]
+[/template]

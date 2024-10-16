@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module generateFile('http://www.petrinets.org/')]
+
+[import org::pnpl::export::greatspn::common::generatePetriNet /]
+
+[template public generateFile(aPetriNet : PetriNet, aFileName : String, aTool : String)]
+[file (aFileName + '_' + aTool + '.pnpro', false, 'UTF-8')]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="[aFileName/]" version="121">
+	<gspn name="[aFileName/]" show-color-cmd="false" show-fluid-cmd="false">
+	[aPetriNet.generateElement (aTool)/]
+	</gspn>
+	[aTool.generateToolSpecific ()/]
+</project>
+[/file]
+[/template]
+
+[template public generateToolSpecific (aTool : String)]
+<measures gspn-name="GSPN" name="Measures" simplified-UI="false">
+	<assignments/>
+	<greatspn/>
+	<formulas>
+		<formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+		<formula comment="All the basic Petri net measures" language="ALL"/>
+	</formulas>
+</measures>
+[/template]

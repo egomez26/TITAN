@@ -3,7 +3,7 @@
    <description name="TITAN Plug-In" url="https://github.com/egomez26/TITAN/blob/main/titan.project/plugins/TITAN.zip">
       TITAN -- Tool for analysing Petri Nets Product Lines
    </description>
-   <feature url="features/org.pnpl.titan.feature_1.0.0.202410161810.jar" id="org.pnpl.titan.feature" version="1.0.0.202410161810">
+   <feature url="features/org.pnpl.titan.feature_1.0.0.202410161917.jar" id="org.pnpl.titan.feature" version="1.0.0.202410161917">
       <category name="TITAN"/>
    </feature>
    <category-def name="TITAN" label="TITAN - Petri Nets Product Lines">

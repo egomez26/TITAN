@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+[module generateFile('http://www.petrinets.org/')]
+
+[import org::pnpl::export::timenet::common::generatePetriNet /]
+
+[template public generateFile(aPetriNet : PetriNet, aFileName : String, aTool : String)]
+[file (aFileName + '_' + aTool + '.pnml', false, 'UTF-8')]
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pnml>
+	<net id="0" type="eDSPN">
+	[aPetriNet.generateElement (aTool)/]
+	</net>
+</pnml>
+[/file]
+[/template]

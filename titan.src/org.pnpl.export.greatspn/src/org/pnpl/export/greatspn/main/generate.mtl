@@ -1,0 +1,9 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.petrinets.org/')]
+
+[import org::pnpl::export::greatspn::files::generateFile /]
+
+[template public generate(aPetriNet : PetriNet) { aTool : String = 'GreatSPN';}]
+[comment @main/]
+	[generateFile (aPetriNet,'output',aTool)/]
+[/template]

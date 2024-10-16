@@ -188,4 +188,16 @@ Universidad Complutense de Madrid
          id="org.eclipse.equinox.common"
          version="0.0.0"/>
 
+   <plugin
+         id="org.pnpl.export.greatspn"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.export.timenet"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.export.woped"
+         version="0.0.0"/>
+
 </feature>

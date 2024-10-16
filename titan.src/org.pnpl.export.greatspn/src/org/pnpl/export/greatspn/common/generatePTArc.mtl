@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module generatePTArc('http://www.petrinets.org/')]
+
+[template public generateElement(anArc : PTArc, anId : Integer)
+	{ anId : Integer = (anId)*10;}]
+<arc id="[anId/]"  head="[anArc.output.name.replaceAll(' ', '_')/]" kind="INPUT" mult="[anArc.weight/]" tail="[anArc.input.name.replaceAll(' ', '_')/]"/>
+[/template]

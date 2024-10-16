@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module generatePlace('http://www.petrinets.org/')]
+
+[template public generateElement(aPlace : Place, anId : Integer)  
+	{ positionX : Integer = (anId)*10; positionY : Integer = 10;}]
+<place marking="[aPlace.marking /]" name="[aPlace.name.toString().replaceAll(' ', '_')/]" x="[positionX/]" y="[positionY/]"/>
+[/template]

@@ -1,0 +1,39 @@
+[comment encoding = UTF-8 /]
+[module generatePetriNet('http://www.petrinets.org/')]
+
+[import org::pnpl::export::woped::common::generatePlace]
+[import org::pnpl::export::woped::common::generateTransition]
+[import org::pnpl::export::woped::common::generatePTArc]
+[import org::pnpl::export::woped::common::generateTPArc]
+
+[comment this specific order of the elements is important for some Petri nets tools /]
+[template public generateElement(aPetriNet : PetriNet, aTool : String)]
+	<!-- List of places -->
+[aPetriNet.generatePlaces()/]
+	<!-- List of transitions -->
+[aPetriNet.generateTransitions(aTool)/]
+	<!-- List of arcs -->
+[aPetriNet.generateArcs(aTool)/]
+[/template]
+
+[template public generatePlaces (aPetriNet : PetriNet)]
+[for (aPlace : Place | aPetriNet.places)]
+	[aPlace.generateElement(i)/]
+[/for]
+[/template]
+
+[template public generateTransitions (aPetriNet : PetriNet, aTool : String)]
+[for (aTransition : Transition | aPetriNet.trans)]	
+	[aTransition.generateElement(i,aTool)/]
+[/for]
+[/template]
+
+[template public generateArcs (aPetriNet : PetriNet, aTool : String)]
+[for (anArc : Arc | aPetriNet.arcs)]
+	[if (anArc.oclIsTypeOf(PTArc))]
+		[anArc.oclAsType(PTArc).generateElement(i,aTool)/]
+	[elseif (anArc.oclIsTypeOf(TPArc))]
+		[anArc.oclAsType(TPArc).generateElement(i,aTool)/]
+	[/if]
+[/for]
+[/template]

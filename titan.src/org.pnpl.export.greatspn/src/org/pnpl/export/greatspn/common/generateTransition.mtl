@@ -1,0 +1,8 @@
+[comment encoding = UTF-8 /]
+[module generateTransition('http://www.petrinets.org/')]
+
+
+[template public generateElement(aTransition : Transition, anId : Integer)  
+	{ positionX : Integer = (anId)*10; positionY : Integer = (1)*10;}]
+<transition name="[aTransition.name.replaceAll(' ', '_')/]" priority="1" weight="1" type="IMM" x="[positionX/]" y="[positionY/]"/>
+[/template]

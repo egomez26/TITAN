@@ -1,0 +1,23 @@
+[comment encoding = UTF-8 /]
+[module generatePlace('http://www.petrinets.org/')]
+
+[template public generateElement(aPlace : Place, anId : Integer)  
+	{ positionX : Integer = (anId - 1)*100; positionY : Integer = (1)*100;}]
+<place id="[aPlace.name/]">
+	<name>
+		<text>[aPlace.name/]</text>
+		<graphics>
+			<offset x="[positionX/]" y="[positionY+40/]"/>
+		</graphics>
+		<value>[aPlace.name/]</value>
+	</name>
+	<graphics>
+        <position x="[positionX/]" y="[positionY/]"/>
+		<dimension x="30" y="30"/>
+    </graphics>
+	<initialMarking>
+		<text>[aPlace.marking /]</text>
+		<value>[aPlace.marking /]</value>
+	</initialMarking>
+</place>
+[/template]

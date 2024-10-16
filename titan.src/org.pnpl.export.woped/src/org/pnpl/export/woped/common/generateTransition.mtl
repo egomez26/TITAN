@@ -1,0 +1,24 @@
+[comment encoding = UTF-8 /]
+[module generateTransition('http://www.petrinets.org/')]
+
+
+[template public generateElement(aTransition : Transition, anId : Integer, aTool : String)  
+	{ positionX : Integer = (anId-1)*100+50; positionY : Integer = (1)*100+10;}]
+<transition id="[aTransition.name/]">
+	<name>
+		<text>[aTransition.name/]</text>
+    	<graphics>
+      		<offset x="[positionX/]" y="[positionY+10/]"/>
+    	</graphics>		
+	</name>
+	<graphics>
+    	<position x="[positionX/]" y="[positionY/]"/>
+		<dimension x="30" y="10"/>
+	</graphics>
+	<toolspecific tool="[aTool/]" version="1.0">
+		<time>0</time>
+		<timeUnit>1</timeUnit>
+		<orientation>1</orientation>
+	</toolspecific>
+</transition>
+[/template]

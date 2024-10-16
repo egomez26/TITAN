@@ -1,0 +1,18 @@
+[comment encoding = UTF-8 /]
+[module generatePTArc('http://www.petrinets.org/')]
+
+[template public generateElement(anArc : PTArc, anId : Integer, aTool : String)]
+<arc id="[anId/]" source="[anArc.input.name/]" target="[anArc.output.name/]">
+	<inscription>
+		<text>[anArc.weight/]</text>
+    	<graphics>
+			<offset page="1" x="0" y="0"/>
+		</graphics>		
+	</inscription>
+	<toolspecific tool="[aTool/]" version="1.0">
+		<probability>1.0</probability>
+		<displayProbabilityOn>false</displayProbabilityOn>
+		<displayProbabilityPosition x="500.0" y="12.0"/>
+	</toolspecific>
+</arc>
+[/template]

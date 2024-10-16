@@ -1,0 +1,9 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.petrinets.org/')]
+
+[import org::pnpl::export::timenet::files::generateFile /]
+
+[template public generate(aPetriNet : PetriNet) { aTool : String = 'TimeNET';}]
+[comment @main/]
+	[generateFile (aPetriNet,'output',aTool)/]
+[/template]

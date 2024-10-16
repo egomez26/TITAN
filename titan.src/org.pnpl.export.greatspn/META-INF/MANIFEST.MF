@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GreatSPN Export Plug-in
+Bundle-SymbolicName: org.pnpl.export.greatspn;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.pnpl.export.greatspn.activator.Activator
+Bundle-ClassPath: bin/,
+ .
+Bundle-Vendor: UAM
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.acceleo.common;bundle-version="3.7.15",
+ org.eclipse.acceleo.model;bundle-version="3.7.15",
+ org.eclipse.acceleo.profiler;bundle-version="3.7.15",
+ org.eclipse.acceleo.engine;bundle-version="3.7.15",
+ org.pnpl.model.petrinet,
+ org.pnpl.model.variability;bundle-version="1.0.0",
+ org.pnpl.export;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Eclipse-LazyStart: true
+Export-Package: org.pnpl.export.greatspn.main
+
