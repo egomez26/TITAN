@@ -1,0 +1,43 @@
+[comment encoding = UTF-8 /]
+[module generatePTArc('http://www.petrinets.org/')]
+
+
+[template public generateElement(anArc : PTArc, anId : Integer)
+	{ anId : Integer = (anId)*10;}]
+<arc id="ARC_[anArc.name/]"
+           orientation="PtoT"
+           order="1">
+  	<posattr x="0.000000"
+             y="0.000000"/>
+    <fillattr colour="White"
+              pattern=""
+              filled="false"/>
+    <lineattr colour="Black"
+              thick="1"
+              type="Solid"/>
+    <textattr colour="Black"
+              bold="false"/>
+    <arrowattr headsize="1.200000"
+               currentcyckle="2"/>
+    <transend idref="TR_[anArc.output.name.replaceAll(' ', '_')/]"/>
+    <placeend idref="PL_[anArc.input.name.replaceAll(' ', '_')/]"/>
+    <annot id="ANN_[anArc.name/]">
+      <posattr x="-48.000000"
+               y="95.000000"/>
+      <fillattr colour="White"
+                pattern="Solid"
+                filled="false"/>
+      <lineattr colour="Black"
+                thick="0"
+                type="Solid"/>
+      <textattr colour="Black"
+                bold="false"/>
+      <text tool="CPN Tools"
+	  [if (anArc.weight > 1)] [comment arc weight/]
+		    version="4.0.1">[anArc.weight/]`1</text> 
+	  [else]
+		    version="4.0.1">[anArc.weight/]</text> 
+	  [/if]
+    </annot>
+</arc>
+[/template]

@@ -24,82 +24,168 @@ Universidad Complutense de Madrid
       <update label="TITAN" url="https://github.com/egomez26/TITAN/blob/main/titan.project/plugins/TITAN.zip"/>
    </url>
 
-   <requires>
-      <import plugin="de.ovgu.featureide.core"/>
-      <import plugin="de.ovgu.featureide.fm.core"/>
-      <import plugin="de.ovgu.featureide.fm.ui"/>
-   </requires>
-
    <plugin
          id="org.pnpl.analysis.markedgraph"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.model.variability.editor"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.model.variability"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.model.variability.editor.ui"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.analysis.featureide"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.model.petrinet"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.model.petrinet.editor"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.model.petrinet.edit"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.solvers.sat"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.model.variability.editor.ide"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.analysis.statemachine"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.analysis.extendedfreechoice"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.analysis.freechoice"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.solvers.jacop"
-         version="0.0.0"/>
+         version="1.0.0"/>
 
    <plugin
          id="org.pnpl.analysis.invariant"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.analysis.pinvariant"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.analysis.tinvariant"
-         version="0.0.0"/>
+         version="1.0.0.qualifier"/>
 
    <plugin
          id="org.pnpl.analysis"
+         version="1.0.0.qualifier"/>
+
+   <plugin
+         id="org.pnpl.export"
+         version="1.0.0.qualifier"/>
+
+   <plugin
+         id="org.pnpl.export.cpntools"
+         version="1.0.0.qualifier"/>
+
+   <plugin
+         id="com.google.guava"
+         version="33.3.0.jre"/>
+
+   <plugin
+         id="de.ovgu.featureide.core"
+         version="3.11.1.202403121722"/>
+
+   <plugin
+         id="de.ovgu.featureide.core.runtime"
+         version="3.11.1.202403121722"/>
+
+   <plugin
+         id="de.ovgu.featureide.fm.core"
+         version="3.11.1.202403121722"/>
+
+   <plugin
+         id="de.ovgu.featureide.fm.ui"
+         version="3.11.1.202403121722"/>
+
+   <plugin
+         id="org.eclipse.acceleo.common"
+         version="3.7.15.202402190857"/>
+
+   <plugin
+         id="org.eclipse.acceleo.engine"
+         version="3.7.15.202402190857"/>
+
+   <plugin
+         id="org.eclipse.osgi"
+         version="3.21.0.v20240717-2103"/>
+
+   <plugin
+         id="org.eclipse.acceleo.model"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.acceleo.profiler"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.antlr.runtime"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.emf.common"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.emf.ecore"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.emf.ecore.edit"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.emf.ecore.xmi"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.emf.transaction"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.ui"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.ui.ide"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.ocl"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.ocl.ecore"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.equinox.common"
          version="0.0.0"/>
 
 </feature>

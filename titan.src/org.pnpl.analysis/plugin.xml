@@ -32,7 +32,7 @@
             allPopups="false"
             locationURI="popup:org.eclipse.ui.popup.any?after=additions">
          <menu
-               id="pnpl.product_analysis_menu"
+               id="org.pnpl.analysis_menu"
                label="PNPL Analysis">
             <visibleWhen
                   checkEnabled="true">

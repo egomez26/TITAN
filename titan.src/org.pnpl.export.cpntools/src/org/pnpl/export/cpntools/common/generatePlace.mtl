@@ -1,0 +1,64 @@
+[comment encoding = UTF-8 /]
+[module generatePlace('http://www.petrinets.org/')]
+
+
+[template public generateElement(aPlace : Place, anId : Integer)  
+	{ positionX : Integer = (anId)*10; positionY : Integer = 10;}]
+<place id="PL_[aPlace.name.toString().replaceAll(' ', '_')/]">
+    <posattr x="-126.000000"
+             y="84.000000"/>
+    <fillattr colour="White"
+              pattern=""
+              filled="false"/>
+    <lineattr colour="Black"
+              thick="1"
+              type="Solid"/>
+    <textattr colour="Black"
+              bold="false"/>
+    <text>[aPlace.name.toString().replaceAll(' ', '_')/]</text>
+    <ellipse w="60.000000"
+             h="60.000000"/>
+    <token x="-10.000000"
+           y="0.000000"/>
+    <marking x="0.000000"
+             y="0.000000"
+             hidden="false">
+      <snap snap_id="0"
+            anchor.horizontal="0"
+            anchor.vertical="0"/>
+    </marking>
+    <type id="PL_T_[aPlace.name.toString().replaceAll(' ', '_')/]">
+      <posattr x="-90.500000"
+               y="60.000000"/>
+      <fillattr colour="White"
+                pattern="Solid"
+                filled="false"/>
+      <lineattr colour="Black"
+                thick="0"
+                type="Solid"/>
+      <textattr colour="Black"
+                bold="false"/>
+      <text tool="CPN Tools"
+            version="4.0.1">INT</text>
+    </type>
+    <initmark id="PL_M_[aPlace.name.toString().replaceAll(' ', '_')/]">
+      <posattr x="-89.000000"
+               y="107.000000"/>
+      <fillattr colour="White"
+                pattern="Solid"
+                filled="false"/>
+      <lineattr colour="Black"
+                thick="0"
+                type="Solid"/>
+      <textattr colour="Black"
+                bold="false"/>
+	[if (aPlace.marking > 0)]
+		<text tool="CPN Tools"
+            version="4.0.1">[aPlace.marking /]`1</text> 
+	[else]
+		<text tool="CPN Tools"
+            version="4.0.1"/>
+	[/if]    
+	</initmark>
+  </place>
+[/template]

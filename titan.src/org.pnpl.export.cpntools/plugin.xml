@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.pnpl.export.pnpl">
+      <client
+            class="org.pnpl.export.cpntools.exporters.ExportPNPL"
+            name="CPN Tools">
+      </client>
+   </extension>
+   <extension
+         point="org.pnpl.export.products">
+      <client
+            class="org.pnpl.export.cpntools.exporters.ExportProducts"
+            name="CPN Tools">
+      </client>
+   </extension>
+
+</plugin>

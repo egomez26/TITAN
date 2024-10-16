@@ -1,0 +1,86 @@
+[comment encoding = UTF-8 /]
+[module generateTransition('http://www.petrinets.org/')]
+
+
+[template public generateElement(aTransition : Transition, anId : Integer)  
+	{ positionX : Integer = (anId)*10; positionY : Integer = (1)*10;}]
+<trans id="TR_[aTransition.name.replaceAll(' ', '_')/]"
+       explicit="false">
+	<posattr x="30.000000"
+             y="84.000000"/>
+	<fillattr colour="White"
+              pattern=""
+              filled="false"/>
+	<lineattr colour="Black"
+              thick="1"
+              type="Solid"/>
+	<textattr colour="Black"
+	          bold="false"/>
+	<text>[aTransition.name.replaceAll(' ', '_')/]</text>
+    <box w="90.000000"
+         h="24.000000"/>
+    <binding x="7.200000"
+             y="-3.000000"/>
+    <cond id="TR_C_[aTransition.name.replaceAll(' ', '_')/]">
+      <posattr x="-9.000000"
+               y="115.000000"/>
+      <fillattr colour="White"
+                pattern="Solid"
+                filled="false"/>
+      <lineattr colour="Black"
+                thick="0"
+                type="Solid"/>
+      <textattr colour="Black"
+                bold="false"/>
+      <text tool="CPN Tools"
+            version="4.0.1"/>
+    </cond>
+    <time id="TR_T_[aTransition.name.replaceAll(' ', '_')/]">
+      <posattr x="74.500000"
+               y="115.000000"/>
+      <fillattr colour="White"
+                pattern="Solid"
+                filled="false"/>
+      <lineattr colour="Black"
+                thick="0"
+                type="Solid"/>
+      <textattr colour="Black"
+                bold="false"/>
+	[if (aTransition.delay > 0)]
+      <text tool="CPN Tools"
+            version="4.0.1"> @+[aTransition.delay /]</text>
+	[else]
+	  <text tool="CPN Tools"
+            version="4.0.1"/>
+	[/if]    
+    </time>
+    <code id="TR_S_[aTransition.name.replaceAll(' ', '_')/]">
+      <posattr x="94.500000"
+               y="32.000000"/>
+      <fillattr colour="White"
+                pattern="Solid"
+                filled="false"/>
+      <lineattr colour="Black"
+                thick="0"
+                type="Solid"/>
+      <textattr colour="Black"
+                bold="false"/>
+      <text tool="CPN Tools"
+            version="4.0.1"/>
+    </code>
+	<priority id="TR_P_[aTransition.name.replaceAll(' ', '_')/]">
+	  <posattr x="-38.000000"
+	           y="53.000000"/>
+	  <fillattr colour="White"
+	            pattern="Solid"
+	            filled="false"/>
+	  <lineattr colour="Black"
+	            thick="0"
+	            type="Solid"/>
+	  <textattr colour="Black"
+	            bold="false"/>
+	  <text tool="CPN Tools"
+	        version="4.0.1"/>
+	</priority>
+ </trans>
+[/template]

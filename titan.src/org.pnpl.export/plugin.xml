@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="org.pnpl.export.pnpl" name="PNPL Export" schema="schema/org.pnpl.export.pnpl.exsd"/>
+   <extension-point id="org.pnpl.export.products" name="Petri Net Export" schema="schema/org.pnpl.export.products.exsd"/>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.pnpl.export.handlers.ExportHandlerPNPL"
+            description="Exportation of Petri Net Product Lines"
+            id="org.pnpl.export.commandPNPL"
+            name="Exportation for a PNPL">
+      </command>
+      <command
+            defaultHandler="org.pnpl.export.handlers.ExportHandlerProducts"
+            description="Exportation for a Derivable Product"
+            id="org.pnpl.export.commandProducts"
+            name="Exportation for a Product">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=org.pnpl.analysis_menu">
+         <separator
+               name="org.pnpl.export.separator1">
+         </separator>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=org.pnpl.export.separator1">
+         <menu
+               id="org.pnpl.export.menu"
+               label="Export to ...">
+            <visibleWhen
+                  checkEnabled="true">
+               <iterate
+                     ifEmpty="false"
+                     operator="or">
+               </iterate>
+            </visibleWhen>
+            <command
+                  commandId="org.pnpl.export.commandPNPL"
+                  label="Petri Net Product Lines"
+                  style="push"
+                  tooltip="Exportation of a Petri Net Product Line">
+               <visibleWhen
+                     checkEnabled="true">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <test
+                           forcePluginActivation="true"
+                           property="org.eclipse.core.resources.name"
+                           value="*.vrb">
+                     </test>
+                  </iterate>
+               </visibleWhen>
+            </command>
+            <command
+                  commandId="org.pnpl.export.commandProducts"
+                  label="Petri Net"
+                  style="push"
+                  tooltip="Exportation of a Derivable Petri Net">
+               <visibleWhen
+                     checkEnabled="true">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <test
+                           forcePluginActivation="true"
+                           property="org.eclipse.core.resources.name"
+                           value="*.petrinets">
+                     </test>
+                  </iterate>
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
