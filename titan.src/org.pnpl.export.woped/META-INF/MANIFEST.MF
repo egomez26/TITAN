@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
+Automatic-Module-Name: org.pnpl.export.woped
 Bundle-Name: WoPeD Export Plug-in
 Bundle-SymbolicName: org.pnpl.export.woped;singleton:=true
 Bundle-Version: 1.0.0.qualifier

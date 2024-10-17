@@ -58,6 +58,7 @@ public abstract class AnalysisHandler extends AbstractHandler implements IHandle
 				
 				// user pressed ok
 				Object[] selection = dialog.getResult();
+				
 				if (selection != null && selection.length > 0) {
 					IConfigurationElement extension = offeredAnalysis.get(selection[0]);
 					AbstractAnalysis      analysis  = (AbstractAnalysis)extension.createExecutableExtension("class");
@@ -81,7 +82,7 @@ public abstract class AnalysisHandler extends AbstractHandler implements IHandle
 					String timeprint =  "The task has taken " + ( time_end - time_start ) + " milliseconds";
 					System.out.println("[pnpl] " + timeprint);
 					
-					MessageDialog.openInformation(null, "Analysis results", outprint + ".\n" + timeprint);
+					MessageDialog.openInformation(null, "Analysis results", outprint + ".\n" + timeprint);					
 				}
 			}
 				

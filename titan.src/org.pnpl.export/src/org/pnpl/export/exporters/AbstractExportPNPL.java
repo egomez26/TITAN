@@ -141,6 +141,7 @@ public abstract class AbstractExportPNPL extends AbstractExport {
 				}
 			}
 		}
+		
 		return files;
 	}
 	
@@ -170,7 +171,7 @@ public abstract class AbstractExportPNPL extends AbstractExport {
 				for (int i = 0; i < result.length; i++) {
 					blockedFeatures.add((String) result[i]);
 				}
-			}
+			}			
 		}
 	}
 

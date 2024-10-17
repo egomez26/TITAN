@@ -32,7 +32,7 @@
             locationURI="popup:org.eclipse.ui.popup.any?after=org.pnpl.export.separator1">
          <menu
                id="org.pnpl.export.menu"
-               label="Export to ...">
+               label="PNPL Export to ...">
             <visibleWhen
                   checkEnabled="true">
                <iterate

@@ -45,6 +45,7 @@ public class ExportPNPL extends AbstractExportPNPL {
 	private String strFeatures = "";
 		
 	private BufferedOutputStream stream = null;
+	@SuppressWarnings("unused")
 	private File folder = null;
 	
 	@Override
@@ -53,9 +54,7 @@ public class ExportPNPL extends AbstractExportPNPL {
 		this.exportedFileName = outputFile;	
 		
 		monitor.subTask("Loading...");
-		monitor.beginTask("PNPL to CPN", 100);
-		generate(monitor);
-		monitor.done();
+		generate(monitor);		
 		
 		return true;
 	}
@@ -63,11 +62,10 @@ public class ExportPNPL extends AbstractExportPNPL {
 	private void generate(Monitor monitor) throws IOException {
 		Display display = new Display();
 		final Shell shell = new Shell(display);
-		
-		selectConfiguration(shell);
-		display.dispose();
+		selectConfiguration(shell);		
 		
 		monitor.beginTask("PNPL to CPN", 100);
+		
 		try {
 			stream = new BufferedOutputStream(new FileOutputStream(getExportedFile()));			
 			
@@ -93,7 +91,9 @@ public class ExportPNPL extends AbstractExportPNPL {
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
+		
 		monitor.done();
+		display.dispose();
 	}
 
 	private void writeFile(String line) throws IOException {
