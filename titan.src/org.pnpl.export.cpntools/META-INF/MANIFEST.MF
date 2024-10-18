@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
+Automatic-Module-Name: org.pnpl.export.cpntools
 Bundle-Name: CPNTools Export Plug-in
 Bundle-SymbolicName: org.pnpl.export.cpntools;singleton:=true
 Bundle-Version: 1.0.0.qualifier
@@ -27,5 +28,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jface
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Export-Package: org.pnpl.export.cpntools.main
+Export-Package: org.pnpl.export.cpntools.exporters,
+ org.pnpl.export.cpntools.main
 

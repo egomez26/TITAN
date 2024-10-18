@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.pnpl.analysis.analyzer.pnpl">
+      <client
+            class="org.pnpl.analysis.runtime.analysis.AnalysisPNPL"
+            name="Runtime Verification">
+      </client>
+   </extension>
+   <extension
+         point="org.pnpl.analysis.analyzer.products">
+      <client
+            class="org.pnpl.analysis.runtime.analysis.AnalysisProducts"
+            name="Runtime Verification">
+      </client>
+   </extension>
+
+</plugin>

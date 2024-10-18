@@ -44,7 +44,7 @@ public abstract class ExportHandler extends AbstractHandler implements IHandler 
 				ElementListSelectionDialog dialog = new ElementListSelectionDialog(null, new LabelProvider());
 				dialog.setMultipleSelection(false);
 				dialog.setElements(offeredExporter.keySet().toArray());
-				dialog.setTitle("Export a PNPL");
+				dialog.setTitle("Exportation");
 				dialog.setMessage("Export to...");
 				
 				// user pressed cancel

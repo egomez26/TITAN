@@ -1,0 +1,35 @@
+<<<<<<< Updated upstream
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.engine.highlevel.jar"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.model.jar"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.engine.proxy.jar"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.model.importer.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.engine.highlevel.jar"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.model.jar"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.engine.proxy.jar"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.model.importer.jar"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.engine.protocol.jar"/>
+	<classpathentry kind="lib" path="lib/org.cpntools.accesscpn.engine.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
+>>>>>>> Stashed changes
