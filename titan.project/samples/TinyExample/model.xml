@@ -2,7 +2,9 @@
 <featureModel>
 	<properties>
 		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="autolayoutconstraints" value="false"/>
 		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
 		<graphics key="showshortnames" value="false"/>
 		<graphics key="layout" value="horizontal"/>
 		<graphics key="showcollapsedconstraints" value="true"/>
@@ -12,25 +14,25 @@
 	<struct>
 		<and mandatory="true" name="Feature_Model">
 			<graphics key="collapsed" value="false"/>
-			<feature mandatory="true" name="Worker1">
+			<feature mandatory="true" name="fWorker1">
 				<graphics key="collapsed" value="false"/>
 			</feature>
-			<feature name="Worker2">
+			<feature name="fWorker2">
 				<graphics key="collapsed" value="false"/>
 			</feature>
-			<feature name="Worker3"/>
+			<feature name="fWorker3"/>
 		</and>
 	</struct>
 	<constraints>
 		<rule>
 			<conj>
 				<imp>
-					<var>Worker2</var>
-					<var>Worker1</var>
+					<var>fWorker2</var>
+					<var>fWorker1</var>
 				</imp>
 				<imp>
-					<var>Worker3</var>
-					<var>Worker2</var>
+					<var>fWorker3</var>
+					<var>fWorker2</var>
 				</imp>
 			</conj>
 		</rule>

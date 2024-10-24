@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="output" version="121">
+	<gspn name="output" show-color-cmd="false" show-fluid-cmd="false">
+	<nodes>
+		<!-- List of places -->
+			<place marking="5" name="Worker3" x="10" y="10"/>
+			<place marking="4" name="Worker2" x="20" y="10"/>
+			<place marking="0" name="Todo" x="30" y="10"/>
+			<place marking="3" name="Worker1" x="40" y="10"/>
+			<place marking="10" name="Finished" x="50" y="10"/>
+		
+		<!-- List of transitions -->	
+			<transition name="t3" priority="1" weight="1" type="IMM" x="10" y="10"/>
+			<transition name="t1" priority="1" weight="1" type="IMM" x="20" y="10"/>
+			<transition name="t0" priority="1" weight="1" type="IMM" x="30" y="10"/>
+			<transition name="t2" priority="1" weight="1" type="IMM" x="40" y="10"/>
+		
+	</nodes>
+	<edges>
+		<!-- List of arcs -->
+				<arc id="a12" head="Worker3" kind="OUTPUT" mult="1" tail="t3"/>
+				
+				<arc id="20"  head="t2" kind="INPUT" mult="1" tail="Worker2"/>
+				<arc id="a3" head="Todo" kind="OUTPUT" mult="1" tail="t0"/>
+				
+				<arc id="40"  head="t2" kind="INPUT" mult="1" tail="Todo"/>
+				<arc id="50"  head="t1" kind="INPUT" mult="1" tail="Todo"/>
+				<arc id="60"  head="t1" kind="INPUT" mult="1" tail="Worker1"/>
+				<arc id="a9" head="Worker2" kind="OUTPUT" mult="1" tail="t2"/>
+				
+				<arc id="a5" head="Finished" kind="OUTPUT" mult="1" tail="t1"/>
+				
+				<arc id="a14" head="Worker1" kind="OUTPUT" mult="1" tail="t1"/>
+				
+				<arc id="a22" head="Finished" kind="OUTPUT" mult="1" tail="t2"/>
+				
+				<arc id="a24" head="Finished" kind="OUTPUT" mult="1" tail="t3"/>
+				
+				<arc id="120"  head="t0" kind="INPUT" mult="1" tail="Finished"/>
+				<arc id="130"  head="t3" kind="INPUT" mult="1" tail="Todo"/>
+				<arc id="140"  head="t3" kind="INPUT" mult="1" tail="Worker3"/>
+		
+	</edges>
+	</gspn>
+	<measures gspn-name="GSPN" name="Measures" simplified-UI="false">
+		<assignments/>
+		<greatspn/>
+		<formulas>
+			<formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+			<formula comment="All the basic Petri net measures" language="ALL"/>
+		</formulas>
+	</measures>
+</project>

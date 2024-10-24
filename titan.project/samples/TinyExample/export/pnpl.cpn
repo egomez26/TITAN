@@ -72,21 +72,21 @@
 					<id>CONFIGURATION</id>
 					<record>
 						<recordfield>
-							<id>FEAT_Worker1</id>
+							<id>FEAT_fWorker1</id>
 							<id>FEATURE</id>
 						</recordfield>
 						<recordfield>
-							<id>FEAT_Worker2</id>
+							<id>FEAT_fWorker2</id>
 							<id>FEATURE</id>
 						</recordfield>
 						<recordfield>
-							<id>FEAT_Worker3</id>
+							<id>FEAT_fWorker3</id>
 							<id>FEATURE</id>
 						</recordfield>
 					</record>
-					<layout>colset CONFIGURATION = record FEAT_Worker1 : FEATURE * 
-		FEAT_Worker2 : FEATURE * 
-		FEAT_Worker3 : FEATURE;</layout>
+					<layout>colset CONFIGURATION = record FEAT_fWorker1 : FEATURE * 
+		FEAT_fWorker2 : FEATURE * 
+		FEAT_fWorker3 : FEATURE;</layout>
 				</color>
 				</block>
 				<block id="ID1413113462">
@@ -111,26 +111,26 @@
 					<id>c</id>
 					<layout>var c : CONFIGURATION;</layout>
 				</var>
-					<var id="VAR_Worker1">
+					<var id="VAR_fWorker1">
 						<type>
 							<id>FEATURE</id>
 						</type>
-						<id>VAR_Worker1</id>
-						<layout>var VAR_Worker1 : FEATURE;</layout>
+						<id>VAR_fWorker1</id>
+						<layout>var VAR_fWorker1 : FEATURE;</layout>
 					</var>
-					<var id="VAR_Worker2">
+					<var id="VAR_fWorker2">
 						<type>
 							<id>FEATURE</id>
 						</type>
-						<id>VAR_Worker2</id>
-						<layout>var VAR_Worker2 : FEATURE;</layout>
+						<id>VAR_fWorker2</id>
+						<layout>var VAR_fWorker2 : FEATURE;</layout>
 					</var>
-					<var id="VAR_Worker3">
+					<var id="VAR_fWorker3">
 						<type>
 							<id>FEATURE</id>
 						</type>
-						<id>VAR_Worker3</id>
-						<layout>var VAR_Worker3 : FEATURE;</layout>
+						<id>VAR_fWorker3</id>
+						<layout>var VAR_fWorker3 : FEATURE;</layout>
 					</var>
 				</block>
 			<block id="ID1413115140">
@@ -141,8 +141,8 @@
 				<ml id="FUN_IFF">fun iff(p, q) = implies(p, q) andalso implies(q, p);
 					<layout>fun iff (p, q) = ((not p orelse q) andalso (p orelse not q));</layout>
 				</ml>
-				<ml id="FUN_ISVALID">fun isValid (PARAM_Feature_Model,PARAM_Worker1,PARAM_Worker2,PARAM_Worker3) =  (iff(PARAM_Worker1,PARAM_Feature_Model) andalso implies(PARAM_Worker2,PARAM_Feature_Model) andalso implies(PARAM_Worker3,PARAM_Feature_Model)) andalso (implies(PARAM_Worker2, PARAM_Worker1) andalso implies(PARAM_Worker3, PARAM_Worker2));
-					<layout>fun isValid (PARAM_Feature_Model,PARAM_Worker1,PARAM_Worker2,PARAM_Worker3) = (iff(PARAM_Worker1,PARAM_Feature_Model) andalso implies(PARAM_Worker2,PARAM_Feature_Model) andalso implies(PARAM_Worker3,PARAM_Feature_Model)) andalso (implies(PARAM_Worker2, PARAM_Worker1) andalso implies(PARAM_Worker3, PARAM_Worker2));</layout>
+				<ml id="FUN_ISVALID">fun isValid (PARAM_Feature_Model,PARAM_fWorker1,PARAM_fWorker2,PARAM_fWorker3) =  (iff(PARAM_fWorker1,PARAM_Feature_Model) andalso implies(PARAM_fWorker2,PARAM_Feature_Model) andalso implies(PARAM_fWorker3,PARAM_Feature_Model)) andalso (implies(PARAM_fWorker2, PARAM_fWorker1) andalso implies(PARAM_fWorker3, PARAM_fWorker2));
+					<layout>fun isValid (PARAM_Feature_Model,PARAM_fWorker1,PARAM_fWorker2,PARAM_fWorker3) = (iff(PARAM_fWorker1,PARAM_Feature_Model) andalso implies(PARAM_fWorker2,PARAM_Feature_Model) andalso implies(PARAM_fWorker3,PARAM_Feature_Model)) andalso (implies(PARAM_fWorker2, PARAM_fWorker1) andalso implies(PARAM_fWorker3, PARAM_fWorker2));</layout>
 				</ml>
 			</block>
 		</block>
@@ -173,7 +173,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">1`1</text>
+					<text tool="CPN Tools" version="4.0.1">3`1</text>
 				</initmark>
 			</place>
 			<place id="PL_Worker2">
@@ -199,7 +199,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">1`1</text>
+					<text tool="CPN Tools" version="4.0.1">4`1</text>
 				</initmark>
 			</place>
 			<place id="PL_Worker3">
@@ -225,7 +225,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">1`1</text>
+					<text tool="CPN Tools" version="4.0.1">5`1</text>
 				</initmark>
 			</place>
 			<place id="PL_Todo">
@@ -304,7 +304,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">1`{FEAT_Worker1 = true, FEAT_Worker2 = true, FEAT_Worker3 = true}</text>
+					<text tool="CPN Tools" version="4.0.1">1`{FEAT_fWorker1 = true, FEAT_fWorker2 = true, FEAT_fWorker3 = true}</text>
 				</initmark>
 			</place>
 			<place id="PL_CURRENT">
@@ -330,7 +330,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">1`{FEAT_Worker1 = true, FEAT_Worker2 = true, FEAT_Worker3 = true}</text>
+					<text tool="CPN Tools" version="4.0.1">1`{FEAT_fWorker1 = true, FEAT_fWorker2 = true, FEAT_fWorker3 = true}</text>
 				</initmark>
 			</place>
 			<!-- List of transitions -->
@@ -347,14 +347,14 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">[((#FEAT_Worker1 c orelse #FEAT_Worker2 c) orelse #FEAT_Worker3 c)]</text>
+					<text tool="CPN Tools" version="4.0.1">[((#FEAT_fWorker1 c orelse #FEAT_fWorker2 c) orelse #FEAT_fWorker3 c)]</text>
 				</cond>
 				<time id="TR_T_t0">
 					<posattr x="257.500000" y="25.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">@+1</text>
+					<text tool="CPN Tools" version="4.0.1">@+50</text>
 				</time>
 				<code id="TR_S_t0">
 					<posattr x="277.500000" y="-46.000000"/>
@@ -384,7 +384,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">[#FEAT_Worker1 c]</text>
+					<text tool="CPN Tools" version="4.0.1">[#FEAT_fWorker1 c]</text>
 				</cond>
 				<time id="TR_T_t1">
 					<posattr x="257.500000" y="25.000000"/>
@@ -421,7 +421,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">[#FEAT_Worker2 c]</text>
+					<text tool="CPN Tools" version="4.0.1">[#FEAT_fWorker2 c]</text>
 				</cond>
 				<time id="TR_T_t2">
 					<posattr x="257.500000" y="25.000000"/>
@@ -458,7 +458,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">[#FEAT_Worker3 c]</text>
+					<text tool="CPN Tools" version="4.0.1">[#FEAT_fWorker3 c]</text>
 				</cond>
 				<time id="TR_T_t3">
 					<posattr x="257.500000" y="25.000000"/>
@@ -483,36 +483,36 @@
 				</priority>
 			</trans>
 			<!-- Transitions for switching the configuration -->
-			<trans id="TR_switch_Worker1" explicit="false">
+			<trans id="TR_switch_fWorker1" explicit="false">
 				<posattr x="195.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
-				<text>switch_Worker1</text>
+				<text>switch_fWorker1</text>
 				<box w="96.000000" h="28.000000"/>
 				<binding x="7.200000" y="-3.000000"/>
-				<cond id="TR_C_switch_Worker1">
+				<cond id="TR_C_switch_fWorker1">
 					<posattr x="138.000000" y="25.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1">[false]</text>
 				</cond>
-				<time id="TR_T_switch_Worker1">
+				<time id="TR_T_switch_fWorker1">
 					<posattr x="257.500000" y="25.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1"/>
 				</time>
-				<code id="TR_S_switch_Worker1">
+				<code id="TR_S_switch_fWorker1">
 					<posattr x="277.500000" y="-46.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1"/>
 				</code>
-				<priority id="TR_P_switch_Worker1">
+				<priority id="TR_P_switch_fWorker1">
 					<posattr x="109.000000" y="-25.000000"/>
 					<fillattr colour="White" pattern="Solid" illed="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
@@ -520,36 +520,36 @@
 					<text tool="CPN Tools" version="4.0.1"/>
 				</priority>
 			</trans>
-			<trans id="TR_switch_Worker2" explicit="false">
+			<trans id="TR_switch_fWorker2" explicit="false">
 				<posattr x="195.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
-				<text>switch_Worker2</text>
+				<text>switch_fWorker2</text>
 				<box w="96.000000" h="28.000000"/>
 				<binding x="7.200000" y="-3.000000"/>
-				<cond id="TR_C_switch_Worker2">
+				<cond id="TR_C_switch_fWorker2">
 					<posattr x="138.000000" y="25.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1">[false]</text>
 				</cond>
-				<time id="TR_T_switch_Worker2">
+				<time id="TR_T_switch_fWorker2">
 					<posattr x="257.500000" y="25.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1"/>
 				</time>
-				<code id="TR_S_switch_Worker2">
+				<code id="TR_S_switch_fWorker2">
 					<posattr x="277.500000" y="-46.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1"/>
 				</code>
-				<priority id="TR_P_switch_Worker2">
+				<priority id="TR_P_switch_fWorker2">
 					<posattr x="109.000000" y="-25.000000"/>
 					<fillattr colour="White" pattern="Solid" illed="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
@@ -557,36 +557,36 @@
 					<text tool="CPN Tools" version="4.0.1"/>
 				</priority>
 			</trans>
-			<trans id="TR_switch_Worker3" explicit="false">
+			<trans id="TR_switch_fWorker3" explicit="false">
 				<posattr x="195.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
-				<text>switch_Worker3</text>
+				<text>switch_fWorker3</text>
 				<box w="96.000000" h="28.000000"/>
 				<binding x="7.200000" y="-3.000000"/>
-				<cond id="TR_C_switch_Worker3">
+				<cond id="TR_C_switch_fWorker3">
 					<posattr x="138.000000" y="25.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1">[false]</text>
 				</cond>
-				<time id="TR_T_switch_Worker3">
+				<time id="TR_T_switch_fWorker3">
 					<posattr x="257.500000" y="25.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1"/>
 				</time>
-				<code id="TR_S_switch_Worker3">
+				<code id="TR_S_switch_fWorker3">
 					<posattr x="277.500000" y="-46.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
 					<text tool="CPN Tools" version="4.0.1"/>
 				</code>
-				<priority id="TR_P_switch_Worker3">
+				<priority id="TR_P_switch_fWorker3">
 					<posattr x="109.000000" y="-25.000000"/>
 					<fillattr colour="White" pattern="Solid" illed="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
@@ -608,7 +608,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">[isValid(true,#FEAT_Worker1 c,#FEAT_Worker2 c,#FEAT_Worker3 c) andalso false]</text>
+					<text tool="CPN Tools" version="4.0.1">[isValid(true,#FEAT_fWorker1 c,#FEAT_fWorker2 c,#FEAT_fWorker3 c) andalso false]</text>
 				</cond>
 				<time id="TR_T_isValid">
 					<posattr x="257.500000" y="25.000000"/>
@@ -646,7 +646,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker1 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker1 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a3" orientation="TtoP" order="1">
@@ -662,7 +662,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (((#FEAT_Worker1 c orelse #FEAT_Worker2 c) orelse #FEAT_Worker3 c)) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (((#FEAT_fWorker1 c orelse #FEAT_fWorker2 c) orelse #FEAT_fWorker3 c)) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a5" orientation="TtoP" order="1">
@@ -678,7 +678,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker1 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker1 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a0" orientation="PtoT" order="1">
@@ -694,7 +694,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker1 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker1 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a14" orientation="TtoP" order="1">
@@ -710,7 +710,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker1 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker1 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a12" orientation="TtoP" order="1">
@@ -726,7 +726,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker3 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker3 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a9" orientation="TtoP" order="1">
@@ -742,7 +742,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker2 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker2 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a8" orientation="PtoT" order="1">
@@ -758,7 +758,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker2 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker2 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a13" orientation="PtoT" order="1">
@@ -774,7 +774,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker3 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker3 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a30" orientation="PtoT" order="1">
@@ -790,7 +790,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (((#FEAT_Worker1 c orelse #FEAT_Worker2 c) orelse #FEAT_Worker3 c)) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (((#FEAT_fWorker1 c orelse #FEAT_fWorker2 c) orelse #FEAT_fWorker3 c)) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a21" orientation="PtoT" order="1">
@@ -806,7 +806,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker2 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker2 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a22" orientation="TtoP" order="1">
@@ -822,7 +822,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker2 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker2 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a23" orientation="PtoT" order="1">
@@ -838,7 +838,7 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker3 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker3 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<arc id="ARC_a24" orientation="TtoP" order="1">
@@ -854,104 +854,104 @@
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">if (#FEAT_Worker3 c) then 1`1 else 0`1</text>
+					<text tool="CPN Tools" version="4.0.1">if (#FEAT_fWorker3 c) then 1`1 else 0`1</text>
 				</annot>
 			</arc>
 			<!-- Arcs for connecting switches -->
-			<arc id="ARC_PTARC_SWITCH_Worker1" orientation="PtoT" order="1">
+			<arc id="ARC_PTARC_SWITCH_fWorker1" orientation="PtoT" order="1">
 				<posattr x="0.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
 				<arrowattr headsize="1.200000" currentcyckle="2"/>
-				<transend idref="TR_switch_Worker1"/>
+				<transend idref="TR_switch_fWorker1"/>
 				<placeend idref="PL_CONFIG"/>
-				<annot id="ANN_PTARC_SWITCH_Worker1">
+				<annot id="ANN_PTARC_SWITCH_fWorker1">
 					<posattr x="89.000000" y="11.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_fWorker1 = VAR_fWorker1, FEAT_fWorker2 = VAR_fWorker2, FEAT_fWorker3 = VAR_fWorker3}</text>
 				</annot>
 			</arc>
-			<arc id="ARC_TPARC_SWITCH_Worker1" orientation="TtoP" order="1">
+			<arc id="ARC_TPARC_SWITCH_fWorker1" orientation="TtoP" order="1">
 				<posattr x="0.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
 				<arrowattr headsize="1.200000" currentcyckle="2"/>
-				<transend idref="TR_switch_Worker1"/>
+				<transend idref="TR_switch_fWorker1"/>
 				<placeend idref="PL_CONFIG"/>
-				<annot id="ANN_TPARC_SWITCH_Worker1">
+				<annot id="ANN_TPARC_SWITCH_fWorker1">
 					<posattr x="89.000000" y="11.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = not VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_fWorker1 = not VAR_fWorker1, FEAT_fWorker2 = VAR_fWorker2, FEAT_fWorker3 = VAR_fWorker3}</text>
 				</annot>
 			</arc>
-			<arc id="ARC_PTARC_SWITCH_Worker2" orientation="PtoT" order="1">
+			<arc id="ARC_PTARC_SWITCH_fWorker2" orientation="PtoT" order="1">
 				<posattr x="0.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
 				<arrowattr headsize="1.200000" currentcyckle="2"/>
-				<transend idref="TR_switch_Worker2"/>
+				<transend idref="TR_switch_fWorker2"/>
 				<placeend idref="PL_CONFIG"/>
-				<annot id="ANN_PTARC_SWITCH_Worker2">
+				<annot id="ANN_PTARC_SWITCH_fWorker2">
 					<posattr x="89.000000" y="11.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_fWorker1 = VAR_fWorker1, FEAT_fWorker2 = VAR_fWorker2, FEAT_fWorker3 = VAR_fWorker3}</text>
 				</annot>
 			</arc>
-			<arc id="ARC_TPARC_SWITCH_Worker2" orientation="TtoP" order="1">
+			<arc id="ARC_TPARC_SWITCH_fWorker2" orientation="TtoP" order="1">
 				<posattr x="0.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
 				<arrowattr headsize="1.200000" currentcyckle="2"/>
-				<transend idref="TR_switch_Worker2"/>
+				<transend idref="TR_switch_fWorker2"/>
 				<placeend idref="PL_CONFIG"/>
-				<annot id="ANN_TPARC_SWITCH_Worker2">
+				<annot id="ANN_TPARC_SWITCH_fWorker2">
 					<posattr x="89.000000" y="11.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = not VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_fWorker1 = VAR_fWorker1, FEAT_fWorker2 = not VAR_fWorker2, FEAT_fWorker3 = VAR_fWorker3}</text>
 				</annot>
 			</arc>
-			<arc id="ARC_PTARC_SWITCH_Worker3" orientation="PtoT" order="1">
+			<arc id="ARC_PTARC_SWITCH_fWorker3" orientation="PtoT" order="1">
 				<posattr x="0.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
 				<arrowattr headsize="1.200000" currentcyckle="2"/>
-				<transend idref="TR_switch_Worker3"/>
+				<transend idref="TR_switch_fWorker3"/>
 				<placeend idref="PL_CONFIG"/>
-				<annot id="ANN_PTARC_SWITCH_Worker3">
+				<annot id="ANN_PTARC_SWITCH_fWorker3">
 					<posattr x="89.000000" y="11.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = VAR_Worker3}</text>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_fWorker1 = VAR_fWorker1, FEAT_fWorker2 = VAR_fWorker2, FEAT_fWorker3 = VAR_fWorker3}</text>
 				</annot>
 			</arc>
-			<arc id="ARC_TPARC_SWITCH_Worker3" orientation="TtoP" order="1">
+			<arc id="ARC_TPARC_SWITCH_fWorker3" orientation="TtoP" order="1">
 				<posattr x="0.000000" y="0.000000"/>
 				<fillattr colour="White" pattern="" filled="false"/>
 				<lineattr colour="Black" thick="1" type="Solid"/>
 				<textattr colour="Black" bold="false"/>
 				<arrowattr headsize="1.200000" currentcyckle="2"/>
-				<transend idref="TR_switch_Worker3"/>
+				<transend idref="TR_switch_fWorker3"/>
 				<placeend idref="PL_CONFIG"/>
-				<annot id="ANN_TPARC_SWITCH_Worker3">
+				<annot id="ANN_TPARC_SWITCH_fWorker3">
 					<posattr x="89.000000" y="11.000000"/>
 					<fillattr colour="White" pattern="Solid" filled="false"/>
 					<lineattr colour="Black" thick="0" type="Solid"/>
 					<textattr colour="Black" bold="false"/>
-					<text tool="CPN Tools" version="4.0.1">{FEAT_Worker1 = VAR_Worker1, FEAT_Worker2 = VAR_Worker2, FEAT_Worker3 = not VAR_Worker3}</text>
+					<text tool="CPN Tools" version="4.0.1">{FEAT_fWorker1 = VAR_fWorker1, FEAT_fWorker2 = VAR_fWorker2, FEAT_fWorker3 = not VAR_fWorker3}</text>
 				</annot>
 			</arc>
 			<!-- Arc for validing configuration -->

@@ -1,17 +1,18 @@
 package org.pnpl.analysis.helpers;
 
+import java.io.IOException;
+import java.io.StreamTokenizer;
+import java.io.StringReader;
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Scanner;
-import java.util.Stack;
-import java.util.regex.Pattern;
 
-import org.pnpl.solvers.sat.presenceConditions.Operator;
 import org.prop4j.And;
 import org.prop4j.Implies;
 import org.prop4j.Node;
 import org.prop4j.Not;
 import org.prop4j.Or;
+
+import org.pnpl.solvers.sat.presenceConditions.Operator;
 
 import variability.BinaryExpression;
 import variability.BinaryOperator;
@@ -91,49 +92,44 @@ public class ExpressionHelper {
 		return getExpression(condition);
 	}
 	
-	// EGM: Be aware of deprecated elements
 	private Expression getExpression(String condition) {
-		Scanner scanner = new Scanner(condition);
-        Stack<Expression> operandStack = new Stack<>();
-        int numOpen = 0;
+		StreamTokenizer stk = new StreamTokenizer(new StringReader(condition));
+		stk.wordChars('_', '_'); // including underscore
+		
+		int numOpen = 0;
+		int token;
+		try {
+			token = stk.nextToken();
+			while(token!=StreamTokenizer.TT_EOF){ 
+				if(stk.ttype == StreamTokenizer.TT_WORD) {
+					Expression expr = handleWord(stk.sval);
+					if (expr != null) {
+						operandStack.push(handleWord(stk.sval));
+						if(isUnary) {
+							operandStack.push(handleOperator());
+							isUnary = false;
+						}
+					}
+				}
+				else if (stk.ttype == '(') {
+					isOpen = true;
+					numOpen++;
+				}
+				else if (stk.ttype == ')') {
+					if(isOpen) {
+						operandStack.push(handleOperator());
+						numOpen--;
+						if(numOpen == 0) 
+							isOpen = false;
+					}					
+				}
+				token=stk.nextToken();
+			}			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
 
-        // Pattern for words (including underscore)
-        Pattern wordPattern = Pattern.compile("\\w+");
-        // Pattern for parenthesis and other individual characters
-        Pattern specialCharPattern = Pattern.compile("[()]");
-
-        while (scanner.hasNext()) {
-            if (scanner.hasNext(wordPattern)) {
-                String word = scanner.next(wordPattern);
-                Expression expr = handleWord(word);
-                if (expr != null) {
-                    operandStack.push(expr);
-                    if (isUnary) {
-                        operandStack.push(handleOperator());
-                        isUnary = false;
-                    }
-                }
-            } else if (scanner.hasNext(specialCharPattern)) {
-                String specialChar = scanner.next(specialCharPattern);
-                if (specialChar.equals("(")) {
-                    isOpen = true;
-                    numOpen++;
-                } else if (specialChar.equals(")")) {
-                    if (isOpen) {
-                        operandStack.push(handleOperator());
-                        numOpen--;
-                        if (numOpen == 0) {
-                            isOpen = false;
-                        }
-                    }
-                }
-            } else {
-                scanner.next(); // Consume another unexpected token
-            }
-        }
-
-        scanner.close();
-        return operandStack.isEmpty() ? null : operandStack.pop();
+		return operandStack.pop();
 	}
 
 	private Expression handleWord(String token) {

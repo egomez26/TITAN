@@ -200,4 +200,12 @@ Universidad Complutense de Madrid
          id="org.pnpl.export.woped"
          version="0.0.0"/>
 
+   <plugin
+         id="org.pnpl.analysis.runtime"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.pnpl.solvers.cpntools"
+         version="0.0.0"/>
+
 </feature>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pnml>
+	<net id="0" type="eDSPN">
+		<!-- List of places -->
+		<place id="Todo">
+			<initialMarking>
+				<graphics>
+					<offset page="1" x="0" y="0"/>
+				</graphics>
+				<value>0</value>
+			</initialMarking>
+			<graphics>
+		        <position page="1" x="100" y="100"/>
+		    </graphics>
+			<name>
+				<graphics>
+					<offset page="1" x="-10" y="-40"/>
+				</graphics>
+				<value>Todo</value>
+			</name>
+		</place>
+		<place id="Worker2">
+			<initialMarking>
+				<graphics>
+					<offset page="1" x="0" y="0"/>
+				</graphics>
+				<value>4</value>
+			</initialMarking>
+			<graphics>
+		        <position page="1" x="100" y="100"/>
+		    </graphics>
+			<name>
+				<graphics>
+					<offset page="1" x="-10" y="-40"/>
+				</graphics>
+				<value>Worker2</value>
+			</name>
+		</place>
+		<place id="Worker3">
+			<initialMarking>
+				<graphics>
+					<offset page="1" x="0" y="0"/>
+				</graphics>
+				<value>5</value>
+			</initialMarking>
+			<graphics>
+		        <position page="1" x="100" y="100"/>
+		    </graphics>
+			<name>
+				<graphics>
+					<offset page="1" x="-10" y="-40"/>
+				</graphics>
+				<value>Worker3</value>
+			</name>
+		</place>
+		<place id="Worker1">
+			<initialMarking>
+				<graphics>
+					<offset page="1" x="0" y="0"/>
+				</graphics>
+				<value>3</value>
+			</initialMarking>
+			<graphics>
+		        <position page="1" x="100" y="100"/>
+		    </graphics>
+			<name>
+				<graphics>
+					<offset page="1" x="-10" y="-40"/>
+				</graphics>
+				<value>Worker1</value>
+			</name>
+		</place>
+		<place id="Finished">
+			<initialMarking>
+				<graphics>
+					<offset page="1" x="0" y="0"/>
+				</graphics>
+				<value>10</value>
+			</initialMarking>
+			<graphics>
+		        <position page="1" x="100" y="100"/>
+		    </graphics>
+			<name>
+				<graphics>
+					<offset page="1" x="-10" y="-40"/>
+				</graphics>
+				<value>Finished</value>
+			</name>
+		</place>
+	
+		<!-- List of transitions -->
+		<transition id="t2">
+			<graphics>
+		    	<position page="1" x="200" y="100"/>
+			</graphics>
+			<name>
+		    	<graphics>
+		      		<offset page="1" x="-10" y="40"/>
+		    	</graphics>
+				<value>t2</value>
+			</name>
+			<EDSPNTransType>
+				<immediate enablingFunction="" priority="1" weight="1"/>
+			</EDSPNTransType>
+		</transition>
+		<transition id="t1">
+			<graphics>
+		    	<position page="1" x="200" y="100"/>
+			</graphics>
+			<name>
+		    	<graphics>
+		      		<offset page="1" x="-10" y="40"/>
+		    	</graphics>
+				<value>t1</value>
+			</name>
+			<EDSPNTransType>
+				<immediate enablingFunction="" priority="1" weight="1"/>
+			</EDSPNTransType>
+		</transition>
+		<transition id="t0">
+			<graphics>
+		    	<position page="1" x="200" y="100"/>
+			</graphics>
+			<name>
+		    	<graphics>
+		      		<offset page="1" x="-10" y="40"/>
+		    	</graphics>
+				<value>t0</value>
+			</name>
+			<EDSPNTransType>
+				<immediate enablingFunction="" priority="1" weight="1"/>
+			</EDSPNTransType>
+		</transition>
+		<transition id="t3">
+			<graphics>
+		    	<position page="1" x="200" y="100"/>
+			</graphics>
+			<name>
+		    	<graphics>
+		      		<offset page="1" x="-10" y="40"/>
+		    	</graphics>
+				<value>t3</value>
+			</name>
+			<EDSPNTransType>
+				<immediate enablingFunction="" priority="1" weight="1"/>
+			</EDSPNTransType>
+		</transition>
+	
+		<!-- List of arcs -->
+			<arc id="a8" source="Worker2" target="t2">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc> 
+			<arc id="a3" source="t0" target="Todo">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc>
+			<arc id="a0" source="Worker1" target="t1">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc> 
+			<arc id="a24" source="t3" target="Finished">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc>
+			<arc id="a5" source="t1" target="Finished">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc>
+			<arc id="a13" source="Worker3" target="t3">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc> 
+			<arc id="a30" source="Finished" target="t0">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc> 
+			<arc id="a21" source="Todo" target="t2">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc> 
+			<arc id="a22" source="t2" target="Finished">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc>
+			<arc id="a9" source="t2" target="Worker2">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc>
+			<arc id="a12" source="t3" target="Worker3">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc>
+			<arc id="a23" source="Todo" target="t3">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc> 
+			<arc id="a4" source="Todo" target="t1">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc> 
+			<arc id="a14" source="t1" target="Worker1">
+				<inscription>
+			    	<graphics>
+						<offset page="1" x="0" y="0"/>
+					</graphics>
+					<value>1</value>
+				</inscription>
+			</arc>
+	
+	</net>
+</pnml>
