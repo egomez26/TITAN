@@ -1,5 +1,6 @@
 package org.pnpl.analysis.runtime.analysis;
 
+import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
 import java.util.Hashtable;
@@ -32,7 +33,7 @@ import PetriNets.Transition;
 
 import de.uni_luebeck.isp.tessla.interpreter.JavaApi.Engine;
 
-public class AnalysisPNPL extends AbstractAnalysisPNPL {
+public class AnalysisPNPL extends AbstractAnalysisPNPL implements Closeable {
 	private String cpnFileName;
 	private String htmlTesslaPath = "\\report.html";
 	private String prefix;
@@ -103,7 +104,7 @@ public class AnalysisPNPL extends AbstractAnalysisPNPL {
 	private int getSteps() {
 		int steps = 1;
 		
-		InputDialog dialog = new InputDialog(shell,"Selecting TeSSla configuratio","Define the number of steps for the simulation","",null);
+		InputDialog dialog = new InputDialog(shell,"Selecting TeSSla configuration","Define the number of steps for the simulation","",null);
 		if (dialog.open() == Window.OK) {
 			steps = Integer.valueOf(dialog.getValue());
 		}
@@ -190,5 +191,10 @@ public class AnalysisPNPL extends AbstractAnalysisPNPL {
 		}
 		
 		return strElements;
+	}
+
+	@Override
+	public void close() throws IOException {
+		shell.dispose();		
 	}
 }

@@ -26,115 +26,115 @@ Universidad Complutense de Madrid
 
    <plugin
          id="org.pnpl.analysis.markedgraph"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.model.variability.editor"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.model.variability"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.model.variability.editor.ui"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.analysis.featureide"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.model.petrinet"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.model.petrinet.editor"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.model.petrinet.edit"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.solvers.sat"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.model.variability.editor.ide"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.analysis.statemachine"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.analysis.extendedfreechoice"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.analysis.freechoice"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.solvers.jacop"
-         version="1.0.0"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.analysis.invariant"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.analysis.pinvariant"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.analysis.tinvariant"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.analysis"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.export"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.pnpl.export.cpntools"
-         version="1.0.0.qualifier"/>
+         version="0.0.0"/>
 
    <plugin
          id="com.google.guava"
-         version="33.3.0.jre"/>
+         version="0.0.0"/>
 
    <plugin
          id="de.ovgu.featureide.core"
-         version="3.11.1.202403121722"/>
+         version="0.0.0"/>
 
    <plugin
          id="de.ovgu.featureide.core.runtime"
-         version="3.11.1.202403121722"/>
+         version="0.0.0"/>
 
    <plugin
          id="de.ovgu.featureide.fm.core"
-         version="3.11.1.202403121722"/>
+         version="0.0.0"/>
 
    <plugin
          id="de.ovgu.featureide.fm.ui"
-         version="3.11.1.202403121722"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.acceleo.common"
-         version="3.7.15.202402190857"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.acceleo.engine"
-         version="3.7.15.202402190857"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.osgi"
-         version="3.21.0.v20240717-2103"/>
+         version="0.0.0"/>
 
    <plugin
          id="org.eclipse.acceleo.model"
